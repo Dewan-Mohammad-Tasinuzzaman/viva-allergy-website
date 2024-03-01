@@ -1,0 +1,84 @@
+'use client'; // Converted to client component
+
+import React, { useState } from 'react';
+import { usePathname } from 'next/navigation'
+import Link from 'next/link'
+import Image from 'next/image';
+import Logo_Gradient from '../public/assets/svgs/logo_icon-gradient.svg';
+import Logo_Text from '../public/assets/svgs/logo_text-only.svg';
+import Arrow_Icon from '../public/assets/svgs/down_arrow-icon.svg';
+
+const NavBar = () => {
+
+  // To use this, we must convert this component to a Client Componenet
+  const currentPath = usePathname();
+
+  // For sub-menus
+  // products
+  const [isHoverProducts, setIsHoverProducts] = useState(false);
+  // about
+  const [isHoverAbout, setIsHoverAbout] = useState(false);
+
+  return (
+    <nav className="navbar">
+      <div className="navbar__logoContainer">
+        <div className="navbar__logoContainer_logoBox">
+          <Image src={Logo_Gradient} alt="Logo" unoptimized={true} className="navbar__logoContainer_logoBox-logo" />
+        </div>
+        <div className="navbar__logoContainer_textBox">
+          <Image src={Logo_Text} alt="Logo" unoptimized={true} className="navbar__logoContainer_textBox-text" />
+        </div>
+      </div>
+      <ul className='navbar__options'>
+        <li className='navbar__options_item'>
+          <Link className={`${"/" === currentPath ? 'active-page-nav' : ''} navbar__options_item-link`} href="/">Home</Link>
+        </li>
+        <li onMouseEnter={() => setIsHoverProducts(true)} onMouseLeave={() => setIsHoverProducts(false)} className='navbar__options_item'>
+          <div className="flex align-items-center">
+            <p className="navbar__options_item-link">Products</p>
+            <Image src={Arrow_Icon} alt="down-arrow" unoptimized={true} className="navbar__options_item-arrow" />
+          </div>
+          <ul onMouseEnter={() => setIsHoverProducts(true)} className={`${isHoverProducts ? 'show-sub-menu' : ''} sub-menu`}>
+            <li className="sub-menu__item">
+              <Link className={`${"/venom-extracts" === currentPath ? 'active-sub-menu' : ''} sub-menu__item_link`} href="/venom-extracts">Venom Extracts</Link>
+            </li>
+            <li className="sub-menu__item">
+              <Link className={`${"/product-catalogue" === currentPath ? 'active-sub-menu' : ''} sub-menu__item_link`} href="/product-catalogue">Product Catalogue</Link>
+            </li>
+            <li className="sub-menu__item">
+              <Link className={`${"/" === currentPath ? 'active-sub-menu' : ''} sub-menu__item_link`} href="/">Scratch Form</Link>
+            </li>
+            <li className="sub-menu__item">
+              <Link className={`${"/skin-test-devices" === currentPath ? 'active-sub-menu' : ''} sub-menu__item_link`} href="/skin-test-devices">Skin-Test Devices</Link>
+            </li>
+          </ul>
+        </li>
+        <li onMouseEnter={() => setIsHoverAbout(true)} onMouseLeave={() => setIsHoverAbout(false)} className='navbar__options_item'>
+          <div className="flex align-items-center">
+            <p className="navbar__options_item-link">About</p>
+            <Image src={Arrow_Icon} alt="down-arrow" unoptimized={true} className="navbar__options_item-arrow" />
+          </div>
+          <ul onMouseEnter={() => setIsHoverAbout(true)} className={`${isHoverAbout ? 'show-sub-menu' : ''} sub-menu`}>
+            <li className="sub-menu__item">
+              <Link className={`${"/about" === currentPath ? 'active-sub-menu' : ''} sub-menu__item_link`} href="/about">About Us</Link>
+            </li>
+            <li className="sub-menu__item">
+              <Link className={`${"https://www.junopharm.ca/" === currentPath ? 'active-sub-menu' : ''} sub-menu__item_link`} href="https://www.junopharm.ca/" target="_blank">Juno Pharmaceuticals</Link>
+            </li>
+            <li className="sub-menu__item">
+              <Link className={`${"https://www.hsallergy.com/" === currentPath ? 'active-sub-menu' : ''} sub-menu__item_link`} href="https://www.hsallergy.com/" target="_blank">HollisterStier</Link>
+            </li>
+          </ul>
+        </li>
+        <li className='navbar__options_item'>
+          <Link className={`${"/contacts" === currentPath ? 'active-page-nav' : ''} navbar__options_item-link`} href="/contacts">Contacts</Link>
+        </li>
+        <li className='navbar__options_item'>
+          <Link className='btn-primary navbar__options_item-button' href="/get-started">Get A Quote</Link>
+        </li>
+      </ul>
+    </nav>
+  );
+}
+
+export default NavBar;
