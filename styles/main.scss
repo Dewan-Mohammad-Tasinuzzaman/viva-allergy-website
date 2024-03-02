@@ -46,10 +46,9 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  // scroll-behavior: smooth;
   box-sizing: border-box;
   font-size: 62.5%; //1rem = 10px, 10px/16px
-  overflow: hidden;
 }
 body {
   position: relative;
@@ -113,7 +112,7 @@ a {
   /* Handle */
   ::-webkit-scrollbar-thumb {
     background-color: rgb(190, 190, 190);
-    border-radius: 2px;
+    border-radius: 0px;
     transition: all .4s ease-out;
   }
 

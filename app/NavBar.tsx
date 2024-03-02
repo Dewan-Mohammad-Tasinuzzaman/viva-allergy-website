@@ -4,9 +4,9 @@ import React, { useState } from 'react';
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image';
-import Logo_Gradient from '../public/assets/svgs/logo_icon-gradient.svg';
-import Logo_Text from '../public/assets/svgs/logo_text-only.svg';
-import Arrow_Icon from '../public/assets/svgs/down_arrow-icon.svg';
+import Logo_Gradient from '@/public/assets/svgs/logo_icon-gradient.svg';
+import Logo_Text from '@/public/assets/svgs/logo_text-only.svg';
+import Arrow_Icon from '@/public/assets/svgs/down_arrow-icon.svg';
 
 const NavBar = () => {
 

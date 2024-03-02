@@ -1,15 +1,14 @@
 'use client'; // Converted to client component
-
 import Image from "next/image";
-import { ParallaxBanner } from 'react-scroll-parallax';
 import "../styles/main.scss";
-import HomeBannerImage from "../public/assets/images/home-banner-photo-enhanced.jpg";
+import { ParallaxBanner } from "react-scroll-parallax";
+import BannerImage from "@/public/assets/images/home-banner-photo-enhanced.jpg"
 
 export default function Home() {
 
 
     // Convert the image import to a string URL
-    const homeBannerImageUrl = "./assets/images/home-banner-photo-enhanced.jpg";
+    const homeBannerImageUrl = "./assets/images/home-banner-photo-enhanced-cropped.jpg";
 
 
   return (
@@ -18,11 +17,20 @@ export default function Home() {
 
       <div id="section-hero" className="hero">
 
-        {/* <Image src={HomeBannerImage} alt="Home Banner Image" unoptimized={true} className="hero-image" /> */}
         <ParallaxBanner
-            layers={[{ image: homeBannerImageUrl, speed: -15 }]}
-            className="aspect-[2/1] hero-image"
+          layers={[
+            {
+              image: homeBannerImageUrl,
+              speed: -300,
+              translateY: [0, 20],
+              opacity: [0.98, 0.9],
+              scale: [1.05, 1, 'easeOutCubic'],
+              shouldAlwaysCompleteAnimation: true,
+            },
+          ]}
+          className="w-full aspect-2-1 hero-image"
         />
+
         <div className="hero__filter"></div>
 
       </div>
@@ -36,8 +44,41 @@ export default function Home() {
         <h1>SCROLL</h1>
         <h1>SCROLL</h1>
         <h1>SCROLL</h1>
+        <h1>SCROLL</h1>
+        <h1>SCROLL</h1>
+        <h1>SCROLL</h1>
+        <h1>SCROLL</h1>
+        <h1>SCROLL</h1>
+        <h1>SCROLL</h1>
+        <h1>SCROLL</h1>
+        <h1>SCROLL</h1>
+        <h1>SCROLL</h1>
+        <h1>SCROLL</h1>
+        <h1>SCROLL</h1>
+        <h1>SCROLL</h1>
+        <h1>SCROLL</h1>
+        <h1>SCROLL</h1>
+        <h1>SCROLL</h1>
+        <h1>SCROLL</h1>
+        <h1>SCROLL</h1>
+        <h1>SCROLL</h1>
+        <h1>SCROLL</h1>
+        <h1>SCROLL</h1>
+        <h1>SCROLL</h1>
+        <h1>SCROLL</h1>
+        <h1>SCROLL</h1>
+        <h1>SCROLL</h1>
+        <h1>SCROLL</h1>
+        <h1>SCROLL</h1>
+        <h1>SCROLL</h1>
+        <h1>SCROLL</h1>
+        <h1>SCROLL</h1>
+        <h1>SCROLL</h1>
+        <h1>SCROLL</h1>
+        <h1>SCROLL</h1>
       </div>
 
     </main>
+    
   );
 }

@@ -32,7 +32,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-  ],
+, "components/SmoothScroll.jsx"  ],
   "exclude": [
     "node_modules"
   ]

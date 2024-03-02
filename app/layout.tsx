@@ -3,6 +3,8 @@ import { Lato } from "next/font/google";
 import "../styles/main.scss";
 import NavBar from "./NavBar";
 import { Providers } from './Providers';
+import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
+import SmoothScroll from "@/components/SmoothScroll";
 
 const lato = Lato({
   subsets: ["latin"],
@@ -24,7 +26,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={lato.className}>
         <NavBar />
-          <Providers>{children}</Providers>
+          <Providers>
+            <SmoothScroll>{children}</SmoothScroll>
+          </Providers>
       </body>
     </html>
   );

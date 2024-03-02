@@ -9,11 +9,8 @@
     overflow: hidden;
 
     &-image {
-        @include absolute-center;
         width: 100%;
         height: 100%;
-        object-fit: cover;
-        object-position: bottom;
     }
     &__filter {
         position: absolute;
@@ -21,7 +18,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(43, 43, 43, 0.45);
+        background-color: rgb(43, 43, 43);
         mix-blend-mode: lighten;
         backdrop-filter: blur(0);
     }

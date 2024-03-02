@@ -1,5 +1,13 @@
 // Utility Classes
 
+.w-full {
+    width: 100%;
+}
+
+.aspect-2-1 {
+    aspect-ratio: 2/1;
+}
+
 .flex {
     display: flex;
 }
@@ -19,3 +27,4 @@
 .bg-white {
     background-color: white;
 }
+
