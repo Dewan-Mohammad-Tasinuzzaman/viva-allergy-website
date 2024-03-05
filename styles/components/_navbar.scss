@@ -48,7 +48,7 @@
         &_textBox {
 
             position: relative;
-            width: 15rem;
+            width: 14rem;
             height: auto;
 
             &-text {
@@ -136,16 +136,17 @@
     
     width: 30rem;
     top: 7rem;
-    background-color: var(--color-white);
-    // border-radius: 0px 0px 5px 5px;
-    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0px 0px 2px 2px;
+    // border-radius: 5px;
     box-shadow: 0 4px 4rem rgba(0, 0, 0, 0.05);
-    border-top: 2px solid var(--color-dark-1);
+    border-top: 1px solid var(--color-viva-lightgreen);
+    overflow: hidden;
 
     &__item {
 
-        
-        background-color: rgb(255, 255, 255);
+        padding: 2.5rem 3rem;
+        background-color: rgba(255, 255, 255, 0);
         transition: all .3s ease-out;
 
         &:hover {
@@ -156,12 +157,18 @@
         }
 
         &_link {
+            position: relative;
             display: inline-block;
             font-size: 1.6rem;
             font-weight: 400;
             color: var(--color-dark-1);
             width: 100%;
-            padding: 2.5rem 3rem;
+
+            &-newtab {
+                width: 10px;
+                height: auto;
+                opacity: 80%;
+            }
         }
     }
 }
@@ -179,7 +186,7 @@
         content: "";
         position: absolute;
         top: 50%;
-        right: 10%;
+        right: 0;
         transform: translateY(-50%);
         width: 5px;
         height: 5px;

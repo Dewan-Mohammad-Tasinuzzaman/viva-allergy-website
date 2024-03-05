@@ -7,6 +7,7 @@ import Image from 'next/image';
 import Logo_Gradient from '@/public/assets/svgs/logo_icon-gradient.svg';
 import Logo_Text from '@/public/assets/svgs/logo_text-only.svg';
 import Arrow_Icon from '@/public/assets/svgs/down_arrow-icon.svg';
+import NewTab_Icon from '@/public/assets/svgs/new_tab-icon.svg';
 
 const NavBar = () => {
 
@@ -62,11 +63,13 @@ const NavBar = () => {
             <li className="sub-menu__item">
               <Link className={`${"/about" === currentPath ? 'active-sub-menu' : ''} sub-menu__item_link`} href="/about">About Us</Link>
             </li>
-            <li className="sub-menu__item">
-              <Link className={`${"https://www.junopharm.ca/" === currentPath ? 'active-sub-menu' : ''} sub-menu__item_link`} href="https://www.junopharm.ca/" target="_blank">Juno Pharmaceuticals</Link>
+            <li className="sub-menu__item flex align-items-center">
+              <Link className={`sub-menu__item_link`} href="https://www.junopharm.ca/" target="_blank">Juno Pharmaceuticals</Link>
+              <Image src={NewTab_Icon} alt="new-tab" unoptimized={true} className="sub-menu__item_link-newtab"/>
             </li>
-            <li className="sub-menu__item">
-              <Link className={`${"https://www.hsallergy.com/" === currentPath ? 'active-sub-menu' : ''} sub-menu__item_link`} href="https://www.hsallergy.com/" target="_blank">HollisterStier</Link>
+            <li className="sub-menu__item flex align-items-center">
+              <Link className={`sub-menu__item_link`} href="https://www.hsallergy.com/" target="_blank">HollisterStier</Link>
+              <Image src={NewTab_Icon} alt="new-tab" unoptimized={true} className="sub-menu__item_link-newtab"/>
             </li>
           </ul>
         </li>
