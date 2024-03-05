@@ -1,0 +1,8 @@
+@keyframes bannerAnimation {
+    0% {
+      backdrop-filter: blur(0);
+    }
+    100% {
+      backdrop-filter: blur(2px);
+    }
+  }

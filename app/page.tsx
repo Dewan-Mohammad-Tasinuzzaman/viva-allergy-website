@@ -24,8 +24,8 @@ export default function Home() {
               image: homeBannerImageUrl,
               speed: -300,
               translateY: [0, 20],
-              opacity: [0.98, 0.98],
-              scale: [1.05, 1, 'easeOutCubic'],
+              opacity: [1, 1],
+              scale: [1.1, 1, 'easeOutCubic'],
               shouldAlwaysCompleteAnimation: true,
             },
           ]}
@@ -39,21 +39,38 @@ export default function Home() {
 
           <div className="hero__maincontainer-start">
 
-            <div className="hero__content">
-              <h2 className="hero__content_subheader-1">We Are Providing Excellence<br/>In Partnership with<br/><span className="hero__content_subheading-1--link">Hollisterstier</span></h2>
-              <div className="hero__content_centercontainer">
-                <h1 className="hero__content_centercontainer-heading">Over 65 Years Of Allergy</h1>
-                <Link className='hero__content_centercontainer-link' href="/get-started">Explore</Link>
+            <div className="hero__content mix-blend-diff page-span-big">
+              <div className="hero__content_subcontainer1">
+                <h2 className="hero__content_subcontainer1-subheader--1">
+                  We&apos;re Providing Excellence<br/>
+                  In Partnership with<br/>
+                  <Link className='hero__content_subcontainer1-subheader--1---link' href="#">Hollisterstier</Link>
+                </h2>
+                <div className="hero__content_subcontainer1-line"></div>
               </div>
-              <h2 className="hero__content_subheader-2">Sole Supplier of Venom<br/>Immunotherapy Treatment<br/>in Canada</h2>
+              
+              <div className="hero__content_centercontainer">
+                <h1 className="hero__content_centercontainer-heading">Over <span className="hero__content_centercontainer-heading--span">65</span> Years of <span className="hero__content_centercontainer-heading--span">Allergy</span></h1>
+                {/* <Link className='hero__content_centercontainer-link' href="#">Explore</Link> */}
+              </div>
+
+              <div className="hero__content_subcontainer2">
+                <div className="hero__content_subcontainer2-line"></div>
+                <h2 className="hero__content_subcontainer2-subheader--2">
+                  <span className="hero__content_subcontainer2-subheader--2---span">Sole Supplier</span> of <Link className='hero__content_subcontainer2-subheader--2---span hero__content_subcontainer2-subheader--2---link' href="/venom-extracts">Venom</Link><br/>
+                  Immunotherapy Treatment<br/>
+                  in Canada</h2>
+              </div>
             </div>
+
+            <Link className='hero__content_centercontainer-link' href="#">Explore</Link>
 
             {/* Keep Scrolling */}
 
           </div>
 
           <div className="hero__maincontainer-end">
-            FORM
+            <div className="hero__form"></div>
           </div>
 
         </div>

@@ -5,7 +5,7 @@
 .hero {
 
     position: relative;
-    height: 130vh;
+    height: 145vh;
     overflow: hidden;
 
     display: flex;
@@ -48,9 +48,9 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgb(43, 43, 43);
+        background-color: rgb(38, 38, 38);
         mix-blend-mode: lighten;
-        backdrop-filter: blur(0);
+        // animation: bannerAnimation 3s infinite alternate ease-in;
     }
 
 
@@ -58,23 +58,127 @@
     &__content {
 
         @include absolute-center;
+        top: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 
-        &_subheader-1 {
+        // width: 90vw; // Controlled by the 'page-span-small' class (utils).
 
+        &_subcontainer1 {
+
+            display: flex;
+            flex-direction: column;
+
+            &-subheader--1 {
+                font-size: 2rem;
+                text-align: left;
+                font-weight: 400;
+                line-height: 1.4;
+                letter-spacing: 1px;
+
+                &---link {
+                    font-size: 2.4rem;
+                    font-weight: 600;
+                    transition: all .3s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+                    &:hover {
+                        letter-spacing: 1.4px;
+                    }
+                }
+            }
+            &-line {
+                width: 1px;
+                height: 45rem;
+                margin-top: 20px;
+                background-color: white;
+            }
         }
 
         &_centercontainer {
 
+            text-align: center;
+
             &-heading {
+                @include absolute-center;
+                top: 42%;
+                width: 100%;
+                font-size: 5.4rem;
+                font-weight: 300;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                // text-shadow: 0px 3px 6px #717171ab;
 
-            }
-            &-link {
-
+                &--span {
+                    font-weight: 400;
+                }
             }
         }
 
-        &_subheader-1 {
+        &_subcontainer2 {
             
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+
+            &-line {
+                right: 0;
+                width: 1px;
+                height: 45rem;
+                margin-bottom: 20px;
+                background-color: white;
+            }
+            &-subheader--2 {
+                font-size: 2rem;
+                text-align: right;
+                font-weight: 400;
+                line-height: 1.4;
+                letter-spacing: 1px;
+
+                &---span {
+                    font-size: 2.4rem;
+                    font-weight: 600;
+                }
+                &---link {
+                    // color: var(--color-venoms);
+                    transition: all .3s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+                    &:hover {
+                        color: #ffe597;
+                        letter-spacing: 1.5px;
+                    }
+                }
+            }
         }
+
+        &_centercontainer-link {
+            @include absolute-center;
+            position: relative;
+            top: 54%;
+            display: inline-block;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--color-dark-1);
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 2rem 6rem;
+            border-radius: 1000px;
+            box-shadow: 0 5px 14px rgba(0, 0, 0, 0.15);
+            text-transform: uppercase;
+
+            &::before {
+                content: "";
+                @include absolute-center;
+                width: 100%;
+                height: 100%;
+                background-color: inherit;
+                border-radius: 1000px;
+                opacity: 0;
+                transition: all .3s ease-out;
+            }
+        }
+    }
+
+    &__form {
+
     }
 }

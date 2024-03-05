@@ -1,13 +1,23 @@
 // Utility Classes
 
-.w-full {
-    width: 100%;
-}
 
+
+// ASPECT RATIOS
 .aspect-2-1 {
     aspect-ratio: 2/1;
 }
 
+
+// PAGE MARGINS
+.page-span-big {
+    width: 90vw;
+}
+.page-span-small {
+    width: 80vw;
+}
+
+
+// Flexbox Classes
 .flex {
     display: flex;
 }
@@ -24,26 +34,29 @@
     flex-direction: column;
 }
 
-.side-margins-small {
-    margin-left: 10rem;
-    margin-right: 10rem;
-}
-.side-margins-big {
-    margin-left: 15rem;
-    margin-right: 15rem;
-}
 
+
+
+// BASIC USEFUL
+.w-full {
+    width: 100%;
+}
 .bg-white {
     background-color: white;
 }
+.mix-blend-diff {
+    color: white !important;
+    mix-blend-mode: difference !important;
+}
 
 
+// SHADOWS etc.
 .banner-shadow {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 20%;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%);
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
     mix-blend-mode: color-burn;
 }
