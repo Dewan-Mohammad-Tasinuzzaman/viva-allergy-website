@@ -145,7 +145,6 @@
 
     &__item {
 
-        padding: 2.5rem 3rem;
         background-color: rgba(255, 255, 255, 0);
         transition: all .3s ease-out;
 
@@ -163,11 +162,13 @@
             font-weight: 400;
             color: var(--color-dark-1);
             width: 100%;
+            padding: 2.5rem 3rem;
 
             &-newtab {
                 width: 10px;
                 height: auto;
                 opacity: 80%;
+                margin-right: 3rem;
             }
         }
     }
@@ -187,6 +188,7 @@
         position: absolute;
         top: 50%;
         right: 0;
+        margin-right: 3rem;
         transform: translateY(-50%);
         width: 5px;
         height: 5px;

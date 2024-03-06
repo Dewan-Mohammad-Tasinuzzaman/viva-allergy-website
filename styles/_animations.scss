@@ -1,8 +1,18 @@
-@keyframes bannerAnimation {
-    0% {
-      backdrop-filter: blur(0);
-    }
-    100% {
-      backdrop-filter: blur(2px);
-    }
+@keyframes bannerBlurAnimation {
+  0% {
+    backdrop-filter: blur(0);
   }
+  100% {
+    backdrop-filter: blur(2px);
+  }
+}
+
+
+@keyframes bannerBrightnessAnimation {
+  0% {
+    background-color: rgb(38, 38, 38);
+  }
+  100% {
+    background-color: rgba(255, 236, 201, 0.08);
+  }
+}

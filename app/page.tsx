@@ -22,7 +22,7 @@ export default function Home() {
           layers={[
             {
               image: homeBannerImageUrl,
-              speed: -300,
+              speed: -70,
               translateY: [0, 20],
               opacity: [1, 1],
               scale: [1.1, 1, 'easeOutCubic'],
@@ -63,7 +63,7 @@ export default function Home() {
               </div>
             </div>
 
-            <Link className='hero__content_centercontainer-link' href="#">Explore</Link>
+            <div className='hero__maincontainer-start--linkbox'><Link className='hero__maincontainer-start--link' href="#scroll-tester">Explore</Link></div>
 
             {/* Keep Scrolling */}
 
@@ -77,7 +77,7 @@ export default function Home() {
 
       </div>
 
-      <div className="bg-white">
+      <div className="bg-white" id="scroll-tester">
         <h1>SCROLL</h1>
         <h1>SCROLL</h1>
         <h1>SCROLL</h1>
