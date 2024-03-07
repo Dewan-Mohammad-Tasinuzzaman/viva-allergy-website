@@ -6,7 +6,7 @@ function SmoothScroll({ children }) {
 
   return <ReactLenis root options={{
     lerp: 0.08,
-    duration: 10,
+    duration: 5,
   }}>{children}</ReactLenis>;
 
 }

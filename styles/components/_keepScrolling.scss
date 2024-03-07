@@ -1,0 +1,31 @@
+.keepScrolling {
+
+    display: flex;
+    align-items: center;
+
+    &__icons {
+        height: 1.8rem;
+        width: 1.8rem;
+        display: inline-block;
+        opacity: 0.7;
+        animation: KeepRotatingAnimation 2s ease-in-out infinite forwards;
+
+        &_1 {
+            // animation: KeepRotatingAnimation 2s ease-in-out infinite forwards;
+        }
+        &_2 {
+            // animation: KeepRotatingReverseAnimation 2s ease-in-out infinite forwards;
+        }
+    }
+
+    &__text {
+        font-size: 1.8rem;
+        font-weight: 400;
+        letter-spacing: 1px;
+        color: white;
+        text-transform: uppercase;
+        margin-right: 3rem;
+        margin-left: 3rem;
+        animation: OpacityPulseAnimation 2s cubic-bezier(0.37, 0, 0.63, 1) infinite reverse;
+    }
+}

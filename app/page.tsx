@@ -1,15 +1,19 @@
 'use client'; // Converted to client component
 import Image from "next/image";
-import "../styles/main.scss";
+import "@/styles/main.scss";
 import { ParallaxBanner } from "react-scroll-parallax";
-import BannerImage from "@/public/assets/images/home-banner-photo-enhanced.jpg"
 import Link from 'next/link'
+import KeepScrolling from "@/components/KeepScrolling";
+import MiniQuoteForm from "@/app/MiniQuoteForm";
+import ButtonPrimary from "@/components/ButtonPrimary";
 
 export default function Home() {
 
 
     // Convert the image import to a string URL
-    const homeBannerImageUrl = "./assets/images/home-banner-photo-enhanced-cropped.jpg";
+    const homeBannerImage = "/assets/images/home-banner-photo-enhanced-cropped.jpg";
+    const introImage01 = "/assets/images/ap-dog-image.jpg";
+    const introImage02 = "/assets/images/bee-image-1.jpg";
 
 
   return (
@@ -21,7 +25,7 @@ export default function Home() {
         <ParallaxBanner
           layers={[
             {
-              image: homeBannerImageUrl,
+              image: homeBannerImage,
               speed: -70,
               translateY: [0, 20],
               opacity: [1, 1],
@@ -66,59 +70,122 @@ export default function Home() {
             <div className='hero__maincontainer-start--linkbox'><Link className='hero__maincontainer-start--link' href="#scroll-tester">Explore</Link></div>
 
             {/* Keep Scrolling */}
+            <div className="hero__maincontainer-start--keepScrolling">
+              <KeepScrolling />
+            </div>
 
           </div>
 
           <div className="hero__maincontainer-end">
-            <div className="hero__form"></div>
+            <div className="hero__form">
+              <MiniQuoteForm />
+            </div>
           </div>
 
         </div>
 
       </div>
 
-      <div className="bg-white" id="scroll-tester">
-        <h1>SCROLL</h1>
-        <h1>SCROLL</h1>
-        <h1>SCROLL</h1>
-        <h1>SCROLL</h1>
-        <h1>SCROLL</h1>
-        <h1>SCROLL</h1>
-        <h1>SCROLL</h1>
-        <h1>SCROLL</h1>
-        <h1>SCROLL</h1>
-        <h1>SCROLL</h1>
-        <h1>SCROLL</h1>
-        <h1>SCROLL</h1>
-        <h1>SCROLL</h1>
-        <h1>SCROLL</h1>
-        <h1>SCROLL</h1>
-        <h1>SCROLL</h1>
-        <h1>SCROLL</h1>
-        <h1>SCROLL</h1>
-        <h1>SCROLL</h1>
-        <h1>SCROLL</h1>
-        <h1>SCROLL</h1>
-        <h1>SCROLL</h1>
-        <h1>SCROLL</h1>
-        <h1>SCROLL</h1>
-        <h1>SCROLL</h1>
-        <h1>SCROLL</h1>
-        <h1>SCROLL</h1>
-        <h1>SCROLL</h1>
-        <h1>SCROLL</h1>
-        <h1>SCROLL</h1>
-        <h1>SCROLL</h1>
-        <h1>SCROLL</h1>
-        <h1>SCROLL</h1>
-        <h1>SCROLL</h1>
-        <h1>SCROLL</h1>
-        <h1>SCROLL</h1>
-        <h1>SCROLL</h1>
-        <h1>SCROLL</h1>
-        <h1>SCROLL</h1>
-        <h1>SCROLL</h1>
-      </div>
+      <section id="section-allergy-extracts" className="allergy-extracts page-margins-big">
+          <div className="allergy-extracts__intro">
+            <div className="allergy-extracts__intro_content">
+              <h3 className="header-primary allergy-extracts__intro_content-header">Allergy Extracts</h3>
+              <p className="text-primary allergy-extracts__intro_content-text">
+                With a commitment to excellence, Viva Allergy offers a wide selection of premium allergy extracts. Be empowered to proactively and efficiently meet the specific requirements of your patients, ensuring optimal care and improved well-being.
+              </p>
+              <div className="allergy-extracts__intro_content-link">
+                <ButtonPrimary href="/product-catalogue" label="Product Catalogue" />
+              </div>
+            </div>
+
+            <div className="allergy-extracts__intro_photos">
+              <div className="allergy-extracts__intro_photos-1">
+                <ParallaxBanner
+                  layers={[
+                    {
+                      image: introImage02,
+                      speed: -50,
+                      translateY: [0, 20],
+                      shouldAlwaysCompleteAnimation: true,
+                    },
+                  ]}
+                  className="aspect-1-1 allergy-extracts__intro_photos-1--img"
+                />
+                <div className="allergy-extracts__intro_photos-1--filter"></div>
+              </div>
+
+              <div className="allergy-extracts__intro_photos-2">
+                <ParallaxBanner
+                  layers={[
+                    {
+                      image: introImage01,
+                      speed: -50,
+                      translateY: [0, 20],
+                      shouldAlwaysCompleteAnimation: true,
+                    },
+                  ]}
+                  className="aspect-1-1 allergy-extracts__intro_photos-2--img"
+                />
+                <div className="allergy-extracts__intro_photos-2--filter"></div>
+              </div>
+            </div>
+          </div>
+      </section>
+
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
+      <div className="scroll">SCROLL</div>
 
     </main>
     

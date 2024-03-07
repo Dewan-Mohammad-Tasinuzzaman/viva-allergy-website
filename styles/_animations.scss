@@ -16,3 +16,36 @@
     background-color: rgba(255, 236, 201, 0.08);
   }
 }
+
+
+@keyframes KeepRotatingAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+@keyframes KeepRotatingReverseAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(-90deg);
+  }
+}
+
+@keyframes OpacityPulseAnimation {
+  0%, 100% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 1;
+  }
+}
