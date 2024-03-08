@@ -1,8 +1,12 @@
+import LoadingAnimation from '@/components/LoadingAnimation'
 import React from 'react'
 
 const VenomPage = () => {
   return (
-    <div>VenomPage</div>
+    <main>
+      VenomPage
+      <LoadingAnimation />
+    </main>
   )
 }
 

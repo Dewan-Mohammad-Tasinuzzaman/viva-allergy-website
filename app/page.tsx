@@ -12,6 +12,7 @@ import CircularImage from "@/components/CircularImage";
 import AllergyExtract from "@/components/AllergyExtract";
 import { useState } from "react";
 import SideModal from "@/components/SideModal";
+import LoadingAnimation from "@/components/LoadingAnimation";
 
 export default function Home() {
 
@@ -153,6 +154,8 @@ export default function Home() {
       <div className={isModalOpen ? "sideModalContainer sideModalContainer__show" : "sideModalContainer"}>
         <SideModal isOpen={isModalOpen} onClose={closeModal} imageURL01={selectedImage} imageURL02="" imageURL03="" title={selectedTitle} description={selectedDescription} />
       </div>
+
+      <LoadingAnimation />
     </main>
     
   );
