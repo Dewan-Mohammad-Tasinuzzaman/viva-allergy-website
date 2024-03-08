@@ -18,7 +18,7 @@
         height: 100%;
         border-radius: 1000px;
         // background-color: var(--color-dark-2);
-        background-image: linear-gradient(var(--color-dark-2), var(--color-dark-2)), url('/public/assets/images/noise-filter.png');
+        background-image: linear-gradient(var(--color-dark-1), var(--color-dark-1)), url('/public/assets/images/noise-filter.png');
         mix-blend-mode: color-dodge;
         backdrop-filter: blur(10px);
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);

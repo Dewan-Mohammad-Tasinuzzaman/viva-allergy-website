@@ -1,4 +1,6 @@
 'use client'; // Converted to client component
+
+
 import Image from "next/image";
 import "@/styles/main.scss";
 import { ParallaxBanner } from "react-scroll-parallax";
@@ -6,14 +8,45 @@ import Link from 'next/link'
 import KeepScrolling from "@/components/KeepScrolling";
 import MiniQuoteForm from "@/app/MiniQuoteForm";
 import ButtonPrimary from "@/components/ButtonPrimary";
+import CircularImage from "@/components/CircularImage";
+import AllergyExtract from "@/components/AllergyExtract";
+import { useState } from "react";
+import SideModal from "@/components/SideModal";
 
 export default function Home() {
 
 
     // Convert the image import to a string URL
     const homeBannerImage = "/assets/images/home-banner-photo-enhanced-cropped.jpg";
-    const introImage01 = "/assets/images/ap-dog-image.jpg";
-    const introImage02 = "/assets/images/bee-image-1.jpg";
+    const apDogImage = "/assets/images/ap-dog-image.jpg";
+    const beeImage = "/assets/images/bee-image-1.jpg";
+    const allergyImageVenom = "/assets/images/venoms_icon.png";
+    const allergyImageEpidermal = "/assets/images/epidermals_dog_icon.png";
+    const allergyImageMites = "/assets/images/mites_icon.png";
+    const allergyImagePollen = "/assets/images/grass-pollen_icon.png";
+    const allergyImageInsects = "/assets/images/insect_icon.png";
+    const allergyImageMolds = "/assets/images/molds_icon.png";
+
+
+    // FOR MODAL (Opening and closing)
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [selectedTitle, setSelectedTitle] = useState('');
+    const [selectedDescription, setSelectedDescription] = useState('');
+    const [selectedImage, setSelectedImage] = useState('');
+
+    const openModal = (title: string, description: string, image: string) => {
+      setIsModalOpen(true);
+      setSelectedTitle(title);
+      setSelectedDescription(description);
+      setSelectedImage(image);
+    };
+
+    const closeModal = () => {
+      setIsModalOpen(false);
+      setSelectedTitle('');
+      setSelectedDescription('');
+      setSelectedImage('');
+    };
 
 
   return (
@@ -27,7 +60,7 @@ export default function Home() {
             {
               image: homeBannerImage,
               speed: -70,
-              translateY: [0, 20],
+              translateY: [0, 22],
               opacity: [1, 1],
               scale: [1.1, 1, 'easeOutCubic'],
               shouldAlwaysCompleteAnimation: true,
@@ -67,7 +100,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className='hero__maincontainer-start--linkbox'><Link className='hero__maincontainer-start--link' href="#scroll-tester">Explore</Link></div>
+            <div className='hero__maincontainer-start--linkbox'><Link className='hero__maincontainer-start--link' href="#section-allergy-extracts">Explore</Link></div>
 
             {/* Keep Scrolling */}
             <div className="hero__maincontainer-start--keepScrolling">
@@ -91,7 +124,7 @@ export default function Home() {
             <div className="allergy-extracts__intro_content">
               <h3 className="header-primary allergy-extracts__intro_content-header">Allergy Extracts</h3>
               <p className="text-primary allergy-extracts__intro_content-text">
-                With a commitment to excellence, Viva Allergy offers a wide selection of premium allergy extracts. Be empowered to proactively and efficiently meet the specific requirements of your patients, ensuring optimal care and improved well-being.
+                <span className="marg-left-small"></span>With a commitment to excellence, Viva Allergy offers a wide selection of premium allergy extracts. Be empowered to proactively and efficiently meet the specific requirements of your patients, ensuring optimal care and improved well-being.
               </p>
               <div className="allergy-extracts__intro_content-link">
                 <ButtonPrimary href="/product-catalogue" label="Product Catalogue" />
@@ -99,94 +132,27 @@ export default function Home() {
             </div>
 
             <div className="allergy-extracts__intro_photos">
-              <div className="allergy-extracts__intro_photos-1">
-                <ParallaxBanner
-                  layers={[
-                    {
-                      image: introImage02,
-                      speed: -50,
-                      translateY: [0, 20],
-                      shouldAlwaysCompleteAnimation: true,
-                    },
-                  ]}
-                  className="aspect-1-1 allergy-extracts__intro_photos-1--img"
-                />
-                <div className="allergy-extracts__intro_photos-1--filter"></div>
-              </div>
-
-              <div className="allergy-extracts__intro_photos-2">
-                <ParallaxBanner
-                  layers={[
-                    {
-                      image: introImage01,
-                      speed: -50,
-                      translateY: [0, 20],
-                      shouldAlwaysCompleteAnimation: true,
-                    },
-                  ]}
-                  className="aspect-1-1 allergy-extracts__intro_photos-2--img"
-                />
-                <div className="allergy-extracts__intro_photos-2--filter"></div>
+              <div className="allergy-extracts__intro_photos-container">
+                  <CircularImage img_href={beeImage} classNameContainer="allergy-extracts__intro_photos-1" classNameImage="allergy-extracts__intro_photos-1--image" classNameFilter="allergy-extracts__intro_photos-1--filter" />
+                  <CircularImage img_href={apDogImage} classNameContainer="allergy-extracts__intro_photos-2" classNameImage="allergy-extracts__intro_photos-2--image" classNameFilter="allergy-extracts__intro_photos-2--filter" />
               </div>
             </div>
           </div>
+
+          <div className="allergy-extracts__extracts">
+            <AllergyExtract className="allergy-extracts__extracts_extract" title="Venom" description="" imageURL={allergyImageVenom} onClick={() => openModal('Venom', 'As the sole venom extract supplier in North America, we remain dedicated to ensuring adequate supply and quality product.', allergyImageVenom)} />
+            <AllergyExtract className="allergy-extracts__extracts_extract" title="Epidermal" description="" imageURL={allergyImageEpidermal} onClick={() => openModal('Epidermal', 'The only extract on the market fulfilling the practice parameter’s recommended dosing of 15 mcg of Can f 1.', allergyImageEpidermal)} />
+            <AllergyExtract className="allergy-extracts__extracts_extract" title="Mite" description="" imageURL={allergyImageMites} onClick={() => openModal('Mite', 'Rely on our 30,000 au/mL mite for diagnosing patients.', allergyImageMites)} />
+            <AllergyExtract className="allergy-extracts__extracts_extract" title="Pollen" description="" imageURL={allergyImagePollen} onClick={() => openModal('Pollen', 'Our inventory of over 70 pollen extracts allows you to test and treat based on local-to-you pollens.', allergyImagePollen)} />
+            <AllergyExtract className="allergy-extracts__extracts_extract" title="Insect" description="" imageURL={allergyImageInsects} onClick={() => openModal('Insect', 'Diagnose and treat fire ant and cockroach allergy patients with our insect extracts.', allergyImageInsects)} />
+            <AllergyExtract className="allergy-extracts__extracts_extract" title="Mold" description="" imageURL={allergyImageMolds} onClick={() => openModal('Mold', 'Current practice parameters recommend using the strongest concentrates available and our molds are 1:10 w/v strength.', allergyImageMolds)} />
+          </div>
       </section>
 
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
-      <div className="scroll">SCROLL</div>
 
+      <div className={isModalOpen ? "sideModalContainer sideModalContainer__show" : "sideModalContainer"}>
+        <SideModal isOpen={isModalOpen} onClose={closeModal} imageURL01={selectedImage} imageURL02="" imageURL03="" title={selectedTitle} description={selectedDescription} />
+      </div>
     </main>
     
   );

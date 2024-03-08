@@ -36,7 +36,7 @@ const NavBar = () => {
         </li>
         <li onMouseEnter={() => setIsHoverProducts(true)} onMouseLeave={() => setIsHoverProducts(false)} className='navbar__options_item'>
           <div className="flex align-items-center">
-            <p className="navbar__options_item-link">Products</p>
+            <p className={`${("/venom-extracts" === currentPath || "/product-catalogue" === currentPath || "/scratch-form" === currentPath || "/skin-test-devices" === currentPath) ? 'active-page-nav' : ''} navbar__options_item-link`}>Products</p>
             <Image src={Arrow_Icon} alt="down-arrow" unoptimized={true} className="navbar__options_item-arrow" />
           </div>
           <ul onMouseEnter={() => setIsHoverProducts(true)} className={`${isHoverProducts ? 'show-sub-menu' : ''} sub-menu`}>
@@ -47,7 +47,7 @@ const NavBar = () => {
               <Link className={`${"/product-catalogue" === currentPath ? 'active-sub-menu' : ''} sub-menu__item_link`} href="/product-catalogue">Product Catalogue</Link>
             </li>
             <li className="sub-menu__item">
-              <Link className={`${"/" === currentPath ? 'active-sub-menu' : ''} sub-menu__item_link`} href="/">Scratch Form</Link>
+              <Link className={`${"/scratch-form" === currentPath ? 'active-sub-menu' : ''} sub-menu__item_link`} href="/scratch-form">Scratch Form</Link>
             </li>
             <li className="sub-menu__item">
               <Link className={`${"/skin-test-devices" === currentPath ? 'active-sub-menu' : ''} sub-menu__item_link`} href="/skin-test-devices">Skin-Test Devices</Link>
@@ -56,7 +56,7 @@ const NavBar = () => {
         </li>
         <li onMouseEnter={() => setIsHoverAbout(true)} onMouseLeave={() => setIsHoverAbout(false)} className='navbar__options_item'>
           <div className="flex align-items-center">
-            <p className="navbar__options_item-link">About</p>
+            <p className={`${("/about" === currentPath) ? 'active-page-nav' : ''} navbar__options_item-link`}>About</p>
             <Image src={Arrow_Icon} alt="down-arrow" unoptimized={true} className="navbar__options_item-arrow" />
           </div>
           <ul onMouseEnter={() => setIsHoverAbout(true)} className={`${isHoverAbout ? 'show-sub-menu' : ''} sub-menu`}>

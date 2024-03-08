@@ -1,0 +1,111 @@
+
+.allergyExtract {
+
+    background-color: var(--color-white);
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    padding: 2rem;
+    padding-right: 4rem;
+    border-radius: 10000px;
+    box-shadow: 0 4px 50px rgba(0, 0, 0, 0.07);
+    cursor: pointer;
+    transform: scale(1) translateY(0);
+    transition: all .3s ease-out;
+
+    &:hover {
+        transform: scale(1.05) translateY(-10px);
+        box-shadow: 0 4px 70px rgba(0, 0, 0, 0.07);
+
+        .allergyExtract__interaction_base {
+            width: 120%;
+            height: 120%;
+        }
+        .allergyExtract__interaction_top {
+            width: 90%;
+            height: 90%;
+        }
+        .allergyExtract__interaction_top-infoIcon {
+            opacity: 1;
+        }
+    }
+    &:active {
+        transform: scale(1) translateY(-2px);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.07);
+    }
+
+    &__pictureContainer {
+
+        display: inline-block;
+        position: relative;
+        border-radius: 10000px;
+        overflow: hidden;
+        width: 15rem;
+        height: 15rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+        transform: translateY(0) scale(1);
+
+        &_img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: rotate(0deg);
+            animation: ExtractsImgFilterRotate 4s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+        }
+
+        &_filter {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10000px;
+            box-shadow: inset -10px 10px 20px rgba(255, 255, 255, 0.5), inset 10px -10px 20px rgba(0, 0, 0, 0.25);
+        }
+    }
+
+    &__title {
+        font-size: 2.4rem;
+        color: var(--color-dark-1);
+        user-select: none;
+    }
+
+    &__interaction {
+
+        position: relative;
+        margin-left: auto;
+        width: 3rem;
+        height: 3rem;
+
+        &_base {
+            @include absolute-center;
+            width: 100%;
+            height: 100%;
+            background-color: var(--color-white);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+            border-radius: 1000px;
+            animation: ExtractIneractionScalePulse 2s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+            transition: all .3s ease-out;
+        }
+        &_top {
+            @include absolute-center;
+            width: 30%;
+            height: 30%;
+            background-color: var(--color-dark-2);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            border-radius: 1000px;
+            animation: ExtractIneractionScalePulse 2s linear infinite reverse;
+            transition: all .3s ease-out;
+
+            &-infoIcon {
+                @include absolute-center;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                transition: all .3s ease-out;
+            }
+        }
+    }
+}

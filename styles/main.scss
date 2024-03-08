@@ -5,6 +5,7 @@
 @import './utils';
 @import './mixins';
 @import './animations';
+@import './typography';
 
 
 // Pages
@@ -19,10 +20,12 @@
 
 // Component-Specific-Styles
 @import './components/buttons';
-@import './components/typography';
 @import './components/navbar';
 @import './components/keepScrolling';
 @import './components/miniQuoteForm';
+@import './components/circularImage';
+@import './components/allergyExtracts';
+@import './components/sideModal';
 
 
 // ROOT:
