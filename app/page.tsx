@@ -88,7 +88,7 @@ export default function Home() {
               </div>
               
               <div className="hero__content_centercontainer">
-                <h1 className="hero__content_centercontainer-heading">Over <span className="hero__content_centercontainer-heading--span">66</span> Years of <span className="hero__content_centercontainer-heading--span">Allergy</span></h1>
+                <h1 className="hero__content_centercontainer-heading">Over <span className="hero__content_centercontainer-heading--span">65</span> Years of <span className="hero__content_centercontainer-heading--span">Allergy</span></h1>
                 {/* <Link className='hero__content_centercontainer-link' href="#">Explore</Link> */}
               </div>
 
