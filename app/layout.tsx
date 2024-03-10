@@ -27,10 +27,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={lato.className}>
         <NavBar />
-          <Providers>
-            <SmoothScroll>{children}</SmoothScroll>
-          </Providers>
-          <SpeedInsights />
+        <Providers>
+          <SmoothScroll>{children}</SmoothScroll>
+        </Providers>
+        <SpeedInsights />
       </body>
     </html>
   );

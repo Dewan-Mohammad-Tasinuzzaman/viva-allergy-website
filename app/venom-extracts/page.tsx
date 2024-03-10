@@ -5,7 +5,7 @@ const VenomPage = () => {
   return (
     <main>
       VenomPage
-      <LoadingAnimation />
+      <LoadingAnimation customClassName="venom-loader" />
     </main>
   )
 }

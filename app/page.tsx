@@ -10,9 +10,11 @@ import MiniQuoteForm from "@/app/MiniQuoteForm";
 import ButtonPrimary from "@/components/ButtonPrimary";
 import CircularImage from "@/components/CircularImage";
 import AllergyExtract from "@/components/AllergyExtract";
+import Logo_Black from '@/public/assets/svgs/logo_icon-black.svg';
 import { useState } from "react";
 import SideModal from "@/components/SideModal";
 import LoadingAnimation from "@/components/LoadingAnimation";
+import Footer from "@/components/Footer";
 
 export default function Home() {
 
@@ -24,9 +26,10 @@ export default function Home() {
     const allergyImageVenom = "/assets/images/venoms_icon.png";
     const allergyImageEpidermal = "/assets/images/epidermals_dog_icon.png";
     const allergyImageMites = "/assets/images/mites_icon.png";
-    const allergyImagePollen = "/assets/images/grass-pollen_icon.png";
+    const allergyImagePollen = "/assets/images/pollen_icon.png";
     const allergyImageInsects = "/assets/images/insect_icon.png";
     const allergyImageMolds = "/assets/images/molds_icon.png";
+    const skinTestsImage = "/assets/images/skin-tests-image.png";
 
 
     // FOR MODAL (Opening and closing)
@@ -150,12 +153,51 @@ export default function Home() {
           </div>
       </section>
 
+      <section id="section-skin-tests" className="skin-tests">
+          <div className="skin-tests__container">
+
+            <div className="skin-tests__container_imagebox">
+              <ParallaxBanner
+              layers={[
+                  {
+                  image: skinTestsImage,
+                  speed: -20,
+                  translateY: [0, 20],
+                  scale: [1, 1.08, 'easeOutCubic'],
+                  shouldAlwaysCompleteAnimation: true,
+                  },
+              ]}
+              className={`aspect-1-1 skin-tests__container_imagebox-img`}
+              />
+              <div className="skin-tests__container_imagebox-filter"></div>
+              <div className="skin-tests__container_imagebox-object-1"></div>
+              <div className="skin-tests__container_imagebox-object-2"></div>
+              <div className="skin-tests__container_imagebox-logobox">
+                <Image src={Logo_Black} alt="Logo" unoptimized={true} className="skin-tests__container_imagebox-logobox--logo" />
+              </div>
+            </div>
+
+            <div className="skin-tests__container_content">
+              <h3 className="header-primary skin-tests__container_content-header">Skin-Test Kits</h3>
+              <p className="text-primary skin-tests__container_content-text">
+                <span className="marg-left-small"></span>Not knowing an invisible and potentially dangerous threat can be scary. We have the most efficient ways to identify if something might affect you and numerous ways to ensure Your well-being.
+              </p>
+              <div className="skin-tests__container_content-link">
+                <ButtonPrimary href="/skin-test-devices" label="See More" />
+              </div>
+            </div>
+
+          </div>
+      </section>
+
 
       <div className={isModalOpen ? "sideModalContainer sideModalContainer__show" : "sideModalContainer"}>
         <SideModal isOpen={isModalOpen} onClose={closeModal} imageURL01={selectedImage} imageURL02="" imageURL03="" title={selectedTitle} description={selectedDescription} />
       </div>
 
-      <LoadingAnimation />
+      <Footer />
+
+      <LoadingAnimation customClassName="" />
     </main>
     
   );

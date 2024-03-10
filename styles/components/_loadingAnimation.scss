@@ -6,13 +6,15 @@
     width: 100vw;
     height: 100vh;
     background-color: var(--color-trees);
+    // background-color: var(--color-dark-1);
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 200;
     opacity: 1;
+    transform: translateY(0);
     transition: all .3s ease-out;
-    animation: LoadingAnimation 1s ease-out forwards;
+    animation: LoadingAnimation 1.2s cubic-bezier(0.65, 0, 0.35, 1) forwards;
     animation-delay: .7s;
 
     &__logoBox {
@@ -32,17 +34,26 @@
 }
 
 
+.venom-loader {
+    background-color: var(--color-venoms);
+}
+
+
 @keyframes LoadingAnimation {
     0% {
-      opacity: 1;
-      display: flex;
-    }
-    50% {
-        opacity: 0;
+        transform: translateY(0);
         display: flex;
     }
+    50% {
+        transform: translateY(100%);
+        display: flex;
+    }
+    55% {
+        transform: translateY(100%);
+        display: none;
+    }
     100% {
-        opacity: 0;
+        transform: translateY(100%);
         display: none;
     }
 }
