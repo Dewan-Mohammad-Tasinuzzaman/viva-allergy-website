@@ -6,6 +6,7 @@ import { Providers } from './Providers';
 import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 import SmoothScroll from "@/components/SmoothScroll";
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import Footer from "@/components/Footer";
 
 const lato = Lato({
   subsets: ["latin"],
@@ -28,7 +29,10 @@ export default function RootLayout({
       <body className={lato.className}>
         <NavBar />
         <Providers>
-          <SmoothScroll>{children}</SmoothScroll>
+          <SmoothScroll>
+            {children}
+            <Footer />
+          </SmoothScroll>
         </Providers>
         <SpeedInsights />
       </body>

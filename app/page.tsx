@@ -161,8 +161,8 @@ export default function Home() {
               layers={[
                   {
                   image: skinTestsImage,
-                  speed: -20,
-                  translateY: [0, 20],
+                  speed: -30,
+                  translateY: [0, 30],
                   scale: [1, 1.08, 'easeOutCubic'],
                   shouldAlwaysCompleteAnimation: true,
                   },
@@ -194,8 +194,7 @@ export default function Home() {
       <div className={isModalOpen ? "sideModalContainer sideModalContainer__show" : "sideModalContainer"}>
         <SideModal isOpen={isModalOpen} onClose={closeModal} imageURL01={selectedImage} imageURL02="" imageURL03="" title={selectedTitle} description={selectedDescription} />
       </div>
-
-      <Footer />
+      
 
       <LoadingAnimation customClassName="" />
     </main>
