@@ -5,6 +5,7 @@ import BeeIllustration from '@/public/assets/svgs/bee-illustration-footer.svg';
 import Logo_White from '@/public/assets/svgs/logo_icon-white.svg';
 import Logo_Cream01 from '@/public/assets/svgs/big_viva_icon-gradient-cream-01.svg';
 import Logo_Cream02 from '@/public/assets/svgs/big_viva_icon-gradient-cream-02.svg';
+import Logo_Full_White from '@/public/assets/svgs/logo_full-white.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons/faLinkedinIn';
 
@@ -57,8 +58,26 @@ const Footer = () => {
                         <Link className='footer-link footer__main_content-segment02--skintests---link' href="/skin-test-devices">Quintip® Skin Test Device</Link>
                     </div>
                 </div>
-
-                <div className="footer__main_content-segment footer__main_content-segment03">CONTENT</div>
+                <div className="footer__main_content-segment footer__main_content-segment03">
+                    <div className="footer__main_content-segment03--about">
+                        <h4 className="footer-title footer__main_content-segment03--about---title">Learn More</h4>
+                        <Link className='footer-link footer__main_content-segment03--about---link' href="/about">About Us</Link>
+                        <Link className='footer-link footer__main_content-segment03--about---link' href="/contacts">Contact Us</Link>
+                    </div>
+                    <div className="footer__main_content-segment03--partners">
+                        <h4 className="footer-title footer__main_content-segment03--partners---title">Our Partners</h4>
+                        <Link className='footer-link footer__main_content-segment03--partners---link' href="https://www.junopharm.ca/" target="_blank">Juno Pharmaceuticals</Link>
+                        <Link className='footer-link footer__main_content-segment03--partners---link' href="https://www.hsallergy.com/" target="_blank">HollisterStier</Link>
+                    </div>
+                    <div className="footer__main_content-segment03--contact">
+                        <Image src={Logo_Full_White} alt="Viva Allergy logo with icon" unoptimized={true} className="footer__main_content-segment03--contact---logo" />
+                        <p className="text-primary footer__main_content-segment03--contact---text">
+                        11255 Rue Hamon, Montreal,<br/>
+                        Quebec H3M 3E4, CA<br/>
+                        Tel: +1 647 787 8878<br/>
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
         <div className="footer__copyrightbox">

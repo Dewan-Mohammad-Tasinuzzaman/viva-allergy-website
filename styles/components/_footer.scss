@@ -70,13 +70,16 @@
             &-segment {
 
                 flex: 1;
+                min-height: 55rem;
 
                 &:not(:last-child) {
-                    padding-right: 2rem;
+                    padding-right: 8rem;
                     border-right: 1px solid rgba(255, 255, 255, 0.3);
                 }
 
                 &01 {
+
+                    // padding-right: 10rem !important;
 
                     &--about-title {
                         font-size: calc(1.6rem * 1.20 * 3) !important;
@@ -178,7 +181,72 @@
                 }
 
                 &03 {
+                    &--about {
 
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+
+                        &---title {
+                            margin-bottom: 1rem;
+                        }
+                        &---link {
+
+                            &:hover {
+                                .footer__main_content-segment02--extracts---link----span {
+                                    color: var(--color-light-cream-2);
+                                }
+                            }
+                            &----span {
+                                color: var(--color-venoms);
+                                font-weight: 400;
+                                transition: all .3s ease-out;
+                            }
+                        }
+                    }
+
+                    &--partners {
+
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        margin-top: 5rem;
+
+                        &---title {
+                            margin-bottom: 1rem;
+                        }
+                        &---link {
+
+                            &:hover {
+                                .footer__main_content-segment02--extracts---link----span {
+                                    color: var(--color-light-cream-2);
+                                }
+                            }
+                            &----span {
+                                color: var(--color-venoms);
+                                font-weight: 400;
+                                transition: all .3s ease-out;
+                            }
+                        }
+                    }
+
+                    &--contact {
+
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        margin-top: 2rem;
+
+                        &---logo {
+                            width: 22rem;
+                            height: auto;
+                            margin-bottom: 1rem;
+                        }
+                        &---text {
+                            color: var(--color-white);
+                            font-weight: 300;
+                        }
+                    }
                 }
             }
         }
@@ -187,6 +255,7 @@
 
     &__copyrightbox {
 
+        position: relative;
         background-color: var(--color-dark-copyrightbar);
         padding: 3rem;
 

@@ -44,13 +44,13 @@ const NavBar = () => {
               <Link className={`${"/venom-extracts" === currentPath ? 'active-sub-menu' : ''} sub-menu__item_link`} href="/venom-extracts">Venom Extracts</Link>
             </li>
             <li className="sub-menu__item">
+              <Link className={`${"/skin-test-devices" === currentPath ? 'active-sub-menu' : ''} sub-menu__item_link`} href="/skin-test-devices">Skin-Test Devices</Link>
+            </li>
+            <li className="sub-menu__item">
               <Link className={`${"/product-catalogue" === currentPath ? 'active-sub-menu' : ''} sub-menu__item_link`} href="/product-catalogue">Product Catalogue</Link>
             </li>
             <li className="sub-menu__item">
               <Link className={`${"/scratch-form" === currentPath ? 'active-sub-menu' : ''} sub-menu__item_link`} href="/scratch-form">Scratch Form</Link>
-            </li>
-            <li className="sub-menu__item">
-              <Link className={`${"/skin-test-devices" === currentPath ? 'active-sub-menu' : ''} sub-menu__item_link`} href="/skin-test-devices">Skin-Test Devices</Link>
             </li>
           </ul>
         </li>
