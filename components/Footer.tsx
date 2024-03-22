@@ -23,7 +23,7 @@ const Footer = () => {
                 <p className="text-primary footer__request-quote_content-text">
                     <span className="marg-left-small"></span>Our knowledgeable customer service representatives are available to take your order<br/>or answer any questions you have about our products.
                 </p>
-                <Link className='btn-primary footer__request-quote_content-button' href="/get-started">Get Started</Link>
+                <Link className='btn-primary footer__request-quote_content-button' href="/contacts">Get Started</Link>
             </div>
         </div>
 

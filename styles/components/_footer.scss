@@ -61,25 +61,19 @@
 
         &_content {
             
-            display: flex;
-            align-items: start;
-            justify-content: start;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
             gap: 5rem;
             color: var(--color-white);
+            justify-items: center;
 
             &-segment {
 
-                flex: 1;
-                min-height: 55rem;
-
                 &:not(:last-child) {
-                    padding-right: 8rem;
-                    border-right: 1px solid rgba(255, 255, 255, 0.3);
+                    
                 }
 
                 &01 {
-
-                    // padding-right: 10rem !important;
 
                     &--about-title {
                         font-size: calc(1.6rem * 1.20 * 3) !important;

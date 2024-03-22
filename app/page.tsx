@@ -19,7 +19,7 @@ import Footer from "@/components/Footer";
 export default function Home() {
 
 
-    // Convert the image import to a string URL
+    // Images for ParallaxBanner
     const homeBannerImage = "/assets/images/home-banner-photo-enhanced-cropped.jpg";
     const apDogImage = "/assets/images/ap-dog-image.jpg";
     const beeImage = "/assets/images/bee-image-1.jpg";
@@ -104,7 +104,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className='hero__maincontainer-start--linkbox'><Link className='hero__maincontainer-start--link' href="#section-allergy-extracts">Explore</Link></div>
+            <div className='hero__maincontainer-start--linkbox'><Link className='hero__maincontainer-start--link' href="#allergy-extracts">Explore</Link></div>
 
             {/* Keep Scrolling */}
             <div className="hero__maincontainer-start--keepScrolling">
@@ -113,17 +113,17 @@ export default function Home() {
 
           </div>
 
-          <div className="hero__maincontainer-end">
+          {/* <div className="hero__maincontainer-end">
             <div className="hero__form">
               <MiniQuoteForm />
             </div>
-          </div>
+          </div> */}
 
         </div>
 
       </div>
 
-      <section id="section-allergy-extracts" className="allergy-extracts page-margins-big">
+      <section id="allergy-extracts" className="allergy-extracts page-margins-big">
           <div className="allergy-extracts__intro">
             <div className="allergy-extracts__intro_content">
               <h3 className="header-primary allergy-extracts__intro_content-header">Allergy Extracts</h3>

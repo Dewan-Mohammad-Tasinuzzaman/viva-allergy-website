@@ -50,7 +50,7 @@ const NavBar = () => {
               <Link className={`${"/product-catalogue" === currentPath ? 'active-sub-menu' : ''} sub-menu__item_link`} href="/product-catalogue">Product Catalogue</Link>
             </li>
             <li className="sub-menu__item">
-              <Link className={`${"/scratch-form" === currentPath ? 'active-sub-menu' : ''} sub-menu__item_link`} href="/scratch-form">Scratch Form</Link>
+              <Link className={`${"/scratch-form" === currentPath ? 'active-sub-menu' : ''} sub-menu__item_link`} href="/scratch-form">Order Form</Link>
             </li>
           </ul>
         </li>
@@ -74,10 +74,7 @@ const NavBar = () => {
           </ul>
         </li>
         <li className='navbar__options_item'>
-          <Link className={`${"/contacts" === currentPath ? 'active-page-nav' : ''} navbar__options_item-link`} href="/contacts">Contacts</Link>
-        </li>
-        <li className='navbar__options_item'>
-          <Link className='btn-primary navbar__options_item-button' href="/get-started">Get A Quote</Link>
+          <Link className='btn-primary navbar__options_item-button' href="/contacts">Contact Us</Link>
         </li>
       </ul>
     </nav>
