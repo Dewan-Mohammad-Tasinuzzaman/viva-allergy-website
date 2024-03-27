@@ -49,6 +49,22 @@
     opacity: 1;
   }
 }
+@keyframes RepsIllustrationOpacityPulseAnimation {
+  0%, 100% {
+    opacity: 0.01;
+  }
+  50% {
+    opacity: 0.12;
+  }
+}
+@keyframes FeatureOpacityPulseAnimation {
+  0%, 100% {
+    background-color: rgba(255, 255, 255, 0.01);
+  }
+  50% {
+    background-color: rgba(255, 255, 255, 0.08);
+  }
+}
 
 
 @keyframes OpacityHeightPulseAnimation {
@@ -78,5 +94,28 @@
   }
   50% {
     transform: rotate(5deg);
+  }
+}
+
+
+
+@keyframes AllergiesColorAnimation {
+  0% {
+    background-color: var(--color-trees);
+  }
+  20% {
+    background-color: var(--color-dust-mites);
+  }
+  40% {
+    background-color: var(--color-venoms);
+  }
+  60% {
+    background-color: var(--color-mold);
+  }
+  80% {
+    background-color: var(--color-insects);
+  }
+  100% {
+    background-color: var(--color-epidermal);
   }
 }

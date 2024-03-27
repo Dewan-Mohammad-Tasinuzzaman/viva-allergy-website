@@ -158,7 +158,7 @@
                 transform: scaleY(100%);
                 margin-top: 20px;
                 background-color: white;
-                animation: OpacityHeightPulseAnimation 3s infinite alternate cubic-bezier(0.65, 0, 0.35, 1);;
+                animation: OpacityHeightPulseAnimation 3s infinite alternate cubic-bezier(0.65, 0, 0.35, 1);
             }
         }
 
@@ -253,9 +253,14 @@
                 margin-top: 2rem;
             }
 
+            &-linksbox {
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                margin-top: 3rem;
+            }
             &-link {
                 display: inline-block;
-                margin-top: 3rem;
             }
         }
 

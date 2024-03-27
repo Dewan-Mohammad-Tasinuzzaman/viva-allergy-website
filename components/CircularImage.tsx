@@ -6,17 +6,21 @@ interface CircularImageProps {
   classNameContainer: string;
   classNameImage: string;
   classNameFilter: string;
+  ParallaxSpeed: number;
+  ParallaxTranslateY: number;
+  ParallaxScale: number;
 }
 
-const CircularImage: React.FC<CircularImageProps> = ({ img_href, classNameContainer, classNameImage, classNameFilter }) => {
+const CircularImage: React.FC<CircularImageProps> = ({ img_href, classNameContainer, classNameImage, classNameFilter, ParallaxSpeed, ParallaxTranslateY, ParallaxScale }) => {
   return (
     <div className={`circularImage ${classNameContainer}`}>
         <ParallaxBanner
         layers={[
             {
             image: img_href,
-            speed: -80,
-            translateY: [0, 30],
+            speed: ParallaxSpeed,
+            translateY: [0, ParallaxTranslateY],
+            scale: [1, ParallaxScale, 'easeOutCubic'],
             shouldAlwaysCompleteAnimation: true,
             },
         ]}

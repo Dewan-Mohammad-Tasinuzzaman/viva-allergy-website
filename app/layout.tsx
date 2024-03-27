@@ -31,7 +31,6 @@ export default function RootLayout({
         <Providers>
           <SmoothScroll>
             {children}
-            <Footer />
           </SmoothScroll>
         </Providers>
         <SpeedInsights />

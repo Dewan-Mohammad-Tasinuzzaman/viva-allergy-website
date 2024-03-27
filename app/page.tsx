@@ -15,6 +15,7 @@ import { useState } from "react";
 import SideModal from "@/components/SideModal";
 import LoadingAnimation from "@/components/LoadingAnimation";
 import Footer from "@/components/Footer";
+import ButtonSecondary from "@/components/ButtonSecondary";
 
 export default function Home() {
 
@@ -128,17 +129,22 @@ export default function Home() {
             <div className="allergy-extracts__intro_content">
               <h3 className="header-primary allergy-extracts__intro_content-header">Allergy Extracts</h3>
               <p className="text-primary allergy-extracts__intro_content-text">
-                <span className="marg-left-small"></span>With a commitment to excellence, Viva Allergy offers a wide selection of premium allergy extracts. Be empowered to proactively and efficiently meet the specific requirements of your patients, ensuring optimal care and improved well-being.
+                <span className="marg-left-small"></span>Discover a comprehensive range of premium allergy extracts at Viva Allergy. Empower yourself to proactively and efficiently meet your patients&apos; specific needs, ensuring optimal care and improved well-being.
               </p>
-              <div className="allergy-extracts__intro_content-link">
-                <ButtonPrimary href="/product-catalogue" label="Product Catalogue" />
+              <div className="allergy-extracts__intro_content-linksbox">
+                <div className="allergy-extracts__intro_content-link">
+                  <ButtonPrimary href="/product-catalogue" label="Product Catalogue" />
+                </div>
+                <div className="allergy-extracts__intro_content-link">
+                  <ButtonSecondary href="/order-forms" label="Order Forms" />
+                </div>
               </div>
             </div>
 
             <div className="allergy-extracts__intro_photos">
               <div className="allergy-extracts__intro_photos-container">
-                  <CircularImage img_href={beeImage} classNameContainer="allergy-extracts__intro_photos-1" classNameImage="allergy-extracts__intro_photos-1--image" classNameFilter="allergy-extracts__intro_photos-1--filter" />
-                  <CircularImage img_href={apDogImage} classNameContainer="allergy-extracts__intro_photos-2" classNameImage="allergy-extracts__intro_photos-2--image" classNameFilter="allergy-extracts__intro_photos-2--filter" />
+                  <CircularImage img_href={beeImage} classNameContainer="allergy-extracts__intro_photos-1" classNameImage="allergy-extracts__intro_photos-1--image" classNameFilter="allergy-extracts__intro_photos-1--filter" ParallaxSpeed={-50} ParallaxTranslateY={30} ParallaxScale={1} />
+                  <CircularImage img_href={apDogImage} classNameContainer="allergy-extracts__intro_photos-2" classNameImage="allergy-extracts__intro_photos-2--image" classNameFilter="allergy-extracts__intro_photos-2--filter" ParallaxSpeed={-50} ParallaxTranslateY={30} ParallaxScale={1} />
               </div>
             </div>
           </div>
@@ -178,12 +184,12 @@ export default function Home() {
             </div>
 
             <div className="skin-tests__container_content">
-              <h3 className="header-primary skin-tests__container_content-header">Skin-Test Kits</h3>
+              <h3 className="header-primary skin-tests__container_content-header">Skin Test Devices</h3>
               <p className="text-primary skin-tests__container_content-text">
-                <span className="marg-left-small"></span>Not knowing an invisible and potentially dangerous threat can be scary. We have the most efficient ways to identify if something might affect you and numerous ways to ensure Your well-being.
+                <span className="marg-left-small"></span>Our skin test device systems, ComforTen® and Quintip®, offer you quick and easy setup for efficient and reproducible testing experiences.
               </p>
               <div className="skin-tests__container_content-link">
-                <ButtonPrimary href="/skin-test-devices" label="See More" />
+                <ButtonPrimary href="/skin-test-devices" label="Learn More" />
               </div>
             </div>
 
@@ -196,6 +202,10 @@ export default function Home() {
       </div>
       
 
+      {/* FOOTER */}
+      <Footer showRequestQuote={true} />
+      
+      {/* LOADING ANIMATION */}
       <LoadingAnimation customClassName="" />
     </main>
     
