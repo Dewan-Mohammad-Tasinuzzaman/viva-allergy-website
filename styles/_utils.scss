@@ -68,6 +68,13 @@
     color: white !important;
     mix-blend-mode: difference !important;
 }
+.required-red {
+    color: var(--required-red);
+}
+.required-star {
+    color: var(--required-red);
+    font-weight: 800;
+}
 
 
 // SHADOWS etc.
