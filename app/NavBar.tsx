@@ -50,7 +50,10 @@ const NavBar = () => {
               <Link className={`${"/product-catalogue" === currentPath ? 'active-sub-menu' : ''} sub-menu__item_link`} href="/product-catalogue">Product Catalogue</Link>
             </li>
             <li className="sub-menu__item">
-              <Link className={`${"/scratch-form" === currentPath ? 'active-sub-menu' : ''} sub-menu__item_link`} href="/order-forms">Order Forms</Link>
+              <Link className={`${"/order-forms" === currentPath ? 'active-sub-menu' : ''} sub-menu__item_link`} href="/order-forms">Order Forms</Link>
+            </li>
+            <li className="sub-menu__item">
+              <Link className={`${"/allergist-locator" === currentPath ? 'active-sub-menu' : ''} sub-menu__item_link`} href="/allergist-locator">Allergist Locator</Link>
             </li>
           </ul>
         </li>

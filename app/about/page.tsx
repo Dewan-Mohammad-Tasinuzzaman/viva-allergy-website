@@ -13,6 +13,9 @@ import { ParallaxBanner } from "react-scroll-parallax";
 import LoadingAnimation from "@/components/LoadingAnimation";
 import Footer from "@/components/Footer";
 import RepresentativeContact from '@/components/RepresentativeContact';
+import Logo_Black from '@/public/assets/svgs/logo_icon-black.svg';
+
+
 
 const AboutPage = () => {
 
@@ -32,7 +35,7 @@ const AboutPage = () => {
         <section id='about-intro' className="page-margins-big about__introContainer">
           <div className="about__intro">
             <h1 className="header-tertiary about__intro_header">About</h1>
-            <p className="text-secondary about__intro_body">At Viva Allergy, we understand the daily struggles of living with allergies. That&apos;s why we&apos;re committed to providing innovative solutions tailored to your individual needs. Our Named-Patient immunotherapy treatments are prepared, based on the Physician prescription to address the specific needs of each patient. From diagnostic to treatment, we&apos;re here to support you every step of the way.</p>
+            <p className="text-secondary about__intro_body"><span className="marg-left-small"></span>At Viva Allergy, we understand the daily struggles of living with allergies. That&apos;s why we&apos;re committed to providing innovative solutions tailored to your individual needs. Our Named-Patient immunotherapy treatments are prepared, based on the Physician prescription to address the specific needs of each patient. From diagnostic to treatment, we&apos;re here to support you every step of the way.</p>
             <div className="keepScrolling about__intro_keepScrolling">
                 <Image src={Plus_Icon_Dark} alt="plus icon" unoptimized={true} className="keepScrolling__icons keepScrolling__icons_1 about__intro_keepScrolling-icons" />
                 <p className="keepScrolling__text about__intro_keepScrolling-text">Keep Scrolling</p>
@@ -91,6 +94,9 @@ const AboutPage = () => {
             </div>
             <div className="about__mission_content">
               <div className="about__mission_content-box">
+                <div className="about__mission_content-box--logobox">
+                  <Image src={Logo_Black} alt="Logo" unoptimized={true} className="about__mission_content-box--logobox---img" />
+                </div>
                 <h2 className="about__mission_content-box--header">Our Mission</h2>
                 <p className="about__mission_content-box--text">At Viva Allergy, our mission is simple: to improve the lives of allergy sufferers everywhere. We&apos;re driven by a passion for innovation and a commitment to excellence, striving to empower individuals to live their lives to the fullest, free from the limitations of allergies.</p>
               </div>

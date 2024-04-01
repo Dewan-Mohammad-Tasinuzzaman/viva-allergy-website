@@ -6,7 +6,7 @@ import "@/styles/main.scss";
 import { ParallaxBanner } from "react-scroll-parallax";
 import Link from 'next/link'
 import KeepScrolling from "@/components/KeepScrolling";
-import MiniQuoteForm from "@/app/MiniQuoteForm";
+import MiniQuoteForm from "@/components/MiniQuoteForm";
 import ButtonPrimary from "@/components/ButtonPrimary";
 import CircularImage from "@/components/CircularImage";
 import AllergyExtract from "@/components/AllergyExtract";
@@ -56,7 +56,7 @@ export default function Home() {
 
   return (
 
-    <main>
+    <main className='pos-relative'>
 
       <div id="section-hero" className="hero">
 

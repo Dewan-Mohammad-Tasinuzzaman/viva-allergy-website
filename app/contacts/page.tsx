@@ -2,11 +2,14 @@
 
 import React from 'react'
 import { ParallaxBanner } from "react-scroll-parallax";
+import LoadingAnimation from "@/components/LoadingAnimation";
+import Footer from "@/components/Footer";
 
 const ContactsPage = () => {
 
   // Image URL
   const Contact_Image_URL = "/assets/images/contactus-img.jpg";
+  const Location_Image_URL = "/assets/images/location-img.png";
 
   return (
     <main className='pos-relative'>
@@ -31,10 +34,10 @@ const ContactsPage = () => {
                 <label htmlFor='category' className="contacts__container__formContainer_form_group-label">Category<span className="required-star">*</span></label>
                 <select className="contacts__container__formContainer_form_group-input contacts__container__formContainer_form_group-input-select" id="category" name="category" required>
                   <option className='contacts__container__formContainer_form_group-input-select--option' value="" disabled selected hidden>Select</option>
-                  <option className='contacts__container__formContainer_form_group-input-select--option' value="volvo">Allergist</option>
-                  <option className='contacts__container__formContainer_form_group-input-select--option' value="saab">Clinic/Hospital</option>
-                  <option className='contacts__container__formContainer_form_group-input-select--option' value="mercedes">Patient</option>
-                  <option className='contacts__container__formContainer_form_group-input-select--option' value="audi">Pharmacy</option>
+                  <option className='contacts__container__formContainer_form_group-input-select--option' value="Allergist">Allergist</option>
+                  <option className='contacts__container__formContainer_form_group-input-select--option' value="Clinic/Hospital">Clinic/Hospital</option>
+                  <option className='contacts__container__formContainer_form_group-input-select--option' value="Patient">Patient</option>
+                  <option className='contacts__container__formContainer_form_group-input-select--option' value="Pharmacy">Pharmacy</option>
                 </select>
               </div>
               <div className="contacts__container__formContainer_form_group">
@@ -53,6 +56,7 @@ const ContactsPage = () => {
                 <label htmlFor='details' className="contacts__container__formContainer_form_group-label">Details<span className="required-star">*</span></label>
                 <textarea className="contacts__container__formContainer_form_group-input" id="details" name="details" placeholder="" rows={6} style={{ resize: "none" }}></textarea>
               </div>
+              <button className='btn-primary contacts__container__formContainer_form_button' type='submit'>Submit</button>
             </form>
           </div>
 
@@ -79,12 +83,35 @@ const ContactsPage = () => {
           </div>
 
           <div className="contacts__container__location">
-            LOLO
+            <ParallaxBanner
+              layers={[
+                {
+                  image: Location_Image_URL,
+                  speed: -40,
+                  translateY: [0, 20],
+                  opacity: [1, 1],
+                  scale: [1.05, 1, 'easeOutCubic'],
+                  shouldAlwaysCompleteAnimation: true,
+                },
+              ]}
+              className="w-full aspect-1-1 contacts__container__location_image" onClick={() => window.open("https://maps.app.goo.gl/D2MhqpwVyX7XUjFh7", "_blank")}
+            />
+            <div className="contacts__container__location_infobox">
+              <h2 className="contacts__container__location_infobox-header">Location</h2>
+              <p className="contacts__container__location_infobox-detail">11177 Rue Hamon,<br/>Montréal, QC H3M 3E4</p>
+            </div>
           </div>
 
         </div>
       </div>
 
+
+
+      {/* FOOTER */}
+      <Footer showRequestQuote={false} />
+      
+      {/* LOADING ANIMATION */}
+      <LoadingAnimation customClassName="" />
     </main>
   )
 }

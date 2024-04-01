@@ -10,6 +10,7 @@
         grid-template-columns: repeat(5, 1fr); /* Two columns */
         grid-template-rows: 1fr 1fr; /* Two rows */
         gap: 8rem 10rem; /* Gap between grid items */
+        margin-bottom: 10rem;
 
         &__formContainer {
             
@@ -77,6 +78,12 @@
                         grid-column: span 2; /* Spans two columns */
                     }
                 }
+
+                &_button {
+                    grid-column: span 2; /* Spans two columns */
+                    outline: none;
+                    border: none;
+                }
             }
         }
 
@@ -84,16 +91,27 @@
 
             grid-column: 4 / 6; /* Second column */
             grid-row: auto; /* Auto placement */
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
 
             &_image {
                 width: 50rem;
                 height: 37rem;
+                border-radius: 5px;
             }
 
             &_infobox {
 
-                &-header {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
 
+                &-header {
+                    margin-bottom: 1rem;
+                    font-size: 3.6rem;
+                    font-weight: 600;
+                    color: var(--color-dark-1);
                 }
                 &-detail {
 
@@ -107,6 +125,36 @@
         &__location {
             grid-column: 4 / 6; /* Second column */
             grid-row: auto; /* Auto placement */
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+
+            &_image {
+                width: 50rem;
+                height: 37rem;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            &_infobox {
+
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                &-header {
+                    margin-bottom: 1rem;
+                    font-size: 3.6rem;
+                    font-weight: 600;
+                    color: var(--color-dark-1);
+                }
+                &-detail {
+
+                    &--span {
+
+                    }
+                }
+            }
         }
     }
 }

@@ -1,0 +1,48 @@
+
+.allergist-locator {
+
+    &__content {
+
+        padding-top: 18rem;
+        display: flex;
+
+        &_intro {
+
+            width: 50%;
+
+            &_header {
+
+            }
+            &_text {
+    
+            }
+        }
+
+        &_logobox {
+
+            margin-left: auto;
+            position: relative;
+            width: 15rem;
+            height: 15rem;
+            background-color: var(--color-dark-1);
+            border-radius: 50%;
+            box-shadow: inset -4px 4px 10px rgba(255, 255, 255, 0.4), inset 4px -4px 10px rgba(0, 0, 0, 0.7);
+
+            &-icon {
+                @include absolute-center;
+                width: 50%;
+                height: auto;
+            }
+        }
+    }
+
+    &__iframe {
+        width: 100vw;
+        height: 100vh;
+        border: none;
+        margin-top: 8rem;
+        margin-bottom: 5rem;
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+}

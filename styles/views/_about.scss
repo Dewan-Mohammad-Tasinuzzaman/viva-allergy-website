@@ -180,6 +180,23 @@
                 width: 80%;
                 color: var(--color-white);
 
+                &--logobox {
+
+                    margin-bottom: 4rem;
+                    width: 20rem;
+                    height: 20rem;
+                    background-color: rgb(255 255 255 / 100%);
+                    backdrop-filter: blur(3px);
+                    overflow: hidden;
+                    border-radius: 50%;
+                    mix-blend-mode: soft-light;
+
+                    &---img {
+                        @include absolute-center;
+                        width: 50%;
+                        height: 50%;
+                    }
+                }
                 &--header {
                     font-size: 5.2rem;
                     font-weight: 400;

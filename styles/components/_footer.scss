@@ -3,6 +3,7 @@
 
     position: relative;
     z-index: 50;
+    overflow: hidden;
 
     &__request-quote {
 
@@ -11,6 +12,7 @@
         padding: 10rem 0;
         padding-bottom: 11.5rem;
         background-color: var(--color-light-cream-1);
+        overflow: hidden;
 
         &_content {
 
@@ -29,9 +31,9 @@
 
         &_illustration {
             position: absolute;
-            top: -8rem;
+            top: 1rem;
             right: -5rem;
-            width: 70rem;
+            width: 60rem;
             height: auto;
             opacity: .5;
         }
