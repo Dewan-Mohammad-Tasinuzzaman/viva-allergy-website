@@ -87,7 +87,7 @@
 
             display: flex;
             flex-direction: column;
-            gap: 3rem;
+            gap: 2rem;
             flex: 1;
             pointer-events: all;
 
@@ -139,6 +139,11 @@
                 margin-left: auto;
                 margin-right: auto;
 
+                @include respond(laptop) {
+                    width: 50rem;
+                    height: 50rem;
+                }
+
                 &--img {
                     position: absolute;
                     top: 35%;
@@ -170,11 +175,20 @@
         justify-content: start;
         gap: 10rem;
 
+        @include respond(laptop) {
+            gap: 6rem;
+        }
+
         &_banner {
 
             position: relative;
             width: 70rem;
             height: 40rem;
+
+            @include respond(laptop) {
+                width: 60rem;
+                height: 35rem;
+            }
 
             &-img {
                 position: absolute;
@@ -211,11 +225,20 @@
         justify-content: end;
         gap: 10rem;
 
+        @include respond(laptop) {
+            gap: 6rem;
+        }
+
         &_banner {
 
             position: relative;
             width: 70rem;
             height: 40rem;
+
+            @include respond(laptop) {
+                width: 60rem;
+                height: 35rem;
+            }
 
             &-img {
                 position: absolute;
@@ -304,6 +327,10 @@
             flex-direction: row;
             align-items: center;
             gap: 10rem;
+
+            @include respond(laptop) {
+                gap: 8rem;
+            }
         }
         &_video {
 
@@ -351,6 +378,11 @@
                 box-shadow: 0 2px 30px rgba(0, 0, 0, 0.05);
                 border-radius: 40px;
                 overflow: hidden;
+
+                @include respond(laptop) {
+                    width: 55rem;
+                    height: 32rem;
+                }
 
                 &--imageContainer {
 

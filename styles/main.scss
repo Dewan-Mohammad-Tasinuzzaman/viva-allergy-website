@@ -57,11 +57,25 @@
   box-sizing: inherit;
 }
 
+
 html {
   // scroll-behavior: smooth; // Using this messes with Lenis
   box-sizing: border-box;
   font-size: 62.5%; //1rem = 10px, 10px/16px
+
+  // Media queries for general sizing adjustments
+  @include respond(laptop-large-2) {
+    font-size: 59.5%;
+  }
+  @include respond(laptop-large-1) {
+    font-size: 56.5%;
+  }
+  @include respond(laptop) {
+    font-size: 54.5%;
+  }
 }
+
+
 body {
   background-color: var(--color-white);
   position: relative;

@@ -84,9 +84,9 @@ export default function Home() {
             <div className="hero__content mix-blend-diff page-span-big">
               <div className="hero__content_subcontainer1">
                 <h2 className="hero__content_subcontainer1-subheader--1">
-                  We&apos;re Providing Excellence<br/>
                   In Partnership with<br/>
-                  <Link className='hero__content_subcontainer1-subheader--1---link' href="#">Hollisterstier</Link>
+                  <Link className='hero__content_subcontainer1-subheader--1---link' href="#">Hollisterstier</Link><br/>
+                  We Deliver Excellence
                 </h2>
                 <div className="hero__content_subcontainer1-line"></div>
               </div>

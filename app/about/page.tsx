@@ -52,53 +52,56 @@ const AboutPage = () => {
 
 
         <section id='about-mission' className="about__mission">
-          <ParallaxBanner
-            layers={[
-              {
-                image: MissionBannerImage_URL,
-                speed: -50,
-                translateY: [0, 30],
-                opacity: [1, 1],
-                scale: [1.4, 1, 'easeOutCubic'],
-                shouldAlwaysCompleteAnimation: true,
-              },
-            ]}
-            className="w-full aspect-2-1 about__mission_banner"
-          />
-          <div className="about__mission_banner-shadow"></div>
           
           <div className="about__mission_contentsbox">
-            <div className="about__mission_features">
-              <div className="about__mission_features_container">
-                <div className="about__mission_features_container-feature">
-                  <div className="about__mission_features_container-feature--iconbox">
-                    <Image src={Personalized_Icon} alt="feature icon" unoptimized={true} className="about__mission_features_container-feature--iconbox---icon" />
+            <ParallaxBanner
+                layers={[
+                  {
+                    image: MissionBannerImage_URL,
+                    speed: -50,
+                    translateY: [0, 30],
+                    opacity: [1, 1],
+                    scale: [1.4, 1, 'easeOutCubic'],
+                    shouldAlwaysCompleteAnimation: true,
+                  },
+                ]}
+                className="w-full aspect-2-1 about__mission_banner"
+              />
+              <div className="about__mission_banner-shadow"></div>
+            <div className="about__mission_contentsbox_flex-container">
+              
+              <div className="about__mission_features">
+                <div className="about__mission_features_container">
+                  <div className="about__mission_features_container-feature">
+                    <div className="about__mission_features_container-feature--iconbox">
+                      <Image src={Personalized_Icon} alt="feature icon" unoptimized={true} className="about__mission_features_container-feature--iconbox---icon" />
+                    </div>
+                    <h2 className="about__mission_features_container-feature--title">Tailored Allergen Extracts</h2>
                   </div>
-                  <h2 className="about__mission_features_container-feature--title">Tailored Allergen Extracts</h2>
-                </div>
-                <div className="about__mission_features_container-line"></div>
-                <div className="about__mission_features_container-feature">
-                  <div className="about__mission_features_container-feature--iconbox">
-                    <Image src={Innovative_Icon} alt="feature icon" unoptimized={true} className="about__mission_features_container-feature--iconbox---icon" />
+                  <div className="about__mission_features_container-line"></div>
+                  <div className="about__mission_features_container-feature">
+                    <div className="about__mission_features_container-feature--iconbox">
+                      <Image src={Innovative_Icon} alt="feature icon" unoptimized={true} className="about__mission_features_container-feature--iconbox---icon" />
+                    </div>
+                    <h2 className="about__mission_features_container-feature--title">Lasting Relief</h2>
                   </div>
-                  <h2 className="about__mission_features_container-feature--title">Lasting Relief</h2>
-                </div>
-                <div className="about__mission_features_container-line"></div>
-                <div className="about__mission_features_container-feature">
-                  <div className="about__mission_features_container-feature--iconbox">
-                    <Image src={Empower_Icon} alt="feature icon" unoptimized={true} className="about__mission_features_container-feature--iconbox---icon" />
+                  <div className="about__mission_features_container-line"></div>
+                  <div className="about__mission_features_container-feature">
+                    <div className="about__mission_features_container-feature--iconbox">
+                      <Image src={Empower_Icon} alt="feature icon" unoptimized={true} className="about__mission_features_container-feature--iconbox---icon" />
+                    </div>
+                    <h2 className="about__mission_features_container-feature--title">Empowerment & Knowledge</h2>
                   </div>
-                  <h2 className="about__mission_features_container-feature--title">Empowerment & Knowledge</h2>
                 </div>
               </div>
-            </div>
-            <div className="about__mission_content">
-              <div className="about__mission_content-box">
-                <div className="about__mission_content-box--logobox">
-                  <Image src={Logo_Black} alt="Logo" unoptimized={true} className="about__mission_content-box--logobox---img" />
+              <div className="about__mission_content">
+                <div className="about__mission_content-box">
+                  <div className="about__mission_content-box--logobox">
+                    <Image src={Logo_Black} alt="Logo" unoptimized={true} className="about__mission_content-box--logobox---img" />
+                  </div>
+                  <h2 className="about__mission_content-box--header">Our Mission</h2>
+                  <p className="about__mission_content-box--text">At Viva Allergy, our mission is simple: to improve the lives of allergy sufferers everywhere. We&apos;re driven by a passion for innovation and a commitment to excellence, striving to empower individuals to live their lives to the fullest, free from the limitations of allergies.</p>
                 </div>
-                <h2 className="about__mission_content-box--header">Our Mission</h2>
-                <p className="about__mission_content-box--text">At Viva Allergy, our mission is simple: to improve the lives of allergy sufferers everywhere. We&apos;re driven by a passion for innovation and a commitment to excellence, striving to empower individuals to live their lives to the fullest, free from the limitations of allergies.</p>
               </div>
             </div>
           </div>

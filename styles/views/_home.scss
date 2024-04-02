@@ -1,5 +1,6 @@
 @import '../mixins';
 @import '../variables';
+@import '../media-query-manager';
 
 
 .hero {
@@ -33,7 +34,7 @@
             // just for positioning the link
             &--linkbox {
                 @include absolute-center;
-                top: 54%;
+                top: 54.5%;
             }
             &--link:link,
             &--link:visited {
@@ -133,9 +134,14 @@
 
             display: flex;
             flex-direction: column;
+            height: 50rem;
+
+            @include respond(laptop) {
+                height: 45rem;
+            }
 
             &-subheader--1 {
-                font-size: 1.8rem;
+                font-size: 2rem;
                 text-align: left;
                 font-weight: 400;
                 line-height: 1.4;
@@ -153,7 +159,7 @@
             }
             &-line {
                 width: 1px;
-                height: 45rem;
+                height: 100%;
                 transform-origin: bottom;
                 transform: scaleY(100%);
                 margin-top: 20px;
@@ -187,11 +193,16 @@
             display: flex;
             flex-direction: column;
             align-items: end;
+            height: 50rem;
+
+            @include respond(laptop) {
+                height: 45rem;
+            }
 
             &-line {
                 right: 0;
                 width: 1px;
-                height: 45rem;
+                height: 100%;
                 transform-origin: top;
                 transform: scaleY(100%);
                 margin-bottom: 20px;
@@ -199,7 +210,7 @@
                 animation: OpacityHeightPulseAnimation 3s infinite alternate cubic-bezier(0.65, 0, 0.35, 1);
             }
             &-subheader--2 {
-                font-size: 1.8rem;
+                font-size: 2rem;
                 text-align: right;
                 font-weight: 400;
                 line-height: 1.4;
@@ -223,7 +234,7 @@
     }
 
 
-    // Mini Get a Quote Form
+    // Mini Get a Quote Form - OBSOLETE
     &__form {
         min-width: 60%;
     }
@@ -321,6 +332,16 @@
 
         margin-top: 15rem;
 
+        @include respond(laptop-large-2) {
+
+        }
+        @include respond(laptop-large-1) {
+
+        }
+        @include respond(laptop) {
+            grid-template-columns: repeat(2, 1fr); /* Three columns with equal width */
+        }
+
         &_extract {
 
         }
@@ -346,6 +367,10 @@
         justify-content: start;
         column-gap: 10rem;
 
+        @include respond(laptop) {
+            column-gap: 8rem;
+        }
+
         &_imagebox {
 
             position: relative;
@@ -355,6 +380,11 @@
             border-top-right-radius: 5px;
             // border-end-start-radius: 40px;
             // border-end-end-radius: 30px;
+
+            @include respond(laptop) {
+                height: calc(50.5rem / 1.2);
+                width: calc(65rem / 1.2);
+            }
 
             &-img {
                 position: absolute;

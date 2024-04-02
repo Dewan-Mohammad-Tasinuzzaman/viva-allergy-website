@@ -132,7 +132,7 @@ const SkinTestPage = () => {
             </div>
             <div className="skintests__quintip_info">
               <h2 className="header-secondary skintests__quintip_info-title">Quintip®</h2>
-              <p className="text-primary skintests__quintip_info-text"><span className="marg-left-small"></span>Easily integrate a single extract into your existing setup. With Quintip®, you can enjoy all the benefits of the ComforTen® Device, including stainless steel lancet tips and a 1.2mm depth guard, while streamlining your allergenic testing process.</p>
+              <p className="text-primary skintests__quintip_info-text">Easily integrate a single extract into your existing setup. With Quintip®, you can enjoy all the benefits of the ComforTen® Device, including stainless steel lancet tips and a 1.2mm depth guard, while streamlining your allergenic testing process.</p>
             </div>
           </div>
 
@@ -166,7 +166,7 @@ const SkinTestPage = () => {
             </div>
             <div className="skintests__comforten_info">
               <h2 className="header-secondary skintests__comforten_info-title">Comforten®</h2>
-              <p className="text-primary skintests__comforten_info-text"><span className="marg-left-small"></span>Test ten extracts at once with the ComforTen Multiple Skin Test System®, available in a 30-hole or 60-hole tray. Enjoy all the benefits of our skin test device systems, along with optional-use spacers that increase testing capacity.</p>
+              <p className="text-primary skintests__comforten_info-text">Test ten extracts at once with the ComforTen Multiple Skin Test System®, available in a 30-hole or 60-hole tray. Enjoy all the benefits of our skin test device systems, along with optional-use spacers that increase testing capacity.</p>
             </div>
           </div>
 

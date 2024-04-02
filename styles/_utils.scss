@@ -1,5 +1,5 @@
 // Utility Classes
-
+@import './media-query-manager';
 
 
 // ASPECT RATIOS
@@ -21,10 +21,34 @@
 .page-margins-big {
     margin-left: 20rem;
     margin-right: 20rem;
+
+    @include respond(laptop-large-2) {
+
+    }
+    @include respond(laptop-large-1) {
+        margin-left: 15rem;
+        margin-right: 15rem;
+    }
+    @include respond(laptop) {
+        margin-left: 12rem;
+        margin-right: 12rem;
+    }
 }
 .page-margins-small {
     margin-left: 10rem;
     margin-right: 10rem;
+
+    @include respond(laptop-large-2) {
+
+    }
+    @include respond(laptop-large-1) {
+        margin-left: 8rem;
+        margin-right: 8rem;
+    }
+    @include respond(laptop) {
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
 }
 
 
