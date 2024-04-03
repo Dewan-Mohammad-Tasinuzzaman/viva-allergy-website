@@ -158,6 +158,10 @@
                     height: 45rem;
                     margin-right: 0;
                 }
+                @include respond(laptop-small-1) {
+                    width: 38rem;
+                    height: 38rem;
+                }
 
                 &--img {
                     position: absolute;
@@ -203,6 +207,10 @@
             @include respond(laptop) {
                 width: 60rem;
                 height: 35rem;
+            }
+            @include respond(laptop-small-1) {
+                width: 50rem;
+                height: 32rem;
             }
 
             &-img {
@@ -253,6 +261,10 @@
             @include respond(laptop) {
                 width: 60rem;
                 height: 35rem;
+            }
+            @include respond(laptop-small-1) {
+                width: 50rem;
+                height: 32rem;
             }
 
             &-img {
@@ -363,6 +375,13 @@
                 border-radius: 50%;
                 background-color: var(--color-trees);
                 overflow: hidden;
+
+                @include respond(laptop) {
+                    top: -5rem;
+                    right: -5rem;
+                    width: 12rem;
+                    height: 12rem;
+                }
             
                 &--logo {
                     @include absolute-center;
@@ -397,6 +416,10 @@
                 @include respond(laptop) {
                     width: 55rem;
                     height: 32rem;
+                }
+                @include respond(laptop-small-1) {
+                    width: 48rem;
+                    height: 28rem;
                 }
 
                 &--imageContainer {

@@ -272,12 +272,34 @@
         display: flex;
         align-items: center;
 
+        @include respond(laptop-small-2) {
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 5rem;
+        }
+
         &_content {
 
             flex: 1;
 
-            &-header {
+            @include respond(laptop-small-2) {
+                text-align: center;
+            }
 
+            &-header {
+                margin-bottom: 4rem;
+                @include respond(laptop-small-2) {
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: -12px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        height: 1px;
+                        width: 5rem;
+                        background-color: var(--color-dark-1);
+                    }
+                }
             }
 
             &-text {
@@ -289,6 +311,10 @@
                 flex-direction: row;
                 gap: 10px;
                 margin-top: 3rem;
+
+                @include respond(laptop-small-2) {
+                    justify-content: center;
+                }
             }
             &-link {
                 display: inline-block;
@@ -304,10 +330,27 @@
             justify-content: end;
             margin-left: auto;
 
+            @include respond(laptop-small-2) {
+                margin-left: 0;
+            }
+
             &-container {
                 position: relative;
                 width: 50rem;
                 height: 50rem;
+
+                @include respond(laptop) {
+                    width: 48rem;
+                    height: 48rem;
+                }
+                @include respond(laptop-small-1) {
+                    width: 40rem;
+                    height: 40rem;
+                }
+                @include respond(laptop-small-2) {
+                    width: 45rem;
+                    height: 45rem;
+                }
             }
             &-1 {
 

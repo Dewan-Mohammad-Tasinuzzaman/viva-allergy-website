@@ -22,7 +22,7 @@ const OrderFormsPage = () => {
         <section id='fellowship-program' className="order-forms__fellowship">
           <div className="order-forms__fellowship_content">
             <div className="order-forms__fellowship_content-mainbox">
-              <h1 className="header-tertiary order-forms__fellowship_content-mainbox-header">Fellowship Program</h1>
+              <h1 className="header-primary order-forms__fellowship_content-mainbox-header">Fellowship Program</h1>
               <p className="text-secondary order-forms__fellowship_content-mainbox-text">Are you an allergist looking to set up your practice? Our New Fellow Program is designed specifically for you!</p>
               <p className="text-primary order-forms__fellowship_content-mainbox-subtext">Through this program, we provide valuable insights, resources, and discounts on initial orders to help you succeed in your practice. Interested in learning more about this opportunity?</p>
               <Link className='btn-primary order-forms__fellowship_content-mainbox-link' href="/contacts">Get Started</Link>

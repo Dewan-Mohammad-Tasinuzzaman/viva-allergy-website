@@ -11,10 +11,12 @@ interface SideModalProps {
   imageURL02: string;
   imageURL03: string;
   title: string;
-  description: string;
+  description_01: string;
+  description_02: string;
+  description_03: string;
 }
 
-const SideModal: React.FC<SideModalProps> = ({ isOpen, onClose, imageURL01, imageURL02, imageURL03, title, description }) => {
+const SideModal: React.FC<SideModalProps> = ({ isOpen, onClose, imageURL01, imageURL02, imageURL03, title, description_01, description_02, description_03 }) => {
   if (!isOpen) return null;
 
   return (
@@ -33,7 +35,9 @@ const SideModal: React.FC<SideModalProps> = ({ isOpen, onClose, imageURL01, imag
             </div>
             <div className="sideModal__content_info">
                 <h2 className='sideModal__content_info-title'>{title}</h2>
-                <p className="sideModal__content_info-description">{description}</p>
+                <p className="sideModal__content_info-description">{description_01}</p>
+                <p className="sideModal__content_info-description">{description_02}</p>
+                <p className="sideModal__content_info-description">{description_03}</p>
             </div>
         </div>
     </div>

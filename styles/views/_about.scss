@@ -31,6 +31,9 @@
                 width: 85%;
                 font-size: 1.8rem;
             }
+            @include respond(laptop-small-2) {
+                width: 90%;
+            }
         }
         &_keepScrolling {
 
@@ -55,6 +58,11 @@
             position: relative;
             width: 50rem;
             height: 50rem;
+
+            @include respond(laptop-small-2) {
+                width: 45rem;
+                height: 45rem;
+            }
 
             @include respond(laptop) {
                 width: 42rem;

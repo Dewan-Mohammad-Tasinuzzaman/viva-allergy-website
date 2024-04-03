@@ -69,6 +69,11 @@
             color: var(--color-white);
             justify-items: center;
 
+            @include respond(laptop-small-2) {
+                gap: 10rem 6rem;
+                justify-items: start;
+            }
+
             &-segment {
 
                 &:not(:last-child) {
@@ -76,6 +81,10 @@
                 }
 
                 &01 {
+
+                    @include respond(laptop-small-2) {
+                        //
+                    }
 
                     &--about-title {
                         font-size: calc(1.6rem * 1.20 * 3) !important;
@@ -136,6 +145,10 @@
 
                 &02 {
 
+                    @include respond(laptop-small-2) {
+                        //
+                    }
+
                     &--extracts {
 
                         display: flex;
@@ -177,6 +190,11 @@
                 }
 
                 &03 {
+
+                    @include respond(laptop-small-2) {
+                        //
+                    }
+
                     &--about {
 
                         display: flex;

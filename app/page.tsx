@@ -17,41 +17,48 @@ import LoadingAnimation from "@/components/LoadingAnimation";
 import Footer from "@/components/Footer";
 import ButtonSecondary from "@/components/ButtonSecondary";
 
+
 export default function Home() {
 
 
-    // Images for ParallaxBanner
-    const homeBannerImage = "/assets/images/home-banner-photo-enhanced-cropped.jpg";
-    const apDogImage = "/assets/images/ap-dog-image.jpg";
-    const beeImage = "/assets/images/bee-image-1.jpg";
-    const allergyImageVenom = "/assets/images/venoms_icon.png";
-    const allergyImageEpidermal = "/assets/images/epidermals_dog_icon.png";
-    const allergyImageMites = "/assets/images/mites_icon.png";
-    const allergyImagePollen = "/assets/images/pollen_icon.png";
-    const allergyImageInsects = "/assets/images/insect_icon.png";
-    const allergyImageMolds = "/assets/images/molds_icon.png";
-    const skinTestsImage = "/assets/images/skin-tests-image.png";
+  // Images for ParallaxBanner
+  const homeBannerImage = "/assets/images/home-banner-photo-enhanced-cropped.jpg";
+  const apDogImage = "/assets/images/ap-dog-image.jpg";
+  const beeImage = "/assets/images/bee-image-1.jpg";
+  const allergyImageVenom = "/assets/images/venoms_icon.png";
+  const allergyImageEpidermal = "/assets/images/epidermals_dog_icon.png";
+  const allergyImageMites = "/assets/images/mites_icon.png";
+  const allergyImagePollen = "/assets/images/pollen_icon.png";
+  const allergyImageInsects = "/assets/images/insect_icon.png";
+  const allergyImageMolds = "/assets/images/molds_icon.png";
+  const skinTestsImage = "/assets/images/skin-tests-image.png";
 
 
-    // FOR MODAL (Opening and closing)
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const [selectedTitle, setSelectedTitle] = useState('');
-    const [selectedDescription, setSelectedDescription] = useState('');
-    const [selectedImage, setSelectedImage] = useState('');
+  // FOR MODAL (Opening and closing)
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedTitle, setSelectedTitle] = useState('');
+  const [selectedDescription_01, setSelectedDescription_01] = useState('');
+  const [selectedDescription_02, setSelectedDescription_02] = useState('');
+  const [selectedDescription_03, setSelectedDescription_03] = useState('');
+  const [selectedImage, setSelectedImage] = useState('');
 
-    const openModal = (title: string, description: string, image: string) => {
-      setIsModalOpen(true);
-      setSelectedTitle(title);
-      setSelectedDescription(description);
-      setSelectedImage(image);
-    };
+  const openModal = (title: string, description_01: string, description_02: string, description_03: string, image: string) => {
+    setIsModalOpen(true);
+    setSelectedTitle(title);
+    setSelectedDescription_01(description_01);
+    setSelectedDescription_02(description_02);
+    setSelectedDescription_03(description_03);
+    setSelectedImage(image);
+  };
 
-    const closeModal = () => {
-      setIsModalOpen(false);
-      setSelectedTitle('');
-      setSelectedDescription('');
-      setSelectedImage('');
-    };
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedTitle('');
+    setSelectedDescription_01('');
+    setSelectedDescription_02('');
+    setSelectedDescription_03('');
+    setSelectedImage('');
+  };
 
 
   return (
@@ -150,12 +157,14 @@ export default function Home() {
           </div>
 
           <div className="allergy-extracts__extracts">
-            <AllergyExtract className="allergy-extracts__extracts_extract" title="Venom" description="" imageURL={allergyImageVenom} onClick={() => openModal('Venom', 'As the sole venom extract supplier in North America, we remain dedicated to ensuring adequate supply and quality product.', allergyImageVenom)} />
-            <AllergyExtract className="allergy-extracts__extracts_extract" title="Epidermal" description="" imageURL={allergyImageEpidermal} onClick={() => openModal('Epidermal', 'The only extract on the market fulfilling the practice parameter’s recommended dosing of 15 mcg of Can f 1.', allergyImageEpidermal)} />
-            <AllergyExtract className="allergy-extracts__extracts_extract" title="Mite" description="" imageURL={allergyImageMites} onClick={() => openModal('Mite', 'Rely on our 30,000 au/mL mite for diagnosing patients.', allergyImageMites)} />
-            <AllergyExtract className="allergy-extracts__extracts_extract" title="Pollen" description="" imageURL={allergyImagePollen} onClick={() => openModal('Pollen', 'Our inventory of over 70 pollen extracts allows you to test and treat based on local-to-you pollens.', allergyImagePollen)} />
-            <AllergyExtract className="allergy-extracts__extracts_extract" title="Insect" description="" imageURL={allergyImageInsects} onClick={() => openModal('Insect', 'Diagnose and treat fire ant and cockroach allergy patients with our insect extracts.', allergyImageInsects)} />
-            <AllergyExtract className="allergy-extracts__extracts_extract" title="Mold" description="" imageURL={allergyImageMolds} onClick={() => openModal('Mold', 'Current practice parameters recommend using the strongest concentrates available and our molds are 1:10 w/v strength.', allergyImageMolds)} />
+            <Link href="/venom-extracts">
+              <AllergyExtract className="allergy-extracts__extracts_extract" title="Venom" description="" imageURL={allergyImageVenom} onClick={() => {}} />
+            </Link>
+            <AllergyExtract className="allergy-extracts__extracts_extract" title="Epidermal" description="" imageURL={allergyImageEpidermal} onClick={() => openModal("Epidermal", "Our AP Dog is the only extract on the market fulfilling the practice parameter's recommended dosing of 15 mcg of Can ft1.", "If your patients are still battling the distressing symptoms of dog allergies, even after treatment, it could be due to the use of lower-concentration extracts. This leaves patients without the much-needed relief from their dog allergies.", "Give your patients the relief they deserve with our premium AP extracts.", allergyImageEpidermal)} />
+            <AllergyExtract className="allergy-extracts__extracts_extract" title="Mite" description="" imageURL={allergyImageMites} onClick={() => openModal("Mite", "Dust mite allergies are prevalent and challenging to manage, impacting individuals' quality of life.", "Our 30,000 au/mL mite extract offers enhanced precision for diagnosing and allows for more flexibility, ensuring precise and personalized care.", "Trust us for consistent results and improved patient care.", allergyImageMites)} />
+            <AllergyExtract className="allergy-extracts__extracts_extract" title="Pollen" description="" imageURL={allergyImagePollen} onClick={() => openModal("Pollen", "Testing and treating patients for grass, tree, and weed pollen allergies can be challenging. The prevalence of these allergens varies by region, underscoring the importance of customizing testing panels.", "At Viva Allergy, we provide a comprehensive range of more than 30 pollen extracts for you to accurately detect and treat the allergens affecting your patients' quality of life.", "", allergyImagePollen)} />
+            <AllergyExtract className="allergy-extracts__extracts_extract" title="Insect" description="" imageURL={allergyImageInsects} onClick={() => openModal("Insect", "Diagnose cockroach allergy with our antigen, at a 1:10 w/v concentration, from recognized allergy-inducing species, such as B. germanica and P. americana.", "", "", allergyImageInsects)} />
+            <AllergyExtract className="allergy-extracts__extracts_extract" title="Mold" description="" imageURL={allergyImageMolds} onClick={() => openModal("Mold", "Mold allergies present persistent challenges for patients, with mold spores indoors and outdoors triggering allergic reactions.", "Choose from our wide-ranging selection of common allergy-causing molds, including Alternaria tenuis, Aspergillus fumigatus, and Penicillium notatum, allowing healthcare professionals like you to address specific diagnostic and treatment needs effectively.", "", allergyImageMolds)} />
           </div>
       </section>
 
@@ -198,7 +207,7 @@ export default function Home() {
 
 
       <div className={isModalOpen ? "sideModalContainer sideModalContainer__show" : "sideModalContainer"}>
-        <SideModal isOpen={isModalOpen} onClose={closeModal} imageURL01={selectedImage} imageURL02="" imageURL03="" title={selectedTitle} description={selectedDescription} />
+        <SideModal isOpen={isModalOpen} onClose={closeModal} imageURL01={selectedImage} imageURL02="" imageURL03="" title={selectedTitle} description_01={selectedDescription_01} description_02={selectedDescription_02} description_03={selectedDescription_03} />
       </div>
       
 
