@@ -1,3 +1,6 @@
+@import '../media-query-manager';
+
+
 .keepScrolling {
 
     display: flex;
@@ -10,6 +13,11 @@
         display: inline-block;
         opacity: 0.7;
         animation: KeepRotatingAnimation 2s ease-in-out infinite forwards;
+
+        @include respond(laptop) {
+            height: 1.5rem;
+            width: 1.5rem;
+        }
 
         &_1 {
             // animation: KeepRotatingAnimation 2s ease-in-out infinite forwards;
@@ -27,5 +35,10 @@
         margin-right: 3rem;
         margin-left: 3rem;
         animation: OpacityPulseAnimation 2s cubic-bezier(0.37, 0, 0.63, 1) infinite reverse;
+
+
+        @include respond(laptop) {
+            font-size: 1.4rem;
+        }
     }
 }

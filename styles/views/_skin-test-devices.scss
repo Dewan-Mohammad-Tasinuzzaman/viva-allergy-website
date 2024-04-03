@@ -1,3 +1,7 @@
+@import '../mixins';
+@import '../variables';
+@import '../media-query-manager';
+
 
 // 3D
 .skintests__3dcontainer {
@@ -43,8 +47,12 @@
         display: flex;
         flex-direction: column;
         align-items: start;
-        gap: 50px;
+        gap: 5rem;
         margin-right: 0;
+
+        @include respond(laptop) {
+            // font-size: 1.8rem;
+        }
 
         &_header {
             
@@ -60,6 +68,7 @@
 
             background-color: rgba(255, 255, 255, 0);
             color: var(--color-black) !important;
+            margin-top: -1rem;
 
             &-icons {
                 opacity: 1 !important;
@@ -72,6 +81,7 @@
 
 
     .skin-test-devices {
+        padding-top: 10rem;
         background-color: rgba(255, 255, 255, 0.5);
         backdrop-filter: blur(20px);
         box-shadow: 0 0px 80px rgba(0, 0, 0, 0.02);
@@ -82,6 +92,7 @@
 
         display: flex;
         align-items: center;
+        gap: 5rem;
 
         &_info {
 
@@ -127,9 +138,12 @@
 
         &_illustrations {
 
-            padding-top: 10rem;
             position: relative;
             flex: 1;
+
+            @include respond(laptop) {
+                flex: none;
+            }
 
             &-container {
                 
@@ -140,8 +154,9 @@
                 margin-right: auto;
 
                 @include respond(laptop) {
-                    width: 50rem;
-                    height: 50rem;
+                    width: 45rem;
+                    height: 45rem;
+                    margin-right: 0;
                 }
 
                 &--img {

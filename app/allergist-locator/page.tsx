@@ -10,7 +10,7 @@ const AllergistLocator = () => {
         
         <div className="allergist-locator">
 
-            <div className="page-margins-small allergist-locator__content">
+            <div className="page-margins-big allergist-locator__content">
                 <div className="allergist-locator__content_intro">
                     <h1 className="header-primary allergist-locator__content_intro_header">Allergist Locator</h1>
                     <p className="text-secondary allergist-locator__content_intro_text"><span className="marg-left-small"></span>Our user-friendly directory connects patients with local allergists specializing in venom immunotherapy, facilitating convenient access to essential care.</p>

@@ -1,8 +1,12 @@
+@import '../media-query-manager';
+
+
 .order-forms {
 
 
     &__fellowship {
 
+        position: relative;
         display: flex;
         flex-direction: row;
         // align-content: space-between;
@@ -10,20 +14,29 @@
 
         &_content {
 
-            flex: 1.5;
+            position: relative;
             display: flex;
             align-items: start;
             justify-content: space-between;
             flex-direction: column;
+            width: 60%;
 
             &-mainbox {
 
+                position: relative;
                 display: flex;
                 flex-direction: column;
                 align-items: start;
-                width: 70%;
                 gap: 3rem;
                 margin-top: 25rem;
+                margin-left: 10rem;
+                margin-right: 15rem;
+
+                @include respond(laptop) {
+                    margin-top: 18rem;
+                    margin-left: 10rem;
+                    margin-right: 10rem;
+                }
 
                 &-header {
 
@@ -53,13 +66,15 @@
 
             // For positioning, for button styling, visit "_buttons.scss"
             &-buttonsbox {
-                
+                position: relative;
+                margin-top: 5rem;
             }
         }
         &_imgbox {
 
             position: relative;
             flex: 1;
+            width: 40%;
 
             &-img {
                 height: 100%;
