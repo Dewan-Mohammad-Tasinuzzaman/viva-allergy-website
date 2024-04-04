@@ -29,7 +29,7 @@ const Footer: React.FC<FooterProps> = ({ showRequestQuote }) => {
                     <div className="footer__request-quote_content page-margins-big">
                         <h3 className="header-primary footer__request-quote_content-header">Contact Us</h3>
                         <p className="text-primary footer__request-quote_content-text">
-                            <span className="marg-left-small"></span>Our knowledgeable customer service representatives are available to take your order <br/>or answer any questions you have about our products.
+                            <span className="marg-left-small"></span>Our knowledgeable customer service representatives are available to take your order or answer any questions you have about our products.
                         </p>
                         <Link className='btn-primary footer__request-quote_content-button' href="/contacts">Get Started</Link>
                     </div>

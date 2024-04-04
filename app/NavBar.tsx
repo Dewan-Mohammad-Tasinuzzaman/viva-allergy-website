@@ -50,7 +50,7 @@ const NavBar = () => {
               </div>
           </div>
           <li className='navbar__options_item'>
-            <Link className={`${"/" === currentPath ? 'active-page-nav' : ''} navbar__options_item-link`} href="/">Home</Link>
+            <Link onClick={closeMobileMenu} className={`${"/" === currentPath ? 'active-page-nav' : ''} navbar__options_item-link`} href="/">Home</Link>
           </li>
           <li onMouseEnter={() => setIsHoverProducts(true)} onMouseLeave={() => setIsHoverProducts(false)} className='navbar__options_item'>
             <div className="flex align-items-center">
@@ -59,19 +59,19 @@ const NavBar = () => {
             </div>
             <ul onMouseEnter={() => setIsHoverProducts(true)} className={`${isHoverProducts ? 'show-sub-menu' : ''} sub-menu`}>
               <li className="sub-menu__item">
-                <Link className={`${"/venom-extracts" === currentPath ? 'active-sub-menu' : ''} sub-menu__item_link`} href="/venom-extracts">Venom Extracts</Link>
+                <Link onClick={closeMobileMenu} className={`${"/venom-extracts" === currentPath ? 'active-sub-menu' : ''} sub-menu__item_link`} href="/venom-extracts">Venom Extracts</Link>
               </li>
               <li className="sub-menu__item">
-                <Link className={`${"/skin-test-devices" === currentPath ? 'active-sub-menu' : ''} sub-menu__item_link`} href="/skin-test-devices">Skin-Test Devices</Link>
+                <Link onClick={closeMobileMenu} className={`${"/skin-test-devices" === currentPath ? 'active-sub-menu' : ''} sub-menu__item_link`} href="/skin-test-devices">Skin-Test Devices</Link>
               </li>
               <li className="sub-menu__item">
-                <Link className={`${"/product-catalogue" === currentPath ? 'active-sub-menu' : ''} sub-menu__item_link`} href="/product-catalogue">Product Catalogue</Link>
+                <Link onClick={closeMobileMenu} className={`${"/product-catalogue" === currentPath ? 'active-sub-menu' : ''} sub-menu__item_link`} href="/product-catalogue">Product Catalogue</Link>
               </li>
               <li className="sub-menu__item">
-                <Link className={`${"/order-forms" === currentPath ? 'active-sub-menu' : ''} sub-menu__item_link`} href="/order-forms">Order Forms</Link>
+                <Link onClick={closeMobileMenu} className={`${"/order-forms" === currentPath ? 'active-sub-menu' : ''} sub-menu__item_link`} href="/order-forms">Order Forms</Link>
               </li>
               <li className="sub-menu__item">
-                <Link className={`${"/allergist-locator" === currentPath ? 'active-sub-menu' : ''} sub-menu__item_link`} href="/allergist-locator">Allergist Locator</Link>
+                <Link onClick={closeMobileMenu} className={`${"/allergist-locator" === currentPath ? 'active-sub-menu' : ''} sub-menu__item_link`} href="/allergist-locator">Allergist Locator</Link>
               </li>
             </ul>
           </li>
@@ -82,20 +82,20 @@ const NavBar = () => {
             </div>
             <ul onMouseEnter={() => setIsHoverAbout(true)} className={`${isHoverAbout ? 'show-sub-menu' : ''} sub-menu`}>
               <li className="sub-menu__item">
-                <Link className={`${"/about" === currentPath ? 'active-sub-menu' : ''} sub-menu__item_link`} href="/about">About Us</Link>
+                <Link onClick={closeMobileMenu} className={`${"/about" === currentPath ? 'active-sub-menu' : ''} sub-menu__item_link`} href="/about">About Us</Link>
               </li>
               <li className="sub-menu__item flex align-items-center">
-                <Link className={`sub-menu__item_link`} href="https://www.junopharm.ca/" target="_blank">Juno Pharmaceuticals</Link>
+                <Link onClick={closeMobileMenu} className={`sub-menu__item_link`} href="https://www.junopharm.ca/" target="_blank">Juno Pharmaceuticals</Link>
                 <Image src={NewTab_Icon} alt="new-tab" unoptimized={true} className="sub-menu__item_link-newtab"/>
               </li>
               <li className="sub-menu__item flex align-items-center">
-                <Link className={`sub-menu__item_link`} href="https://www.hsallergy.com/" target="_blank">HollisterStier</Link>
+                <Link onClick={closeMobileMenu} className={`sub-menu__item_link`} href="https://www.hsallergy.com/" target="_blank">HollisterStier</Link>
                 <Image src={NewTab_Icon} alt="new-tab" unoptimized={true} className="sub-menu__item_link-newtab"/>
               </li>
             </ul>
           </li>
           <li className='navbar__options_item'>
-            <Link className='btn-primary navbar__options_item-button' href="/contacts">Contact Us</Link>
+            <Link onClick={closeMobileMenu} className='btn-primary navbar__options_item-button' href="/contacts">Contact Us</Link>
           </li>
         </ul>
         <div className="navbar__expand-btn" onClick={toggleMobileMenu}>

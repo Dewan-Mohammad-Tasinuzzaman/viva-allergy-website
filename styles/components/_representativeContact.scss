@@ -15,6 +15,10 @@
         justify-content: center;
         gap: 30px;
 
+        @include respond(tablet) {
+            flex-direction: column;
+        }
+
         &_picture {
 
             position: relative;
@@ -22,6 +26,11 @@
             height: 25rem;
             border-radius: 10px;
             overflow: hidden;
+
+            @include respond(tablet) {
+                width: 100%;
+                height: 40rem;
+            }
 
             &-img {
                 object-fit: cover;
@@ -76,6 +85,10 @@
                 cursor: pointer;
                 transform: translateY(0) scale(1);
                 transition: all .3s ease-out;
+
+                @include respond(tablet) {
+                    width: 100%;
+                }
 
                 &:hover {
                     background-color: rgb(58, 58, 58);

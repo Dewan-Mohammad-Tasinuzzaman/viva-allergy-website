@@ -33,6 +33,10 @@
     z-index: 10;
     pointer-events: none;
 
+    @include respond(tablet) {
+        pointer-events: all;
+    }
+
     &__introContainer {
         position: relative;
         width: 100vw;
@@ -62,6 +66,9 @@
         }
         &_body {
             width: 60%;
+            @include respond(tablet) {
+                width: 90%;
+            }
         }
 
         &_keepScrolling {
@@ -86,6 +93,10 @@
         backdrop-filter: blur(20px);
         box-shadow: 0 0px 80px rgba(0, 0, 0, 0.02);
         pointer-events: none;
+
+        @include respond(tablet) {
+            pointer-events: all;
+        }
     }
 
     &__features {
@@ -93,6 +104,10 @@
         display: flex;
         align-items: center;
         gap: 5rem;
+
+        @include respond(tablet) {
+            flex-direction: column-reverse;
+        }
 
         &_info {
 
@@ -197,6 +212,9 @@
         @include respond(laptop) {
             gap: 6rem;
         }
+        @include respond(tablet) {
+            flex-direction: column;
+        }
 
         &_banner {
 
@@ -211,6 +229,10 @@
             @include respond(laptop-small-1) {
                 width: 50rem;
                 height: 32rem;
+            }
+            @include respond(tablet) {
+                width: 100%;
+                height: 50vh;
             }
 
             &-img {
@@ -227,6 +249,11 @@
 
             width: 45%;
             pointer-events: all;
+
+            @include respond(tablet) {
+                width: 80%;
+                text-align: center;
+            }
 
             &-title {
 
@@ -251,6 +278,10 @@
         @include respond(laptop) {
             gap: 6rem;
         }
+        @include respond(tablet) {
+            flex-direction: column;
+            margin-top: 20rem;
+        }
 
         &_banner {
 
@@ -265,6 +296,10 @@
             @include respond(laptop-small-1) {
                 width: 50rem;
                 height: 32rem;
+            }
+            @include respond(tablet) {
+                width: 100%;
+                height: 50vh;
             }
 
             &-img {
@@ -332,6 +367,12 @@
             width: 45%;
             pointer-events: all;
 
+            @include respond(tablet) {
+                width: 80%;
+                margin-top: 5rem;
+                text-align: center;
+            }
+
             &-title {
 
             }
@@ -357,6 +398,10 @@
 
             @include respond(laptop) {
                 gap: 8rem;
+            }
+            @include respond(tablet) {
+                flex-direction: column;
+                gap: 6rem;
             }
         }
         &_video {
@@ -421,6 +466,10 @@
                     width: 48rem;
                     height: 28rem;
                 }
+                @include respond(tablet) {
+                    width: 50rem;
+                    height: 30rem;
+                }
 
                 &--imageContainer {
 
@@ -468,6 +517,10 @@
             }
         }
         &_info {
+
+            @include respond(tablet) {
+                text-align: center;
+            }
 
             &-title {
                 font-size: 3.4rem !important;

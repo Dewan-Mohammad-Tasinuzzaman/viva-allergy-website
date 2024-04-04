@@ -14,15 +14,35 @@
         background-color: var(--color-light-cream-1);
         overflow: hidden;
 
+
         &_content {
 
             position: relative;
 
-            &-header {
+            @include respond(tablet) {
+                text-align: center;
+            }
 
+            &-header {
+                @include respond(tablet) {
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: -12px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        height: 1px;
+                        width: 5rem;
+                        background-color: var(--color-dark-1);
+                    }
+                }
             }
             &-text {
                 margin-top: 2rem;
+                width: 70%;
+                @include respond(tablet) {
+                    width: 90%;
+                }
             }
             &-button {
                 margin-top: 2rem;
@@ -36,6 +56,14 @@
             width: 60rem;
             height: auto;
             opacity: .5;
+
+            @include respond(tablet) {
+                opacity: .2;
+                right: 0;
+                top: auto;
+                bottom: 0;
+                width: 20rem;
+            }
         }
     }
 
@@ -72,6 +100,9 @@
             @include respond(laptop-small-2) {
                 gap: 10rem 6rem;
                 justify-items: start;
+            }
+            @include respond(tablet) {
+                grid-template-columns: 1fr;
             }
 
             &-segment {

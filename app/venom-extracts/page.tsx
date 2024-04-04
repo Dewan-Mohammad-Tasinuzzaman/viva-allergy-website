@@ -13,7 +13,7 @@ const VenomPage = () => {
           border: 'none',
         }}
       /> */}
-      <LoadingAnimation customClassName="venom-loader" />
+      <LoadingAnimation customClassName="" />
     </main>
   )
 }
