@@ -33,6 +33,10 @@
         margin-left: 12rem;
         margin-right: 12rem;
     }
+    @include respond(tablet) {
+        margin-left: 8rem;
+        margin-right: 8rem;
+    }
 }
 .page-margins-small {
     margin-left: 10rem;
@@ -48,6 +52,10 @@
     @include respond(laptop) {
         margin-left: 5rem;
         margin-right: 5rem;
+    }
+    @include respond(tablet) {
+        margin-left: 4rem;
+        margin-right: 4rem;
     }
 }
 

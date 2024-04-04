@@ -45,6 +45,11 @@
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
         transform: translateY(0) scale(1);
 
+        @include respond(tablet) {
+            width: 12rem;
+            height: 12rem;
+        }
+
         &_img {
             position: absolute;
             top: 0;

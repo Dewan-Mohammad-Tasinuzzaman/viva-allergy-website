@@ -131,7 +131,7 @@ export default function Home() {
 
       </div>
 
-      <section id="allergy-extracts" className="allergy-extracts page-margins-big">
+      <section id="allergy-extracts" className="page-margins-big allergy-extracts">
           <div className="allergy-extracts__intro">
             <div className="allergy-extracts__intro_content">
               <h3 className="header-primary allergy-extracts__intro_content-header">Allergy Extracts</h3>

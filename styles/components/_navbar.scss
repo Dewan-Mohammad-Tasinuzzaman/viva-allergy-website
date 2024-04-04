@@ -212,18 +212,42 @@
 
     &__expand-btn {
 
+        position: relative;
         display: none;
+        width: 5rem;
+        height: 5rem;
+        background-color: white;
+        border-radius: 5px;
+        overflow: hidden;
+        // box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
 
         @include respond(tablet) {
-            display: inline-block;
-            width: 5rem;
-            height: 5rem;
-            background-color: rgb(0, 255, 170);
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         &_iconbox {
 
+            position: relative;
+            width: 70%;
+            height: 70%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 6px;
+            transition: all .3s ease-out;
+
+            &:hover {
+                gap: 8px;
+            }
+
             &-bar {
+
+                width: 100%;
+                height: 2px;
+                background-color: var(--color-dark-1);
 
                 &--1 {
 

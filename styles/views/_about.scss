@@ -8,6 +8,10 @@
         align-items: center;
         justify-content: center;
         min-height: 100vh;
+
+        @include respond(tablet) {
+            flex-direction: column-reverse;
+        }
     }
     &__intro {
 
@@ -15,14 +19,32 @@
         display: flex;
         flex-direction: column;
         align-items: start;
-        gap: 50px;
+        gap: 5rem;
 
         @include respond(laptop) {
             margin-top: 8rem;
         }
+        @include respond(tablet) {
+            align-items: center;
+            margin-top: 5rem;
+            gap: 5rem;
+        }
 
         &_header {
             font-size: 5.6rem;
+
+            @include respond(laptop-small-2) {
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -12px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    height: 1px;
+                    width: 5rem;
+                    background-color: var(--color-dark-1);
+                }
+            }
         }
         &_body {
             width: 80%;
@@ -53,6 +75,10 @@
         position: relative;
         display: flex;
 
+        @include respond(tablet) {
+            margin-top: 12rem;
+        }
+
         &_container {
 
             position: relative;
@@ -63,10 +89,13 @@
                 width: 45rem;
                 height: 45rem;
             }
-
             @include respond(laptop) {
                 width: 42rem;
                 height: 42rem;
+            }
+            @include respond(tablet) {
+                width: 30rem;
+                height: 30rem;
             }
 
             &-1 {
@@ -135,6 +164,11 @@
                 gap: 10rem;
                 align-items: flex-end;
 
+                @include respond(tablet) {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
                 //features
                 //content
             }
@@ -149,6 +183,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
+
+            @include respond(tablet) {
+                width: 80%;
+            }
 
             &_container {
 

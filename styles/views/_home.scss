@@ -402,7 +402,10 @@
 
         }
         @include respond(laptop) {
-            grid-template-columns: repeat(2, 1fr); /* Three columns with equal width */
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include respond(tablet) {
+            // grid-template-columns: repeat(1, 1fr);
         }
 
         &_extract {
@@ -433,6 +436,9 @@
         @include respond(laptop) {
             column-gap: 8rem;
         }
+        @include respond(tablet) {
+            flex-direction: column;
+        }
 
         &_imagebox {
 
@@ -447,6 +453,9 @@
             @include respond(laptop) {
                 height: calc(50.5rem / 1.2);
                 width: calc(65rem / 1.2);
+            }
+            @include respond(tablet) {
+                width: 100%;
             }
 
             &-img {
@@ -519,8 +528,26 @@
 
             width: 40%;
 
+            @include respond(tablet) {
+                width: 80%;
+                padding: 6rem 0;
+                text-align: center;
+            }
+
             &-header {
 
+                @include respond(laptop-small-2) {
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: -12px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        height: 1px;
+                        width: 5rem;
+                        background-color: var(--color-dark-1);
+                    }
+                }
             }
 
             &-text {
