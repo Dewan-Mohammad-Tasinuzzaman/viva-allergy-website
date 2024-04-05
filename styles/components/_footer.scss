@@ -8,7 +8,7 @@
     &__request-quote {
 
         top: 0;
-        // position: sticky !important;
+        position: sticky !important;
         padding: 10rem 0;
         padding-bottom: 11.5rem;
         background-color: var(--color-light-cream-1);
@@ -58,11 +58,11 @@
             opacity: .5;
 
             @include respond(tablet) {
-                opacity: .2;
-                right: 0;
+                opacity: .3;
                 top: auto;
-                bottom: 0;
-                width: 20rem;
+                bottom: -10rem;
+                right: -10rem;
+                width: 40rem;
             }
         }
     }

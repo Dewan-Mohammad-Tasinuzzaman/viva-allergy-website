@@ -326,7 +326,9 @@
         }
 
         &_maincontainer {
-
+            @include respond(tablet) {
+                margin: 0;
+            }
         }
         &_header {
             color: var(--color-white);
@@ -342,7 +344,9 @@
             align-items: center;
 
             &-rep {
-
+                @include respond(tablet) {
+                    width: 100%;
+                }
             }
             &-rep01 {
 
