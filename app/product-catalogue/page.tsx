@@ -1,6 +1,7 @@
 import React from 'react';
 import LoadingAnimation from "@/components/LoadingAnimation";
 import Footer from "@/components/Footer";
+import ButtonPrimary from "@/components/ButtonPrimary";
 
 const ProductCataloguePage = () => {
   return (
@@ -21,6 +22,10 @@ const ProductCataloguePage = () => {
             allowTransparency={true}
             allowFullScreen
           ></iframe>
+        </div>
+
+        <div className="product-catalogue__button-container">
+          <ButtonPrimary href="/#" label="Download" />
         </div>
       </div>
 

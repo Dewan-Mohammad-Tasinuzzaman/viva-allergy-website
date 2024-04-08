@@ -323,6 +323,10 @@
             height: 95%;
             opacity: .03;
             // animation: RepsIllustrationOpacityPulseAnimation 3s cubic-bezier(0.65, 0, 0.35, 1) infinite reverse;
+
+            @include respond(tablet) {
+                height: auto;
+            }
         }
 
         &_maincontainer {

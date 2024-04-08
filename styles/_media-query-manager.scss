@@ -17,6 +17,7 @@
 
 $breakpoint argument choices:
 
+- tablet-small-1 (<900px)
 - tablet (<1000px)
 - laptop-small-2 (<1100px)
 - laptop-small-1 (<1150px)
@@ -32,6 +33,9 @@ $breakpoint argument choices:
 
 
 @mixin respond($breakpoint) {
+    @if $breakpoint == tablet-small-1 {
+        @media only screen and (max-width: 56.25em) { @content } ; // 900px
+    }
     @if $breakpoint == tablet {
         @media only screen and (max-width: 62.5em) { @content } ; // 1000px
     }
