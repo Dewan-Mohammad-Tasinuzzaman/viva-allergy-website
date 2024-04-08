@@ -8,9 +8,15 @@
 
     &__catalogue-container {
 
+        position: relative;
+        margin-top: 5rem;
+        margin-bottom: 10rem;
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+
         &_catalogue {
-            margin-top: 5rem;
-            margin-bottom: 10rem;
+            
         }
     }
 

@@ -196,9 +196,14 @@
     align-items: center;
     width: 100%;
 
+    @include respond(phone) {
+        flex-direction: column;
+    }
+
     &__button {
 
         flex: 1;
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;

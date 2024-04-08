@@ -11,7 +11,7 @@ const ProductCataloguePage = () => {
 
         <h1 className="header-primary page-margins-small product-catalogue__header">Product Catalogue</h1>
 
-        <div className='product-catalogue__catalogue-container' style={{ position: 'relative', paddingTop: 'max(60%,324px)', width: '100%', height: 0 }}>
+        <div className='product-catalogue__catalogue-container'>
           <iframe
             className='product-catalogue__catalogue-container_catalogue'
             style={{ position: 'absolute', border: 'none', width: '100%', height: '100%', left: 0, top: 0 }}

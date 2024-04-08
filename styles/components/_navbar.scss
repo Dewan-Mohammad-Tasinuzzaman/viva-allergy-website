@@ -102,8 +102,15 @@
             padding-top: 12rem;
             overflow-y: auto;
             overflow-x: hidden;
-            box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.0);
             z-index: 1000;
+
+            @include respond(tablet-small-3) {
+                width: 70vw;
+            }
+            @include respond(phone) {
+                width: 90vw;
+            }
 
             /* width */
             &::-webkit-scrollbar {
@@ -344,6 +351,7 @@
 }
 
 .show-mobile-menu {
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
     transform: translateX(-100%);
 }
 .show-sub-menu {

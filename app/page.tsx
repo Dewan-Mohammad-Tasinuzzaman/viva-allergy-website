@@ -88,7 +88,7 @@ export default function Home() {
 
           <div className="hero__maincontainer-start">
 
-            <div className="hero__content mix-blend-diff page-span-big">
+            <div className="hero__content page-span-big">
               <div className="hero__content_subcontainer1">
                 <h2 className="hero__content_subcontainer1-subheader--1">
                   In Partnership with<br/>

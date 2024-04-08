@@ -37,6 +37,10 @@
         margin-left: 8rem;
         margin-right: 8rem;
     }
+    @include respond(tablet-small-2) {
+        margin-left: 4rem;
+        margin-right: 4rem;
+    }
 }
 .page-margins-small {
     margin-left: 10rem;
@@ -56,6 +60,10 @@
     @include respond(tablet) {
         margin-left: 4rem;
         margin-right: 4rem;
+    }
+    @include respond(tablet-small-2) {
+        margin-left: 2rem;
+        margin-right: 2rem;
     }
 }
 

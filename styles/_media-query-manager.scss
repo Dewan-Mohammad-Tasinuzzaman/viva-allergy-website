@@ -17,6 +17,11 @@
 
 $breakpoint argument choices:
 
+- phone-small-1 (<400px)
+- phone (<450px)
+- tablet-small-4 (<550px)
+- tablet-small-3 (<650px)
+- tablet-small-2 (<800px)
 - tablet-small-1 (<900px)
 - tablet (<1000px)
 - laptop-small-2 (<1100px)
@@ -33,6 +38,21 @@ $breakpoint argument choices:
 
 
 @mixin respond($breakpoint) {
+    @if $breakpoint == phone-small-1 {
+        @media only screen and (max-width: 25em) { @content } ; // 400px
+    }
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 28.125em) { @content } ; // 450px
+    }
+    @if $breakpoint == tablet-small-4 {
+        @media only screen and (max-width: 34.375em) { @content } ; // 550px
+    }
+    @if $breakpoint == tablet-small-3 {
+        @media only screen and (max-width: 40.625em) { @content } ; // 650px
+    }
+    @if $breakpoint == tablet-small-2 {
+        @media only screen and (max-width: 50em) { @content } ; // 800px
+    }
     @if $breakpoint == tablet-small-1 {
         @media only screen and (max-width: 56.25em) { @content } ; // 900px
     }

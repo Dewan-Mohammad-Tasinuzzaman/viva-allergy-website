@@ -18,6 +18,15 @@
     @include respond(laptop-small-2) {
         width: 50vw;
     }
+    @include respond(tablet) {
+        width: 70vw;
+    }
+    @include respond(tablet-small-3) {
+        width: 80vw;
+    }
+    @include respond(phone) {
+        width: 90vw;
+    }
 }
 .sideModalContainer__show {
     transform: translateX(0);

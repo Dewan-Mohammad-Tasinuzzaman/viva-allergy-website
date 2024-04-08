@@ -15,6 +15,11 @@
     transition: all .3s ease-out;
     animation: LoadingAnimation 1.2s cubic-bezier(0.65, 0, 0.35, 1) forwards;
     animation-delay: .7s;
+    
+    &-loader {
+        animation: none !important;
+    }
+
 
     &__logoBox {
         position: relative;

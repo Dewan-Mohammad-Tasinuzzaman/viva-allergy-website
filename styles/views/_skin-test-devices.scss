@@ -177,6 +177,10 @@
                     width: 38rem;
                     height: 38rem;
                 }
+                @include respond(phone-small-1) {
+                    width: 32rem;
+                    height: 32rem;
+                }
 
                 &--img {
                     position: absolute;
@@ -233,6 +237,10 @@
             @include respond(tablet) {
                 width: 100%;
                 height: 50vh;
+            }
+            @include respond(phone) {
+                width: 100%;
+                height: 40vh;
             }
 
             &-img {
@@ -300,6 +308,10 @@
             @include respond(tablet) {
                 width: 100%;
                 height: 50vh;
+            }
+            @include respond(phone) {
+                width: 100%;
+                height: 40vh;
             }
 
             &-img {
@@ -427,6 +439,13 @@
                     width: 12rem;
                     height: 12rem;
                 }
+                @include respond(tablet-small-2) {
+                    top: -8rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 12rem;
+                    height: 12rem;
+                }
             
                 &--logo {
                     @include absolute-center;
@@ -470,6 +489,14 @@
                     width: 55rem;
                     height: 32rem;
                 }
+                @include respond(tablet-small-4) {
+                    width: 45rem;
+                    height: 25rem;
+                }
+                @include respond(phone) {
+                    width: 40rem;
+                    height: 22rem;
+                }
 
                 &--imageContainer {
 
@@ -506,6 +533,11 @@
                     width: 10rem;
                     height: 10rem;
                     animation: ExtractIneractionScalePulse 4s ease-in-out infinite;
+
+                    @include respond(phone) {
+                        width: 8rem;
+                        height: 8rem;
+                    }
 
                     &---playIcon {
                         @include absolute-center;

@@ -49,10 +49,18 @@
                 grid-auto-rows: auto; /* Automatic row height */
                 gap: 4rem 2rem; /* Gap between grid items */
 
+                @include respond(tablet-small-1) {
+                    grid-template-columns: 1fr;
+                }
+
                 &_group {
 
                     display: flex;
                     flex-direction: column;
+
+                    @include respond(tablet-small-1) {
+                        grid-column: span 2;
+                    }
 
                     &-label {
                         font-size: 1.6rem;

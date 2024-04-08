@@ -39,6 +39,7 @@
                 margin-top: 25rem;
                 margin-left: 10rem;
                 margin-right: 15rem;
+                margin-bottom: 5rem;
 
                 @include respond(laptop) {
                     margin-top: 18rem;
@@ -47,6 +48,15 @@
                 }
                 @include respond(laptop-small-2) {
                     margin-top: 10rem;
+                    margin-bottom: 10rem;
+                }
+                @include respond(tablet-small-4) {
+                    margin-left: 6rem;
+                    margin-right: 6rem;
+                }
+                @include respond(phone) {
+                    margin-left: 3rem;
+                    margin-right: 3rem;
                 }
 
                 &-header {
@@ -82,11 +92,6 @@
             // For positioning, for button styling, visit "_buttons.scss"
             &-buttonsbox {
                 position: relative;
-                margin-top: 5rem;
-
-                @include respond(laptop-small-2) {
-                    margin-top: 10rem;
-                }
             }
         }
         &_imgbox {

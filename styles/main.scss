@@ -73,6 +73,9 @@ html {
   @include respond(laptop) {
     font-size: 54.5%;
   }
+  @include respond(phone-small-1) {
+    font-size: 50%;
+  }
 }
 
 

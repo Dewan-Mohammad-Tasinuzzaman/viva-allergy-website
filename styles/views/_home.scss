@@ -26,6 +26,11 @@
         align-items: center;
         justify-content: space-between;
 
+        @include respond(tablet) {
+            backdrop-filter: blur(3px);
+            background-image: linear-gradient(to bottom, rgb(255, 249, 240) 0%, rgb(255, 228, 196, 0) 100%);
+        }
+
         &-start {
             position: relative;
             width: 100%;
@@ -35,6 +40,10 @@
             &--linkbox {
                 @include absolute-center;
                 top: 54.5%;
+                
+                @include respond(tablet-small-4) {
+                    top: 54.5%;
+                }
             }
             &--link:link,
             &--link:visited {
@@ -82,10 +91,21 @@
             }
 
             &--keepScrolling {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 position: absolute;
                 bottom: 8%;
                 left: 50%;
                 transform: translateX(-50%);
+
+                @include respond(tablet-small-3) {
+                    Bottom: 4%;
+                }
+                @include respond(tablet-small-4) {
+                    bottom: -8%;
+                }
             }
         }
 
@@ -127,8 +147,18 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        color: white;
+        mix-blend-mode: difference;
 
-        // width: 90vw; // Controlled by the 'page-span-small' class (utils).
+        @include respond(tablet) {
+            flex-direction: column;
+            align-items: stretch;
+            color: var(--color-black);
+            mix-blend-mode: normal;
+        }
+        @include respond(tablet-small-4) {
+            
+        }
 
         &_subcontainer1 {
 
@@ -138,6 +168,15 @@
 
             @include respond(laptop) {
                 height: 45rem;
+            }
+            @include respond(laptop-small-2) {
+                height: 65rem;
+            }
+            @include respond(tablet) {
+                height: 20rem;
+            }
+            @include respond(tablet-small-3) {
+                // height: 20rem;
             }
 
             &-subheader--1 {
@@ -173,17 +212,23 @@
                 margin-top: 20px;
                 background-color: white;
                 animation: OpacityHeightPulseAnimation 3s infinite alternate cubic-bezier(0.65, 0, 0.35, 1);
+
+                @include respond(tablet) {
+                    background-color: rgba(0, 0, 0, 0.30);
+                }
             }
         }
 
         &_centercontainer {
 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             text-align: center;
 
             &-heading {
-                @include absolute-center;
-                top: 40%;
-                width: 100%;
+                margin-bottom: 10rem;
                 font-size: 5.0rem;
                 font-weight: 300;
                 letter-spacing: 1px;
@@ -193,10 +238,18 @@
                 @include respond(laptop) {
                     font-size: 4.2rem;
                 }
+                @include respond(tablet-small-3) {
+                    font-size: 3.8rem;
+                    line-height: 1.2;
+                }
 
                 &--span {
                     font-weight: 400;
                 }
+            }
+
+            &-link {
+
             }
         }
 
@@ -210,6 +263,15 @@
             @include respond(laptop) {
                 height: 45rem;
             }
+            @include respond(laptop-small-2) {
+                height: 65rem;
+            }
+            @include respond(tablet) {
+                height: 20rem;
+            }
+            @include respond(tablet-small-3) {
+                height: 25rem;
+            }
 
             &-line {
                 right: 0;
@@ -220,6 +282,10 @@
                 margin-bottom: 20px;
                 background-color: white;
                 animation: OpacityHeightPulseAnimation 3s infinite alternate cubic-bezier(0.65, 0, 0.35, 1);
+
+                @include respond(tablet) {
+                    background-color: rgba(0, 0, 0, 0.30);
+                }
             }
             &-subheader--2 {
                 font-size: 2rem;
@@ -315,6 +381,10 @@
                 @include respond(laptop-small-2) {
                     justify-content: center;
                 }
+                @include respond(tablet-small-4) {
+                    flex-direction: column;
+                    gap: 15px;
+                }
             }
             &-link {
                 display: inline-block;
@@ -350,6 +420,10 @@
                 @include respond(laptop-small-2) {
                     width: 45rem;
                     height: 45rem;
+                }
+                @include respond(phone) {
+                    width: 35rem;
+                    height: 35rem;
                 }
             }
             &-1 {
@@ -406,6 +480,9 @@
         }
         @include respond(tablet) {
             // grid-template-columns: repeat(1, 1fr);
+        }
+        @include respond(tablet-small-1) {
+            grid-template-columns: repeat(1, 1fr);
         }
 
         &_extract {
