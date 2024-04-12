@@ -552,6 +552,8 @@
 
             @include respond(tablet) {
                 text-align: center;
+                margin-right: 3rem;
+                margin-left: 3rem;
             }
 
             &-title {

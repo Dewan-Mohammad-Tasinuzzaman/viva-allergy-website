@@ -41,7 +41,7 @@
                 margin-top: 2rem;
                 width: 70%;
                 @include respond(tablet) {
-                    width: 90%;
+                    width: 100%;
                 }
             }
             &-button {

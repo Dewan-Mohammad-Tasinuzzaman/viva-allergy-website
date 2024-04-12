@@ -17,6 +17,7 @@
 
 $breakpoint argument choices:
 
+- phone-small-2 (<280px)
 - phone-small-1 (<400px)
 - phone (<450px)
 - tablet-small-4 (<550px)
@@ -38,6 +39,9 @@ $breakpoint argument choices:
 
 
 @mixin respond($breakpoint) {
+    @if $breakpoint == phone-small-2 {
+        @media only screen and (max-width: 17.5em) { @content } ; // 280px
+    }
     @if $breakpoint == phone-small-1 {
         @media only screen and (max-width: 25em) { @content } ; // 400px
     }

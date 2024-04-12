@@ -1,0 +1,252 @@
+
+
+.venom {
+
+
+
+    &__intro {
+
+        &__container{
+
+            display: flex;
+            width: 100vw;
+            min-height: 100vh;
+
+            &__content {
+
+                width: 55%;
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                justify-content: space-between;
+                gap: 5rem;
+
+                &_infobox {
+
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+
+                    &_contents {
+
+                        display: flex;
+                        flex-direction: column;
+                        gap: 3rem;
+                        margin-top: 10rem;
+
+                        &-heading01 {
+                            font-size: 4.2rem;
+                            font-weight: 600;
+                            color: var(--color-dark-1);
+                        }
+                        &-heading02 {
+                            font-size: 2.8rem;
+                            font-weight: 400;
+                            color: #555555;
+                        }
+                        &-text {
+
+                        }
+                        &-keepScrolling {
+                            
+                            margin-top: 1rem;
+
+                            &--text {
+                                color: var(--color-black);
+                            }
+                            &--icons {
+                                opacity: 1 !important;
+                            }
+                        }
+                    }
+                }
+
+                &_buttonbox {
+
+                }
+            }
+
+
+            &__videobox {
+
+                width: 45%;
+                position: relative;
+                overflow: hidden;
+
+                &_video {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                &_banner {
+
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 10rem;
+                    background-color: rgba(36, 36, 36, 0.8);
+                    overflow: hidden;
+
+                    &-text {
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        transform: translateY(-50%);
+                        font-size: 3rem;
+                        font-weight: 300;
+                        letter-spacing: 1px;
+                        color: white;
+                        text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+                        text-transform: uppercase;
+                        display: block;
+                        width: 100%;
+                        white-space: nowrap;
+
+                        &--span{
+                            color: var(--color-venoms);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    &__patient-journey {
+
+        position: relative;
+        height: 300vh;
+        width: 100vw;
+        background-color: #202020;
+        padding-bottom: 10rem;
+
+        &_illustration {
+            @include absolute-center;
+            width: 80%;
+            height: auto;
+            opacity: .3;
+            animation: MapIconOpacityPulseAnimation 3.5s infinite ease-in-out;
+        }
+
+        &_container {
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            // background-color: rgb(106, 0, 177);
+
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+
+
+            &_slider {
+
+                display: flex;
+                align-items: end;
+                gap: 4rem;
+                padding-bottom: 5rem;
+
+                &-intro {
+
+                    position: relative;
+                    height: 100vh;
+                    width: 50vw;
+                    display: flex;
+                    align-items: center;
+                    justify-content: start;
+                    margin-left: 10rem;
+
+                    &--contents {
+
+                        display: flex;
+                        flex-direction: column;
+                        gap: 2.5rem;
+
+                        &__header {
+                            
+                            font-size: 7.2rem;
+                            font-weight: 400;
+                            color: var(--color-white);
+
+                            &-span {
+                                color: var(--color-venoms);
+                            }
+                        }
+                        &__keepScrolling {
+
+                        }
+                    }
+                }
+
+                // Cards...
+            }
+        }
+    }
+
+
+    &__venom-immunotherapy {
+
+        &__container {
+
+            position: relative;
+            width: 100vw;
+            min-height: 100vh;
+            overflow: hidden;
+
+            &_video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            &_contents {
+
+                position: relative;
+                width: 45%;
+                height: 100vh;
+                margin-left: auto;
+                padding: 5rem;
+                background-color: rgba(255, 255, 255, 0.05);
+
+                display: flex;
+                align-items: center;
+                justify-content: start;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: white;
+                    mix-blend-mode: overlay;
+                }
+
+                &_box {
+
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+
+                    &-header {
+                        font-size: 4rem;
+                        font-weight: 600;
+                        line-height: 1.2;
+                        color: var(--color-black);
+                    }
+                    &-text {
+                        font-size: 1.9rem;
+                        font-weight: 700;
+                        color: var(--color-dark-1);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -198,6 +198,10 @@
 
                 &:hover {
                     color: var(--color-viva-lightgreen);
+
+                    .navbar__options_item-arrow {
+                        // Not working???
+                    }
                 }
 
                 @include respond(tablet) {
@@ -209,6 +213,8 @@
             &-arrow {
                 width: 1.2rem;
                 height: auto;
+                transform: rotate(0deg);
+                transition: all .3s ease-out;
             }
 
             &-button {

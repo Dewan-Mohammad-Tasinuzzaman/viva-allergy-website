@@ -31,6 +31,7 @@
 @import './components/sideModal';
 @import './components/loadingAnimation';
 @import './components/representativeContact';
+@import './components/patientJourneyCard';
 @import './components/footer';
 
 
@@ -75,6 +76,9 @@ html {
   }
   @include respond(phone-small-1) {
     font-size: 50%;
+  }
+  @include respond(phone-small-2) {
+    font-size: 47%;
   }
 }
 
