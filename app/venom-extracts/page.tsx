@@ -59,7 +59,7 @@ const VenomPage = () => {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-60%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-80%"]);
 
   return (
     <main className='pos-relative venom'>
