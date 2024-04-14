@@ -2,14 +2,19 @@
 @import '../mixins';
 
 
-
+.navbar-hidden {
+    transform: translate(-50%, -150%) !important;
+    @include respond(phone) {
+        transform: translate(-50%, 0) !important;
+    }
+}
 // TOP-NAVIGATION
 .navbar {
 
     position: fixed;
     z-index: 100;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, 0);
     width: 90vw;
     display: flex;
     align-items: center;
@@ -20,6 +25,7 @@
     border-radius: 100rem;
     margin-top: 3rem;
     padding: 1rem 1.5rem;
+    transition: all 0.3s ease-out;
 
     @include respond(tablet) {
         width: 100vw;

@@ -15,6 +15,11 @@ import { useRef } from 'react';
 import { ParallaxBanner } from "react-scroll-parallax";
 import PatientJourneyCard from '@/components/PatientJourneyCard';
 import KeepScrolling from '@/components/KeepScrolling';
+import Viva_Icon_White from "@/public/assets/svgs/logo_icon-white.svg";
+import Check_Icon from "@/public/assets/svgs/check-icon.svg";
+import Syringe_Icon from "@/public/assets/svgs/syringe_icon-angled.svg";
+import Innovative_Icon from '@/public/assets/svgs/innovative_icon.svg';
+import Empower_Icon from '@/public/assets/svgs/empowerment_icon.svg';
 
 const VenomPage = () => {
 
@@ -84,13 +89,13 @@ const VenomPage = () => {
             <div className="button-group venom__intro__container__content_buttonsbox">
               <Link className="button-group__button button-group__button--dark" href="#">
                 <div className="button-group__button_content">
-                  <p className="button-group__button_content-text">SCIT Order Form</p>
+                  <p className="button-group__button_content-text">Patient Journey</p>
                   <Image src={Map_Icon} alt="map icon" unoptimized={true} className="button-group__button_content-icon" />
                 </div>
               </Link>
               <Link className="button-group__button button-group__button--light" href="#">
                 <div className="button-group__button_content">
-                  <p className="button-group__button_content-text">Venom Order Form</p>
+                  <p className="button-group__button_content-text">Allergist Info</p>
                   <Image src={Allergist_Icon} alt="allergist icon" unoptimized={true} className="button-group__button_content-icon" />
                 </div>
               </Link>
@@ -114,7 +119,8 @@ const VenomPage = () => {
 
 
       <section ref={targetRef} className="venom__patient-journey">
-        <Image src={Map_Icon_Large} alt="map illustration" unoptimized={true} className="venom__patient-journey_illustration" />
+        <Image src={Map_Icon_Large} alt="map illustration" unoptimized={true} className="venom__patient-journey_illustration01" />
+        <Image src={Viva_Icon_White} alt="map illustration" unoptimized={true} className="venom__patient-journey_illustration02" />
         <div className="venom__patient-journey_container">
           <motion.div style={{ x }} className="venom__patient-journey_container_slider">
             <div className="venom__patient-journey_container_slider-intro">
@@ -125,10 +131,10 @@ const VenomPage = () => {
                 </div>
               </div>
             </div>
-            <PatientJourneyCard header='Now' step_number='01.' description={NowDescription} banner_URL={Now_Image_URL} />
-            <PatientJourneyCard header='Today' step_number='02.' description={TodayDescription} banner_URL={Today_Image_URL} />
-            <PatientJourneyCard header='Tomorrow' step_number='03.' description={TomorrowDescription} banner_URL={Tomorrow_Image_URL} />
-            <PatientJourneyCard header='Next Time' step_number='04.' description={NextTimeDescription} banner_URL={NextTime_Image_URL} />
+            <PatientJourneyCard header='Now' step_number='01' colorClassName='bg-mites' description={NowDescription} banner_URL={Now_Image_URL} />
+            <PatientJourneyCard header='Today' step_number='02' colorClassName='bg-insects' description={TodayDescription} banner_URL={Today_Image_URL} />
+            <PatientJourneyCard header='Tomorrow' step_number='03' colorClassName='bg-venom' description={TomorrowDescription} banner_URL={Tomorrow_Image_URL} />
+            <PatientJourneyCard header='Next Time' step_number='04' colorClassName='bg-trees' description={NextTimeDescription} banner_URL={NextTime_Image_URL} />
           </motion.div>
         </div>
       </section>
@@ -146,6 +152,131 @@ const VenomPage = () => {
             <div className="venom__venom-immunotherapy__container_contents_box">
               <h1 className="venom__venom-immunotherapy__container_contents_box-header">What Is Venom Immunothepary?</h1>
               <p className="venom__venom-immunotherapy__container_contents_box-text">VIT is a series of injections that introduces minute  amounts of venom into your body. The amount is  gradually increased over time to help your immune  system build a tolerance to the venom proteins. This  process is continued until your body has enough  immunity to tolerate a bee or wasp sting.<sup>2</sup></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="venom__epi-vs-vit">
+        <div className="page-margins-big venom__epi-vs-vit__intro">
+          <div className="venom__epi-vs-vit__intro_container">
+            <h2 className="venom__epi-vs-vit__intro_container-header">
+              Reactive or Proactive Treatment For Bee and Wasp Allergies?
+              <br/>
+              <span className="venom__epi-vs-vit__intro_container-header--span">The Choice Is Yours</span>
+            </h2>
+            <p className="venom__epi-vs-vit__intro_container-text">VIT is proactive treatment that prevents a life threatening emergency before it happens. An EAI is  the first step of emergency treatment after an allergic  reaction occurs.</p>
+          </div>
+        </div>
+
+        <div className="venom__epi-vs-vit__comparison">
+          <div className="venom__epi-vs-vit__comparison_leftcol"></div>
+          <div className="venom__epi-vs-vit__comparison_rightcol"></div>
+          <div className="venom__epi-vs-vit__comparison_headerbox">
+            <div className="venom__epi-vs-vit__comparison_headerbox-box">
+              <div className="venom__epi-vs-vit__comparison_headerbox-box-container">
+                <h3 className="venom__epi-vs-vit__comparison_headerbox-box-container--header01">EAI</h3>
+                <h3 className="venom__epi-vs-vit__comparison_headerbox-box-container--header02">Epinephrine Auto-Injector</h3>
+              </div>
+            </div>
+            <div className="venom__epi-vs-vit__comparison_headerbox-box">
+              <div className="venom__epi-vs-vit__comparison_headerbox-box-container">
+                <h3 className="venom__epi-vs-vit__comparison_headerbox-box-container--header01">VIT</h3>
+                <h3 className="venom__epi-vs-vit__comparison_headerbox-box-container--header02">Venom Immunotherapy</h3>
+              </div>
+            </div>
+          </div>
+          {/* List */}
+          <div className="venom__epi-vs-vit__comparison_list">
+            <div className="page-margins-big venom__epi-vs-vit__comparison_list-container">
+
+              <div className="venom__epi-vs-vit__comparison_list-container-item">
+                <div className="venom__epi-vs-vit__comparison_list-container-item--containerLeft">
+                  <h4 className="venom__epi-vs-vit__comparison_list-container-item--containerLeft__header">Reactive</h4>
+                  <p className="venom__epi-vs-vit__comparison_list-container-item--containerLeft__text">
+                    It does not prevent an emergency; it&apos;s simply the first step of emergency treatment.
+                  </p>
+                </div>
+                <div className="venom__epi-vs-vit__comparison_list-container-item--containerMiddle">
+                  <div className="venom__epi-vs-vit__comparison_list-container-item--containerMiddle__container">
+                    <Image src={Innovative_Icon} alt="map illustration" unoptimized={true} className="venom__epi-vs-vit__comparison_list-container-item--containerMiddle__container_icon" />
+                    <div className="venom__epi-vs-vit__comparison_list-container-item--containerMiddle__container_filter"></div>
+                  </div>
+                </div>
+                <div className="venom__epi-vs-vit__comparison_list-container-item--containerRight">
+                  <h4 className="venom__epi-vs-vit__comparison_list-container-item--containerRight__header">Proactive</h4>
+                  <p className="venom__epi-vs-vit__comparison_list-container-item--containerRight__text">
+                    Shown to be 98% effective at eliminating a systemic reaction following an insect sting.<sup>3</sup>
+                  </p>
+                </div>
+              </div>
+
+
+              <div className="venom__epi-vs-vit__comparison_list-container-item">
+                <div className="venom__epi-vs-vit__comparison_list-container-item--containerLeft">
+                  <h4 className="venom__epi-vs-vit__comparison_list-container-item--containerLeft__header">Self-Administered</h4>
+                  <p className="venom__epi-vs-vit__comparison_list-container-item--containerLeft__text">
+                    Epinephrine is often self-administered in a  crisis situation and can  be difficult to administer  correctly.<sup>4</sup>
+                  </p>
+                </div>
+                <div className="venom__epi-vs-vit__comparison_list-container-item--containerMiddle">
+                  <div className="venom__epi-vs-vit__comparison_list-container-item--containerMiddle__container">
+                    <Image src={Syringe_Icon} alt="map illustration" unoptimized={true} className="venom__epi-vs-vit__comparison_list-container-item--containerMiddle__container_icon venom__epi-vs-vit__comparison_list-container-item--containerMiddle__container_icon-special" />
+                    <div className="venom__epi-vs-vit__comparison_list-container-item--containerMiddle__container_filter"></div>
+                  </div>
+                </div>
+                <div className="venom__epi-vs-vit__comparison_list-container-item--containerRight">
+                  <h4 className="venom__epi-vs-vit__comparison_list-container-item--containerRight__header">Professional</h4>
+                  <p className="venom__epi-vs-vit__comparison_list-container-item--containerRight__text">
+                    Venom Immunotherapy is administered by a licensed health care professional in a clinical setting.
+                  </p>
+                </div>
+              </div>
+
+
+              <div className="venom__epi-vs-vit__comparison_list-container-item">
+                <div className="venom__epi-vs-vit__comparison_list-container-item--containerLeft">
+                  <h4 className="venom__epi-vs-vit__comparison_list-container-item--containerLeft__header">Dependent</h4>
+                  <p className="venom__epi-vs-vit__comparison_list-container-item--containerLeft__text">
+                    Remembering to carry epinephrine every day  can be inconvenient,  meaning it may not  be available when it&apos;s  needed most.
+                  </p>
+                </div>
+                <div className="venom__epi-vs-vit__comparison_list-container-item--containerMiddle">
+                  <div className="venom__epi-vs-vit__comparison_list-container-item--containerMiddle__container">
+                    <Image src={Check_Icon} alt="map illustration" unoptimized={true} className="venom__epi-vs-vit__comparison_list-container-item--containerMiddle__container_icon" />
+                    <div className="venom__epi-vs-vit__comparison_list-container-item--containerMiddle__container_filter"></div>
+                  </div>
+                </div>
+                <div className="venom__epi-vs-vit__comparison_list-container-item--containerRight">
+                  <h4 className="venom__epi-vs-vit__comparison_list-container-item--containerRight__header">Prepared</h4>
+                  <p className="venom__epi-vs-vit__comparison_list-container-item--containerRight__text">
+                    With VIT, your protection is always with you meaning  you are prepared and  protected, wherever you are.
+                  </p>
+                </div>
+              </div>
+
+
+              <div className="venom__epi-vs-vit__comparison_list-container-item">
+                <div className="venom__epi-vs-vit__comparison_list-container-item--containerLeft">
+                  <h4 className="venom__epi-vs-vit__comparison_list-container-item--containerLeft__header">Worry</h4>
+                  <p className="venom__epi-vs-vit__comparison_list-container-item--containerLeft__text">
+                    Relying on a reactive approach can mean constant fear and worry.
+                  </p>
+                </div>
+                <div className="venom__epi-vs-vit__comparison_list-container-item--containerMiddle">
+                  <div className="venom__epi-vs-vit__comparison_list-container-item--containerMiddle__container">
+                    <Image src={Empower_Icon} alt="map illustration" unoptimized={true} className="venom__epi-vs-vit__comparison_list-container-item--containerMiddle__container_icon" />
+                    <div className="venom__epi-vs-vit__comparison_list-container-item--containerMiddle__container_filter"></div>
+                  </div>
+                </div>
+                <div className="venom__epi-vs-vit__comparison_list-container-item--containerRight">
+                  <h4 className="venom__epi-vs-vit__comparison_list-container-item--containerRight__header">Free From Fear</h4>
+                  <p className="venom__epi-vs-vit__comparison_list-container-item--containerRight__text">
+                    Venom Immunotherapy  reduces fear and  improves patient quality of life.<sup>1,3</sup>
+                  </p>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>

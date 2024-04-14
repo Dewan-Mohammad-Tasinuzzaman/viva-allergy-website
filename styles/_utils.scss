@@ -104,6 +104,18 @@
 .bg-white {
     background-color: white;
 }
+.bg-venom {
+    background-color: var(--color-venoms) !important;
+}
+.bg-trees {
+    background-color: var(--color-trees) !important;
+}
+.bg-mites {
+    background-color: var(--color-dust-mites) !important;
+}
+.bg-insects {
+    background-color: var(--color-insects) !important;
+}
 .mix-blend-diff {
     color: white !important;
     mix-blend-mode: difference !important;

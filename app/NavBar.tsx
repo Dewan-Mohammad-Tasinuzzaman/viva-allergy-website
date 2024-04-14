@@ -1,6 +1,6 @@
 'use client'; // Converted to client component
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image';
@@ -30,11 +30,38 @@ const NavBar = () => {
   // about
   const [isHoverAbout, setIsHoverAbout] = useState(false);
 
+
+
+  // Sticky-Effect
+  const [isNavBarVisible, setIsNavBarVisible] = useState(true);
+  const [lastScrollTop, setLastScrollTop] = useState(0);
+  const navBarRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollTop = window.scrollY;
+      const isScrolledDown = currentScrollTop > lastScrollTop;
+
+      setLastScrollTop(currentScrollTop);
+
+      // If scrolled down or at the top of the page, show the navbar
+      setIsNavBarVisible(!isScrolledDown || currentScrollTop === 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [lastScrollTop]);
+
+  const navbarClass = isNavBarVisible ? 'navbar' : 'navbar navbar-hidden';
+
   return (
     <>
 
       {/* Desktop Nav */}
-      <nav className="navbar">
+      <nav ref={navBarRef} className={navbarClass}>
         <div className="navbar__logoContainer">
           <div className="navbar__logoContainer_logoBox">
             <Image src={Logo_Gradient} alt="Logo" unoptimized={true} className="navbar__logoContainer_logoBox-logo" />
