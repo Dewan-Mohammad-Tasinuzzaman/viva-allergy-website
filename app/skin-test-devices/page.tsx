@@ -224,7 +224,7 @@ const SkinTestPage = () => {
 
 
       {/* LOADING ANIMATION */}
-      {/* <LoadingAnimation customClassName="" /> */}
+      <LoadingAnimation customClassName="" />
     </main>
   )
 }

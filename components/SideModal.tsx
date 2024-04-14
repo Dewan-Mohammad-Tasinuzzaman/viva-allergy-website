@@ -26,7 +26,7 @@ const SideModal: React.FC<SideModalProps> = ({ isOpen, onClose, imageURL01, imag
                 <Image src={Plus_Icon} alt="collapse icon" unoptimized={true} className="sideModal__collapseContainer_button-icon" />
             </div>
         </div>
-        <div className="sideModal__content">
+        <div className="sideModal__content" data-lenis-prevent>
             <div className='sideModal__content_imagesContainer'>
                 <div className="sideModal__content_imagesContainer-imgbox">
                     <Image src={imageURL01} fill={true} alt="extract_illustration" unoptimized={true} className="sideModal__content_imageContainer-imgbox--img sideModal__content_imageContainer-imgbox--img01" />

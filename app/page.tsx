@@ -11,7 +11,7 @@ import ButtonPrimary from "@/components/ButtonPrimary";
 import CircularImage from "@/components/CircularImage";
 import AllergyExtract from "@/components/AllergyExtract";
 import Logo_Black from '@/public/assets/svgs/logo_icon-black.svg';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SideModal from "@/components/SideModal";
 import LoadingAnimation from "@/components/LoadingAnimation";
 import Footer from "@/components/Footer";
