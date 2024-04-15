@@ -66,7 +66,7 @@ const VenomPage = () => {
   );
   const NextTimeDescription = (
     <p className="journey-card__container_text">
-      Discover the risk of an allergic reaction in a doctor’s office instead of during your next sting.
+      Discover the risk of an allergic reaction in a doctor&apos;s office instead of during your next sting.
     </p>
   );
 
