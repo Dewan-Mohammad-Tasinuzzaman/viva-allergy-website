@@ -161,7 +161,7 @@
             width: 50%;
             height: auto;
             opacity: .3;
-            animation: VivaIconOpacityPulseAnimation 3s infinite cubic-bezier(0.65, 0, 0.35, 1);
+            animation: VivaIconOpacityPulseAnimation01 3s infinite cubic-bezier(0.65, 0, 0.35, 1);
         }
 
         &_container {
@@ -174,7 +174,7 @@
             align-items: center;
             overflow: hidden;
 
-
+            
             &_slider {
 
                 display: flex;
@@ -489,7 +489,7 @@
 
     &__allergist-info {
 
-        margin-top: 3rem;
+        // margin-top: 1rem;
         position: relative;
         width: 100%;
 
@@ -516,8 +516,7 @@
             width: 45%;
             height: fit-content;
             margin-left: auto;
-            padding: 20rem 5rem;
-            padding-left: 6rem;
+            padding: 20rem 8rem;
             background-color: rgba(255, 255, 255, 0.9);
             display: flex;
             align-items: center;
@@ -564,13 +563,14 @@
 
     &__extraction {
 
-        margin-top: 20rem;
-        margin-bottom: 15rem;
+        margin-top: 25rem;
+        margin-bottom: 10rem;
 
         &_header {
             text-align: center;
             font-size: 3.4rem;
             font-weight: 400;
+            line-height: 1.5;
             color: var(--color-dark-1);
         }
 
@@ -597,7 +597,7 @@
                         position: relative;
                         background-color: var(--color-venoms);
                         border-radius: 50%;
-                        padding: 5rem;
+                        padding: 4.2rem;
                         box-shadow: inset -5px 5px 15px rgba(255, 255, 255, 0.45), inset 5px -5px 15px rgba(0, 0, 0, 0.3);
                         
                         &----number {
@@ -635,32 +635,179 @@
     &__options {
 
         position: relative;
-        min-height: 100vh;
 
         &_container {
 
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            position: relative;
+            height: 400vh;
+            width: 100vw;
+            background-color: #cabd7c;
 
-            &-slider {
+            &-bgbox {
+                
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                // display: flex;
+                display: none;
+                flex-direction: column;
 
-                position: relative;
+                &-bg {
+                    width: 100%;
+                    height: calc(100% / 4);
+
+                    &--1 {
+                        background-color: #ffffff;
+                    }
+                    &--2 {
+                        background-color: var(--color-trees);
+                    }
+                    &--3 {
+                        background-color: #1f1f1f;
+                    }
+                    &--4 {
+                        background-color: #e9d98d;
+                    }
+                }
+            }
+
+
+            &-iconBig {
+                display: none;
+                @include absolute-center;
+                transform: translate(-50%, -50%) rotate(15deg);
+                width: auto;
+                height: 70%;
+                z-index: 2;
+                opacity: 0.04;
+                pointer-events: none;
+            }
+            &-icon {
+                
+                // display: none;
+                position: absolute;
+                left: 10%;
+                transform: rotate(15deg);
+                height: 48rem;
+                width: auto;
+                z-index: 2;
+                opacity: 0.08;
+                pointer-events: none;
+                
+                &--1 {
+                    top: 5%;
+                    opacity: 0.03;
+                    mix-blend-mode: difference;
+                }
+                &--2 {
+                    top: 30%;
+                }
+                &--3 {
+                    top: 55%;
+                }
+                &--4 {
+                    top: 80%;
+                    opacity: 0.2;
+                }
+            }
+
+
+            &-container {
+                position: sticky;
+                top: 0;
+                height: 100vh;
+
                 display: flex;
                 align-items: center;
-                justify-content: center;
-                width: 100vw;
+                overflow: hidden;
+            }
+            &-slider {
+                
                 height: 100vh;
-                // background-color: var(--color-trees);
+                display: flex;
+                align-items: start;
 
-                &--img {
-                    position: absolute;
-                    top: 0;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    height: 100%;
-                    width: auto;
-                    // border-radius: 10px;
+                // Sections basically:
+                &__section {
+                    
+                    position: relative;
+                    min-width: 100vw;
+                    height: 100vh;
+                    display: flex;
+                    align-items: center;
+                    z-index: 1;
+
+                    &--01 {
+                        background-color: #ffffff;
+                    }
+                    &--02 {
+                        background-color: var(--color-trees);
+                    }
+                    &--03 {
+                        background-color: #1f1f1f;
+                    }
+                    &--04 {
+                        background-color: #e9d98d;
+                    }
+
+
+                    &_container {
+
+                        position: relative;
+                        display: flex;
+                        align-items: end;
+                        justify-content: space-between;
+                        gap: 10rem;
+                        width: 100%;
+                        margin-top: 6rem;
+                        margin-bottom: 6rem;
+                        z-index: 3;
+
+                        &-intro {
+                            font-size: 2.8rem;
+                            font-weight: 600;
+                            text-wrap: nowrap;
+                            text-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+
+                            &--span {
+                                font-size: 4rem;
+                                margin-left: 3rem;
+                            }
+                        }
+                        &-headerbox {
+
+                            display: flex;
+                            flex-direction: column;
+                            gap: 2rem;
+
+                            &--header {
+                                font-size: 8rem;
+                                font-weight: 400;
+                                text-wrap: nowrap;
+                                text-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+                            }
+                            &--text {
+                                font-size: 2.8rem;
+                                font-weight: 400;
+                                text-wrap: nowrap;
+                                text-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+                            }
+                        }
+                        &-image {
+                            
+                            height: 50rem;
+                            width: auto;
+                            pointer-events: none;
+                            animation: FloatAnimation01 3s ease-in-out infinite;
+
+                            &--custom {
+                                height: 30rem;
+                                width: auto;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -673,7 +820,7 @@
 
             &-box {
 
-                margin-top: 10rem;
+                margin-top: 12rem;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -696,6 +843,7 @@
                         display: flex;
                         flex-direction: column;
                         align-items: center;
+                        width: 50%;
                         gap: 2rem;
 
                         &:not(:last-child) {
@@ -725,7 +873,7 @@
 
     &__slideshow {
 
-        margin-top: 15rem;
+        margin-top: 30rem;
         position: relative;
         overflow: hidden;
         // Slideshow (_slide-show.scss)
@@ -734,7 +882,7 @@
 
     &__beeaware {
 
-        margin-top: 20rem;
+        margin-top: 30rem;
 
         &__container {
 

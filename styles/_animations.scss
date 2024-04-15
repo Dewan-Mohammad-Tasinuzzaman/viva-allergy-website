@@ -74,7 +74,15 @@
   }
 }
 
-@keyframes VivaIconOpacityPulseAnimation {
+@keyframes VivaIconOpacityPulseAnimation01 {
+  0%, 100% {
+    opacity: 0.005;
+  }
+  50% {
+    opacity: .1;
+  }
+}
+@keyframes VivaIconOpacityPulseAnimation02 {
   0%, 100% {
     opacity: 0.005;
   }
@@ -144,5 +152,15 @@
   }
   50% {
     transform: translateX(-33.3333333333%);
+  }
+}
+
+
+@keyframes FloatAnimation01 {
+  0%, 100% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(20px);
   }
 }

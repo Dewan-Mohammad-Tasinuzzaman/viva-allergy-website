@@ -130,6 +130,36 @@
     color: white !important;
     mix-blend-mode: difference !important;
 }
+.color-white {
+    color: white !important;
+}
+.color-black {
+    color: rgb(0, 0, 0) !important;
+}
+.color-dark-1 {
+    color: var(--color-dark-1);
+}
+.color-venom {
+    color: var(--color-venoms) !important;
+}
+.color-trees {
+    color: var(--color-trees) !important;
+}
+.color-mites {
+    color: var(--color-dust-mites) !important;
+}
+.color-insects {
+    color: var(--color-insects) !important;
+}
+.color-epidermals {
+    color: var(--color-epidermal) !important;
+}
+.color-mold {
+    color: var(--color-mold) !important;
+}
+.color-grass {
+    color: var(--color-grass-pollen) !important;
+}
 .required-red {
     color: var(--required-red);
 }

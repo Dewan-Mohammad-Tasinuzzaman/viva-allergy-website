@@ -11,6 +11,10 @@ import Map_Icon_Large from "@/public/assets/svgs/map_icon_large.svg";
 import Allergist_Icon from "@/public/assets/svgs/allergist_info-icon.svg";
 import Plus_Icon_Dark from '@/public/assets/svgs/plus_icon-dark.svg';
 import Vespids_Diagram from '@/public/assets/images/venom_extracts-upscaled-edited.png';
+import Honey_Bee_Diagram from '@/public/assets/images/ext-options-1-blacktext.png';
+import Hornet_Diagram from '@/public/assets/images/ext-options-2.png';
+import Wasp_Diagram from '@/public/assets/images/ext-options-3.png';
+import Yellow_Jacket_Diagram from '@/public/assets/images/ext-options-4.png';
 import BeeAware_Img from '@/public/assets/images/beeaware-img.png';
 import Allergist_CTA_Icon from '@/public/assets/svgs/location-custom-icon.svg';
 import Footer from '@/components/Footer';
@@ -39,7 +43,7 @@ const VenomPage = () => {
   const Today_Image_URL = "/assets/images/clock-time-4.jpg";
   const Tomorrow_Image_URL = "/assets/images/laptop-research-3.jpg";
   const NextTime_Image_URL = "/assets/images/outdoors-1.jpg";
-  const Allergists_Image_URL = "/assets/images/about07.png";
+  const Allergists_Image_URL = "/assets/images/laptop-research-3.jpg";
   const Bee_Image_URL_01 = "/assets/images/bee_image_allergy-01.jpg";
   const Bee_Image_URL_02 = "/assets/images/bee_image_allergy-02.jpg";
   const Bee_Image_URL_03 = "/assets/images/bee_image_allergy-03.jpg";
@@ -67,13 +71,21 @@ const VenomPage = () => {
   );
 
 
-  // For horizontal scroller
+  // For horizontal scrollers
+  // For venom__patient-journey horizontal scroller
   const targetRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
   });
-
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-80%"]);
+
+  // For venom__options_container horizontal scroller
+  const optionsTargetRef = useRef<HTMLDivElement | null>(null);
+  const { scrollYProgress: optionsScrollYProgress } = useScroll({
+    target: optionsTargetRef,
+  });
+  const optionsX = useTransform(optionsScrollYProgress, [0, 1], ["0%", "-80%"]);
+
 
   return (
     <main className='pos-relative venom'>
@@ -300,8 +312,8 @@ const VenomPage = () => {
           layers={[
               {
               image: Allergists_Image_URL,
-              speed: -30,
-              translateY: [0, 30],
+              speed: -10,
+              translateY: [0, 20],
               scale: [1, 1.15, 'easeOutCubic'],
               shouldAlwaysCompleteAnimation: true,
               },
@@ -405,9 +417,61 @@ const VenomPage = () => {
 
 
       <section className="venom__options">
-        <div className="venom__options_container">
-          <div className="venom__options_container-slider">
-            <Image src={Vespids_Diagram} alt="vespids diagram" unoptimized={true} className="venom__options_container-slider--img" />
+        <div ref={optionsTargetRef} className="venom__options_container">
+          <div className="venom__options_container-bgbox">
+            <div className="venom__options_container-bgbox-bg venom__options_container-bgbox-bg--1"></div>
+            <div className="venom__options_container-bgbox-bg venom__options_container-bgbox-bg--2"></div>
+            <div className="venom__options_container-bgbox-bg venom__options_container-bgbox-bg--3"></div>
+            <div className="venom__options_container-bgbox-bg venom__options_container-bgbox-bg--4"></div>
+          </div>
+          <Image src={Viva_Icon_White} alt="viva allergy icon" unoptimized={true} className="venom__options_container-iconBig" />
+          <Image src={Viva_Icon_White} alt="viva allergy icon" unoptimized={true} className="venom__options_container-icon venom__options_container-icon--1" />
+          <Image src={Viva_Icon_White} alt="viva allergy icon" unoptimized={true} className="venom__options_container-icon venom__options_container-icon--2" />
+          <Image src={Viva_Icon_White} alt="viva allergy icon" unoptimized={true} className="venom__options_container-icon venom__options_container-icon--3" />
+          <Image src={Viva_Icon_White} alt="viva allergy icon" unoptimized={true} className="venom__options_container-icon venom__options_container-icon--4" />
+          <div className="venom__options_container-container">
+            <motion.div style={{ x: optionsX }} className="venom__options_container-slider">
+              <div className="venom__options_container-slider__section venom__options_container-slider__section--01">
+                <div className="page-margins-big venom__options_container-slider__section_container">
+                  <h2 className="color-dark-1 venom__options_container-slider__section_container-intro">Our Collection<span className="venom__options_container-slider__section_container-intro--span">:</span></h2>
+                  <div className="venom__options_container-slider__section_container-headerbox">
+                    <h3 className="color-dark-1 venom__options_container-slider__section_container-headerbox--header">Honey Bee</h3>
+                    <h3 className="color-dark-1 venom__options_container-slider__section_container-headerbox--text">________</h3>
+                  </div>
+                  <Image src={Honey_Bee_Diagram} alt="options image" unoptimized={true} className="venom__options_container-slider__section_container-image venom__options_container-slider__section_container-image--custom" />
+                </div>
+              </div>
+              <div className="venom__options_container-slider__section venom__options_container-slider__section--02">
+                <div className="page-margins-big venom__options_container-slider__section_container">
+                  <h2 className="color-white venom__options_container-slider__section_container-intro">Vespid<span className="venom__options_container-slider__section_container-intro--span">:</span></h2>
+                  <div className="venom__options_container-slider__section_container-headerbox">
+                    <h3 className="color-white venom__options_container-slider__section_container-headerbox--header">Hornet</h3>
+                    <h3 className="color-white venom__options_container-slider__section_container-headerbox--text">Dolichovespula</h3>
+                  </div>
+                  <Image src={Hornet_Diagram} alt="options image" unoptimized={true} className="venom__options_container-slider__section_container-image venom__options_container-slider__section_container-image--custom" />
+                </div>
+              </div>
+              <div className="venom__options_container-slider__section venom__options_container-slider__section--03">
+                <div className="page-margins-big venom__options_container-slider__section_container">
+                  <h2 className="color-white venom__options_container-slider__section_container-intro">Vespid<span className="venom__options_container-slider__section_container-intro--span">:</span></h2>
+                  <div className="venom__options_container-slider__section_container-headerbox">
+                    <h3 className="color-white venom__options_container-slider__section_container-headerbox--header">Wasp</h3>
+                    <h3 className="color-white venom__options_container-slider__section_container-headerbox--text">Polistes</h3>
+                  </div>
+                  <Image src={Wasp_Diagram} alt="options image" unoptimized={true} className="venom__options_container-slider__section_container-image" />
+                </div>
+              </div>
+              <div className="venom__options_container-slider__section venom__options_container-slider__section--04">
+                <div className="page-margins-big venom__options_container-slider__section_container">
+                  <h2 className="color-dark-1 venom__options_container-slider__section_container-intro">Vespid<span className="venom__options_container-slider__section_container-intro--span">:</span></h2>
+                  <div className="venom__options_container-slider__section_container-headerbox">
+                    <h3 className="color-dark-1 venom__options_container-slider__section_container-headerbox--header">Yellow Jacket</h3>
+                    <h3 className="color-dark-1 venom__options_container-slider__section_container-headerbox--text">Vespula</h3>
+                  </div>
+                  <Image src={Yellow_Jacket_Diagram} alt="options image" unoptimized={true} className="venom__options_container-slider__section_container-image" />
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
         <div className="venom__options_contents">
@@ -447,6 +511,7 @@ const VenomPage = () => {
                 ]}
                 className={`aspect-1-1 w-full slide-show__container_imgbox-img`}
               />
+              <div className="slide-show__container_imgbox-filter"></div>
             </div>
             <div className="slide-show__container_imgbox">
               <ParallaxBanner
@@ -461,6 +526,7 @@ const VenomPage = () => {
                 ]}
                 className={`aspect-1-1 w-full slide-show__container_imgbox-img`}
               />
+              <div className="slide-show__container_imgbox-filter"></div>
             </div>
             <div className="slide-show__container_imgbox">
               <ParallaxBanner
@@ -475,6 +541,7 @@ const VenomPage = () => {
                 ]}
                 className={`aspect-1-1 w-full slide-show__container_imgbox-img`}
               />
+              <div className="slide-show__container_imgbox-filter"></div>
             </div>
           </div>
         </div>

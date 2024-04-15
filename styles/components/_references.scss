@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #322E2A;
+    background-color: #292726;
     padding: 15rem 0;
     overflow: hidden;
 
@@ -11,7 +11,7 @@
         @include absolute-center;
         width: auto;
         height: 50%;
-        opacity: .04;
+        opacity: .02;
     }
 
     &_container {
