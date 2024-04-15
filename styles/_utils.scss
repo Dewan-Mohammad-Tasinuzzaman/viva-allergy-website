@@ -1,5 +1,6 @@
 // Utility Classes
 @import './media-query-manager';
+@import './variables';
 
 
 // ASPECT RATIOS
@@ -115,6 +116,15 @@
 }
 .bg-insects {
     background-color: var(--color-insects) !important;
+}
+.bg-epidermals {
+    background-color: var(--color-epidermal) !important;
+}
+.bg-mold {
+    background-color: var(--color-mold) !important;
+}
+.bg-grass {
+    background-color: var(--color-grass-pollen) !important;
 }
 .mix-blend-diff {
     color: white !important;

@@ -1,0 +1,49 @@
+.references {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #322E2A;
+    padding: 15rem 0;
+    overflow: hidden;
+
+    &_illustration {
+        @include absolute-center;
+        width: auto;
+        height: 50%;
+        opacity: .04;
+    }
+
+    &_container {
+
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+
+        &-header {
+            font-size: 4.2rem;
+            font-weight: 400;
+            color: var(--color-white);
+        }
+
+        &-item {
+
+            position: relative;
+            display: flex;
+            align-items: start;
+            gap: 1rem;
+
+            &--number {
+                margin-top: 4px;
+                font-size: 2.8rem;
+                color: var(--color-venoms);
+                margin-right: 1rem;
+            }
+            &--text {
+                font-size: 2rem;
+                font-weight: 300;
+                color: var(--color-white);
+            }
+        }
+    }
+}

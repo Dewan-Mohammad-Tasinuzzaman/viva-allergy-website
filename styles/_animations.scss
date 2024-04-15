@@ -67,10 +67,10 @@
 }
 @keyframes MapIconOpacityPulseAnimation {
   0%, 100% {
-    opacity: 0.06;
+    opacity: 0.01;
   }
   50% {
-    opacity: .4;
+    opacity: .08;
   }
 }
 
@@ -134,5 +134,15 @@
   }
   100% {
     background-color: var(--color-epidermal);
+  }
+}
+
+
+@keyframes slideShowMover {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-33.3333333333%);
   }
 }

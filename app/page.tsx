@@ -173,16 +173,16 @@ export default function Home() {
 
             <div className="skin-tests__container_imagebox">
               <ParallaxBanner
-              layers={[
-                  {
-                  image: skinTestsImage,
-                  speed: -30,
-                  translateY: [0, 30],
-                  scale: [1, 1.08, 'easeOutCubic'],
-                  shouldAlwaysCompleteAnimation: true,
-                  },
-              ]}
-              className={`aspect-1-1 skin-tests__container_imagebox-img`}
+                layers={[
+                    {
+                    image: skinTestsImage,
+                    speed: -30,
+                    translateY: [0, 30],
+                    scale: [1, 1.08, 'easeOutCubic'],
+                    shouldAlwaysCompleteAnimation: true,
+                    },
+                ]}
+                className={`aspect-1-1 skin-tests__container_imagebox-img`}
               />
               <div className="skin-tests__container_imagebox-filter"></div>
               <div className="skin-tests__container_imagebox-object-1"></div>
