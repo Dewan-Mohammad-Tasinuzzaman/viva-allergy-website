@@ -24,7 +24,7 @@ import Empower_Icon from '@/public/assets/svgs/empowerment_icon.svg';
 const VenomPage = () => {
 
   // Video URL
-  const IntroVideo_MP4_URL = "/assets/videos/park_swing.mp4";
+  const IntroVideo_MP4_URL = "/assets/videos/outdoors-12.mp4";
   const IntroVideo_WEBM_URL = "/assets/videos/park_swing.webm";
   const WaspVideo_MP4_URL = "/assets/videos/wasp_closeup.mp4";
   const WaspVideo_WEBM_URL = "/assets/videos/wasp_closeup.webm";
@@ -110,6 +110,8 @@ const VenomPage = () => {
               {/* Add more source elements for different formats if necessary */}
               Your browser does not support the video tag. Time to switch!
             </video>
+            <div className="venom__intro__container__videobox_filter"></div>
+            <div className="venom__intro__container__videobox_frame"></div>
             <div className="venom__intro__container__videobox_banner">
               <p className="venom__intro__container__videobox_banner-text"><span className="venom__intro__container__videobox_banner-text--span">Venom</span> Immunotherapy Saves Lives • <span className="venom__intro__container__videobox_banner-text--span">Venom</span> Immunotherapy Saves Lives •</p>
             </div>
