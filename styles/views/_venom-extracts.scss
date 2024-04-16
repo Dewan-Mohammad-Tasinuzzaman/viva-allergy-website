@@ -14,6 +14,10 @@
             width: 100vw;
             min-height: 100vh;
 
+            @include respond(tablet) {
+                flex-direction: column-reverse;
+            }
+
             &__content {
 
                 width: 55%;
@@ -22,6 +26,11 @@
                 align-items: start;
                 justify-content: space-between;
                 gap: 4rem;
+
+                @include respond(tablet) {
+                    width: 100%;
+                    gap: 15rem;
+                }
 
                 &_infobox {
 
@@ -36,6 +45,10 @@
                         flex-direction: column;
                         gap: 3rem;
                         margin-top: 10rem;
+
+                        @include respond(tablet) {
+                            margin-top: 15rem;
+                        }
 
                         &-heading01 {
                             font-size: 4.2rem;
@@ -80,6 +93,11 @@
                 position: relative;
                 overflow: hidden;
 
+                @include respond(tablet) {
+                    height: 50vh;
+                    width: 100%;
+                }
+
                 &_video {
                     width: 100%;
                     height: 100%;
@@ -103,12 +121,11 @@
                     bottom: 0;
                     left: 0;
                     width: 100%;
-                    height: 10rem;
-                    // height: 15rem;
+                    // height: 10rem;
+                    height: 25rem;
                     // background-color: rgba(36, 36, 39, 0.9);
                     overflow: hidden;
-                    // background-image: linear-gradient(to top, rgba(36, 36, 39, 1), rgba(0, 0, 0, 0));
-                    background-image: linear-gradient(to top, rgb(34 34 34), rgba(34, 34, 34, 0.753));
+                    background-image: linear-gradient(to top, rgba(36, 36, 39, 1), rgba(0, 0, 0, 0));
 
                     &-text {
                         position: absolute;
@@ -162,6 +179,11 @@
             height: auto;
             opacity: .3;
             animation: VivaIconOpacityPulseAnimation01 3s infinite cubic-bezier(0.65, 0, 0.35, 1);
+
+            @include respond(tablet-small-4) {
+                width: 70%;
+                right: 10%;
+            }
         }
 
         &_container {
@@ -190,6 +212,10 @@
                     align-items: center;
                     justify-content: start;
                     margin-left: 10rem;
+
+                    @include respond(tablet-small-4) {
+                        margin-left: 1rem;
+                    }
 
                     &--contents {
 
@@ -228,6 +254,11 @@
             min-height: 100vh;
             overflow: hidden;
 
+            @include respond(tablet) {
+                display: flex;
+                align-items: end;
+            }
+
             &_video {
                 position: absolute;
                 top: 0;
@@ -249,6 +280,20 @@
                 display: flex;
                 align-items: center;
                 justify-content: start;
+
+                @include respond(laptop) {
+                    width: 50%;
+                }
+                @include respond(laptop-small-2) {
+                    width: 60%;
+                    background-color: rgba(255, 255, 255, 0.3);
+                }
+                @include respond(tablet) {
+                    margin-left: 0;
+                    width: 100%;
+                    height: fit-content;
+                    background-color: rgba(255, 255, 255, 0.1);
+                }
 
                 &::before {
                     content: "";
@@ -318,6 +363,10 @@
                     font-weight: 300;
                     color: white;
                     width: 60%;
+
+                    @include respond(tablet) {
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -401,12 +450,31 @@
                     flex-direction: column;
                     gap: 10rem;
 
+                    @include respond(tablet-small-3) {
+                        margin-left: 2rem;
+                        margin-right: 2rem;
+                    }
+                    @include respond(phone-small-1) {
+                        margin-left: 1rem;
+                        margin-right: 1rem;
+                    }
+
                     &-item {
 
                         display: flex;
                         align-items: center;
                         justify-content: space-between;
                         gap: 4rem;
+
+                        @include respond(tablet) {
+                            gap: 2rem;
+                        }
+                        @include respond(tablet-small-3) {
+                            gap: 1.5rem;
+                        }
+                        @include respond(phone-small-1) {
+                            gap: 1rem;
+                        }
 
                         &:last-child {
                             margin-bottom: 15rem;
@@ -422,6 +490,10 @@
 
                             &__header {
                                 font-size: 2.8rem;
+
+                                @include respond(phone-small-1) {
+                                    font-size: 2.2rem;
+                                }
                             }
                             &__text {
                                 font-size: 1.8rem;
@@ -443,6 +515,14 @@
                                 overflow: hidden;
                                 background-color: var(--color-dark-1);
                                 box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+                                
+                                @include respond(tablet) {
+                                    width: 6rem;
+                                    height: 6rem;
+                                }
+                                @include respond(tablet-small-3) {
+                                    display: none
+                                }
                                 
                                 &_icon {
                                     @include absolute-center;
@@ -475,6 +555,10 @@
 
                             &__header {
                                 font-size: 2.8rem;
+
+                                @include respond(phone-small-1) {
+                                    font-size: 2.2rem;
+                                }
                             }
                             &__text {
                                 font-size: 1.8rem;
@@ -487,11 +571,68 @@
     }
 
 
+    &__success {
+        position: relative;
+        width: 100%;
+        min-height: 80vh;
+
+        &_video {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: bottom;
+        }
+        &_video-filter {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 80%;
+            // mix-blend-mode: lighten;
+            // background-color: #2b2b2b;
+            background-image: linear-gradient(to top, rgba(36, 36, 39, 1), rgba(0, 0, 0, 0));
+        }
+
+        &_container {
+
+            @include absolute-center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3rem;
+            text-align: center;
+
+            &-header {
+                font-size: 4.8rem;
+                font-weight: 400;
+                color: white;
+                text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            }
+            &-link {
+                display: inline-block;
+            }
+        }
+    }
+
+
     &__allergist-info {
 
         // margin-top: 1rem;
         position: relative;
+        min-height: 100vh;
         width: 100%;
+        display: flex;
+        justify-content: end;
+
+        @include respond(tablet) {
+            display: flex;
+            align-items: end;
+            min-height: 120vh;
+        }
+
 
         &_banner {
             position: absolute !important;
@@ -514,13 +655,30 @@
 
             position: relative;
             width: 45%;
-            height: fit-content;
-            margin-left: auto;
+            height: 100vh;
             padding: 20rem 8rem;
             background-color: rgba(255, 255, 255, 0.9);
             display: flex;
             align-items: center;
             justify-content: start;
+
+            @include respond(laptop) {
+                width: 50%;
+            }
+            @include respond(laptop-small-2) {
+                width: 60%;
+            }
+            @include respond(tablet) {
+                margin-left: 0;
+                height: fit-content;
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.9);
+                padding: 8rem 8rem;
+            }
+            @include respond(tablet-small-4) {
+                padding: 8rem 4rem;
+            }
+
 
             &-contents {
 
@@ -568,7 +726,7 @@
 
         &_header {
             text-align: center;
-            font-size: 3.4rem;
+            font-size: 3.2rem;
             font-weight: 400;
             line-height: 1.5;
             color: var(--color-dark-1);
@@ -580,15 +738,31 @@
 
             display: grid;
             grid-template-rows: auto auto;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 6rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8rem;
+
+            @include respond(laptop-large-1) {
+                gap: 8rem 6rem;
+            }
+            @include respond(laptop) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @include respond(laptop-small-2) {
+                grid-template-columns: 1fr;
+            }
 
             &-item {
 
                 display: flex;
                 align-items: start;
-                gap: 3rem;
+                gap: 3.5rem;
                 width: 100%;
+
+                @include respond(tablet-small-3) {
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                }
 
                 &--numbox {
 
@@ -597,8 +771,21 @@
                         position: relative;
                         background-color: var(--color-venoms);
                         border-radius: 50%;
-                        padding: 4.2rem;
+                        padding: 6rem;
                         box-shadow: inset -5px 5px 15px rgba(255, 255, 255, 0.45), inset 5px -5px 15px rgba(0, 0, 0, 0.3);
+
+                        @include respond(laptop-large-1) {
+                            padding: 6rem;
+                        }
+                        @include respond(laptop) {
+                            padding: 6rem;
+                        }
+                        @include respond(laptop-small-1) {
+                            padding: 4rem;
+                        }
+                        @include respond(laptop-small-2) {
+                            padding: 6rem;
+                        }
                         
                         &----number {
                             @include absolute-center;
@@ -606,7 +793,7 @@
                             width: 50%;
                             height: auto;
                             color: white;
-                            font-size: 3.4rem;
+                            font-size: 3.8rem;
                             font-weight: 600;
                         }
                     }
@@ -616,7 +803,7 @@
 
                     display: flex;
                     flex-direction: column;
-                    gap: 1rem;
+                    gap: 2rem;
 
                     &---title {
                         font-size: 2.8rem;
@@ -641,7 +828,7 @@
             position: relative;
             height: 400vh;
             width: 100vw;
-            background-color: #cabd7c;
+            background-color: #e9d98d;
 
             &-bgbox {
                 
@@ -650,68 +837,79 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                // display: flex;
-                display: none;
+                display: flex;
                 flex-direction: column;
+                overflow: hidden;
 
                 &-bg {
+                    position: relative;
                     width: 100%;
                     height: calc(100% / 4);
 
                     &--1 {
-                        background-color: #ffffff;
+
                     }
                     &--2 {
-                        background-color: var(--color-trees);
+
                     }
                     &--3 {
-                        background-color: #1f1f1f;
+
                     }
                     &--4 {
-                        background-color: #e9d98d;
+
+                    }
+
+
+                    &-icon {
+                
+                        position: absolute;
+                        top: 50%;
+                        left: 10%;
+                        transform: translateY(-50%) rotate(15deg);
+                        height: 48rem;
+                        width: auto;
+                        z-index: 2;
+                        opacity: 0.08;
+                        pointer-events: none;
+        
+                        @include respond(laptop-small-1) {
+                            height: 30rem;
+                        }
+                        
+                        &--1 {
+                            top: 55%;
+                            height: 58rem;
+                            opacity: 0.03;
+                            mix-blend-mode: difference;
+        
+                            @include respond(laptop-small-1) {
+                                height: 35rem;
+                            }
+                        }
+                        &--2 {
+                            top: 40%;
+                            @include respond(laptop-small-1) {
+                                height: 35rem;
+                            }
+                        }
+                        &--3 {
+                            top: 30%;
+                            opacity: 0.1;
+                            @include respond(laptop-small-1) {
+                                height: 35rem;
+                            }
+                        }
+                        &--4 {
+                            top: 15%;
+                            opacity: 0.2;
+                            @include respond(laptop-small-1) {
+                                height: 35rem;
+                            }
+                        }
                     }
                 }
             }
 
-
-            &-iconBig {
-                display: none;
-                @include absolute-center;
-                transform: translate(-50%, -50%) rotate(15deg);
-                width: auto;
-                height: 70%;
-                z-index: 2;
-                opacity: 0.04;
-                pointer-events: none;
-            }
-            &-icon {
-                
-                // display: none;
-                position: absolute;
-                left: 10%;
-                transform: rotate(15deg);
-                height: 48rem;
-                width: auto;
-                z-index: 2;
-                opacity: 0.08;
-                pointer-events: none;
-                
-                &--1 {
-                    top: 5%;
-                    opacity: 0.03;
-                    mix-blend-mode: difference;
-                }
-                &--2 {
-                    top: 30%;
-                }
-                &--3 {
-                    top: 55%;
-                }
-                &--4 {
-                    top: 80%;
-                    opacity: 0.2;
-                }
-            }
 
 
             &-container {
@@ -727,16 +925,17 @@
                 
                 height: 100vh;
                 display: flex;
-                align-items: start;
 
                 // Sections basically:
+
+
                 &__section {
                     
                     position: relative;
                     min-width: 100vw;
                     height: 100vh;
                     display: flex;
-                    align-items: center;
+                    align-items: end;
                     z-index: 1;
 
                     &--01 {
@@ -759,11 +958,20 @@
                         display: flex;
                         align-items: end;
                         justify-content: space-between;
-                        gap: 10rem;
+                        gap: 2rem;
                         width: 100%;
                         margin-top: 6rem;
-                        margin-bottom: 6rem;
+                        margin-bottom: 20rem;
+                        margin-left: 10rem;
+                        margin-right: 10rem;
                         z-index: 3;
+
+                        @include respond(laptop) {
+                            margin-bottom: 12rem;
+                        }
+                        @include respond(laptop-small-1) {
+                            margin-bottom: 10rem;
+                        }
 
                         &-intro {
                             font-size: 2.8rem;
@@ -774,7 +982,14 @@
                             &--span {
                                 font-size: 4rem;
                                 margin-left: 3rem;
+                                display: none;
                             }
+                        }
+                        &-line {
+                            width: 10%;
+                            min-width: 20px;
+                            height: 1px;
+                            opacity: .3;
                         }
                         &-headerbox {
 
@@ -783,13 +998,13 @@
                             gap: 2rem;
 
                             &--header {
-                                font-size: 8rem;
+                                font-size: 6.2rem;
                                 font-weight: 400;
                                 text-wrap: nowrap;
                                 text-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
                             }
                             &--text {
-                                font-size: 2.8rem;
+                                font-size: 2.4rem;
                                 font-weight: 400;
                                 text-wrap: nowrap;
                                 text-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
@@ -800,10 +1015,11 @@
                             height: 50rem;
                             width: auto;
                             pointer-events: none;
+                            margin-left: 4rem;
                             animation: FloatAnimation01 3s ease-in-out infinite;
 
                             &--custom {
-                                height: 30rem;
+                                height: 35rem;
                                 width: auto;
                             }
                         }
@@ -838,6 +1054,12 @@
                     margin-top: 2rem;
                     display: flex;
 
+                    @include respond(tablet-small-2) {
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 8rem;
+                    }
+
                     &__category {
 
                         display: flex;
@@ -846,8 +1068,16 @@
                         width: 50%;
                         gap: 2rem;
 
+                        @include respond(tablet-small-2) {
+                            width: 100%;
+                        }
+
                         &:not(:last-child) {
                             border-right: 1px solid rgba(0, 0, 0, 0.2);
+
+                            @include respond(tablet-small-2) {
+                                border-right: none;
+                            }
                         }
 
                         &_title {
@@ -892,9 +1122,22 @@
             gap: 6rem;
             width: 100vw;
 
+            @include respond(laptop-small-2) {
+                flex-direction: column;
+                align-items: center;
+                gap: 8rem;
+            }
+
             &_img {
                 width: 30%;
                 height: auto;
+
+                @include respond(laptop-small-2) {
+                    width: 85%;
+                }
+                @include respond(tablet-small-2) {
+                    width: 100%;
+                }
             }
 
             &_content {
@@ -904,6 +1147,11 @@
                 flex-direction: column;
                 gap: 4rem;
                 margin-right: 10rem;
+
+                @include respond(laptop-small-2) {
+                    width: 85%;
+                    margin-right: 0;
+                }
 
                 &-header {
                     font-size: 3.8rem;
@@ -965,7 +1213,7 @@
 
     &__allergist-cta {
 
-        margin-top: 15rem;
+        margin-top: 25rem;
         position: relative;
         display: flex;
         align-items: center;

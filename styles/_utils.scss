@@ -105,6 +105,12 @@
 .bg-white {
     background-color: white;
 }
+.bg-black {
+    background-color: rgb(0, 0, 0);
+}
+.bg-dark-1 {
+    background-color: var(--color-dark-1);
+}
 .bg-venom {
     background-color: var(--color-venoms) !important;
 }

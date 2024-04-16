@@ -12,7 +12,7 @@
     align-items: center;
     justify-content: center;
     width: 50rem;
-    height: 60rem;
+    height: 65rem;
     overflow: hidden;
 
     &--icon {
@@ -47,7 +47,7 @@
         &_numbox {
             
             position: relative;
-            padding: 6rem;
+            padding: 5rem;
             background-color: var(--color-trees);
             border-radius: 50%;
             overflow: hidden;
@@ -58,7 +58,7 @@
                 width: 100%;
                 height: auto;
                 text-transform: uppercase;
-                font-size: 4.2rem;
+                font-size: 3.8rem;
                 font-weight: 600;
                 color: white;
             }

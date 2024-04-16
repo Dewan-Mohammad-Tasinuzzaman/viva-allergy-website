@@ -12,11 +12,36 @@
         transform: translateX(-40%);
         animation: slideShowMover 15s infinite ease-in-out;
 
+        @include respond(laptop-small-1) {
+            width: 180vw;
+        }
+        @include respond(tablet) {
+            width: 200vw;
+        }
+        @include respond(tablet-small-2) {
+            width: 230vw;
+        }
+        @include respond(tablet-small-4) {
+            width: 290vw;
+        }
+
+
         &_imgbox {
 
             position: relative;
             height: 40rem;
             width: 33.3333333333%;
+
+            @include respond(laptop-small-1) {
+                height: 35rem;
+            }
+            @include respond(tablet) {
+                height: 30rem;
+            }
+            @include respond(tablet-small-2) {
+                height: 25rem;
+            }
+    
 
             &-img {
                 position: absolute !important;
