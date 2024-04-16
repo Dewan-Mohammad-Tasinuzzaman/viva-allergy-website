@@ -471,6 +471,7 @@
                         }
                         @include respond(tablet-small-3) {
                             gap: 1.5rem;
+                            align-items: start;
                         }
                         @include respond(phone-small-1) {
                             gap: 1rem;
@@ -505,6 +506,7 @@
                             display: flex;
                             align-items: center;
                             justify-content: center;
+
 
                             &__container {
 
