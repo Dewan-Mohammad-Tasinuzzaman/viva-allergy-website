@@ -978,7 +978,7 @@
                         z-index: 3;
 
                         @include respond(laptop) {
-                            margin-bottom: 15rem;
+                            margin-bottom: 12rem;
                         }
                         @include respond(laptop-small-1) {
                             margin-bottom: 10rem;
