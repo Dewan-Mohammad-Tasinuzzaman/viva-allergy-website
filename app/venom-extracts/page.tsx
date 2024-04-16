@@ -38,7 +38,7 @@ const VenomPage = () => {
   const IntroVideo_WEBM_URL = "/assets/videos/park_swing.webm";
   const WaspVideo_MP4_URL = "/assets/videos/wasp_closeup.mp4";
   const WaspVideo_WEBM_URL = "/assets/videos/wasp_closeup.webm";
-  const VITSuccessVideo_MP4_URL = "/assets/videos/outdoors-8.MP4";
+  const VITSuccessVideo_MP4_URL = "/assets/videos/outdoors-7.mp4";
 
   // Images for ParallaxBanner
   const Now_Image_URL = "/assets/images/ambulance-1-cropped.jpg";
@@ -314,7 +314,8 @@ const VenomPage = () => {
           {/* Add more source elements for different formats if necessary */}
           Your browser does not support the video tag. Time to switch!
         </video>
-        <div className="venom__success_video-filter"></div>
+        <div className="venom__success_video-filter01"></div>
+        <div className="venom__success_video-filter02"></div>
         <div className="venom__success_container">
           <h1 className="venom__success_container-header">Live Life To The Fullest</h1>
           <div className="venom__success_container-link">

@@ -587,15 +587,24 @@
             object-fit: cover;
             object-position: bottom;
         }
-        &_video-filter {
+        &_video-filter01 {
             position: absolute;
             bottom: 0;
             left: 0;
             width: 100%;
             height: 80%;
-            // mix-blend-mode: lighten;
+            mix-blend-mode: multiply;
             // background-color: #2b2b2b;
-            background-image: linear-gradient(to top, rgba(36, 36, 39, 1), rgba(0, 0, 0, 0));
+            background-image: linear-gradient(to top, rgb(37, 37, 37), rgba(0, 0, 0, 0));
+        }
+        &_video-filter02 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            mix-blend-mode: lighten;
+            background-color: #303030;
         }
 
         &_container {
