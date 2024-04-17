@@ -13,7 +13,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         const msg = {
             to: 'dewanmohammad.tasinuzzaman@ontariotechu.net', // Change to your recipient
             from: 'sender@vivaallergy.ca', // Change to your verified sender
-            subject: 'Viva Allergy - Contact Form',
+            subject: 'Viva Allergy - DO NOT REPLY',
             text: ` Hello,\n
                     You have received a new entry from:\n
                     Name: ${first_name} ${last_name}\n
