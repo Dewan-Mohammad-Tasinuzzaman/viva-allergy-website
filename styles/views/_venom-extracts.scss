@@ -129,22 +129,22 @@
 
                     &-text {
                         position: absolute;
-                        // top: 50%;
                         bottom: 20px;
                         left: 0;
-                        // transform: translateY(-50%);
-                        font-size: 3rem;
+                        transform: translateX(0);
+                        font-size: 3.6rem;
                         font-weight: 300;
                         letter-spacing: 1px;
                         color: white;
                         text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
                         text-transform: uppercase;
                         display: block;
-                        width: 100%;
+                        width: auto;
                         white-space: nowrap;
+                        animation: InfiniteMoveX 6s linear infinite forwards;
 
                         &--span{
-                            color: var(--color-venoms);
+                            // color: var(--color-venoms);
                         }
                     }
                 }

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import LoadingAnimation from "@/components/LoadingAnimation";
 import Footer from "@/components/Footer";
@@ -17,15 +18,13 @@ const ProductCataloguePage = () => {
             style={{ position: 'absolute', border: 'none', width: '100%', height: '100%', left: 0, top: 0 }}
             src="https://online.fliphtml5.com/phqel/uwwe/"
             seamless={true}
-            scrolling="no"
-            frameBorder="0"
             allowTransparency={true}
             allowFullScreen
           ></iframe>
         </div>
 
         <div className="product-catalogue__button-container">
-          <ButtonPrimary href="/#" label="Download" />
+          <ButtonPrimary href="/assets/files/Viva_Allergy_Product_Catalouge.pdf" target='blank' label="Download" />
         </div>
       </div>
 

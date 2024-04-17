@@ -137,7 +137,7 @@ const VenomPage = () => {
             <div className="venom__intro__container__videobox_filter"></div>
             <div className="venom__intro__container__videobox_frame"></div>
             <div className="venom__intro__container__videobox_banner">
-              <p className="venom__intro__container__videobox_banner-text"><span className="venom__intro__container__videobox_banner-text--span">Venom</span> Immunotherapy Saves Lives • <span className="venom__intro__container__videobox_banner-text--span">Venom</span> Immunotherapy Saves Lives •</p>
+              <p className="venom__intro__container__videobox_banner-text"><span className="color-venom">Venom</span> Immunotherapy Saves Lives • <span className="color-venom">Venom</span> Immunotherapy Saves Lives • <span className="color-venom">Venom</span> Immunotherapy Saves Lives •</p>
             </div>
           </div>
         </div>
@@ -348,7 +348,7 @@ const VenomPage = () => {
             <p className="text-secondary venom__allergist-info_container-contents--text">Offering venom immunotherapy (VIT) in your clinic can change lives!</p>
             <p className="text-primary venom__allergist-info_container-contents--subtext">With an impressive efficacy rating of up to 98%<sup>3</sup>, VIT significantly reduces the risk of systemic reactions, making it possible for patients to once again enjoy being outdoors.</p>
             <div className="venom__allergist-info_container-contents--link">
-              <ButtonPrimary href="/product-catalogue" label="Venom Order Form" />
+              <ButtonPrimary href="/assets/files/Viva_Allergy_Venom_Form_Colour.pdf" target='blank' label="Venom Order Form" />
             </div>
           </div>
         </div>
@@ -513,7 +513,7 @@ const VenomPage = () => {
               </div>
             </div>
             <div className="venom__options_contents-box--link">
-              <ButtonPrimary href="/product-catalogue" label="Product Catalogue" />
+              <ButtonPrimary href="/product-catalogue" target='' label="Product Catalogue" />
             </div>
           </div>
         </div>
@@ -616,7 +616,7 @@ const VenomPage = () => {
           <h3 className="venom__allergist-cta_container-header">Are You Offering Venom Immunotherapy?</h3>
           <p className="venom__allergist-cta_container-text">Help more patients by adding your clinic to the locator!</p>
           <div className="venom__allergist-cta_container-link">
-            <ButtonPrimary href="/contacts" label="Contact Us" />
+            <ButtonPrimary href="/contacts" target='' label="Contact Us" />
           </div>
         </div>
       </section>
