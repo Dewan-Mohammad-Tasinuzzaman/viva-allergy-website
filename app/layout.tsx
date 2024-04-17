@@ -6,6 +6,7 @@ import { Providers } from './Providers';
 import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 import SmoothScroll from "@/components/SmoothScroll";
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react"
 import Footer from "@/components/Footer";
 
 const lato = Lato({
@@ -16,7 +17,7 @@ const lato = Lato({
 
 export const metadata: Metadata = {
   title: "Viva Allergy",
-  description: "Fight your allergies with our top-notch extracts.",
+  description: "Innovative change for a healthier tomorrow.",
 };
 
 export default function RootLayout({
@@ -34,6 +35,7 @@ export default function RootLayout({
           </SmoothScroll>
         </Providers>
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );

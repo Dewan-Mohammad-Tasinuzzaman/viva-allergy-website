@@ -120,9 +120,13 @@
             }
 
             &_image {
-                width: 50rem;
-                height: 37rem;
+                width: 100%;
+                height: 100%;
                 border-radius: 5px;
+
+                @include respond(laptop-small-2) {
+                    
+                }
             }
 
             &_infobox {
@@ -158,10 +162,14 @@
             }
 
             &_image {
-                width: 50rem;
-                height: 37rem;
+                width: 100%;
+                height: 100%;
                 border-radius: 5px;
                 cursor: pointer;
+
+                @include respond(laptop-small-2) {
+                    
+                }
             }
 
             &_infobox {
