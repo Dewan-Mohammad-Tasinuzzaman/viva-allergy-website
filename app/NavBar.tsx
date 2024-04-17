@@ -62,14 +62,17 @@ const NavBar = () => {
 
       {/* Desktop Nav */}
       <nav ref={navBarRef} className={navbarClass}>
-        <div className="navbar__logoContainer">
-          <div className="navbar__logoContainer_logoBox">
-            <Image src={Logo_Gradient} alt="Logo" unoptimized={true} className="navbar__logoContainer_logoBox-logo" />
+        <Link href="/">
+          <div className="navbar__logoContainer">
+            <div className="navbar__logoContainer_logoBox">
+              <Image src={Logo_Gradient} alt="Logo" unoptimized={true} className="navbar__logoContainer_logoBox-logo" />
+            </div>
+            <div className="navbar__logoContainer_textBox">
+              <Image src={Logo_Text} alt="Logo" unoptimized={true} className="navbar__logoContainer_textBox-text" />
+            </div>
           </div>
-          <div className="navbar__logoContainer_textBox">
-            <Image src={Logo_Text} alt="Logo" unoptimized={true} className="navbar__logoContainer_textBox-text" />
-          </div>
-        </div>
+        </Link>
+        
         <ul className={`navbar__options ${showMobileMenu ? 'show-mobile-menu' : ''}`}>
           <div className={`navbar__options_collapseContainer`} onClick={closeMobileMenu}>
               <div className="navbar__options_collapseContainer-button" >

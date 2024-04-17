@@ -702,13 +702,14 @@
 
                 }
                 &--text {
-
+                    font-size: 2.2rem;
+                    color: var(--color-black);
                 }
                 &--subtext {
                     position: relative;
                     color: var(--color-dark-1);
                     margin-left: 2rem;
-                    margin-top: 3rem;
+                    margin-top: 2rem;
 
                     &::after {
                         content: "";
@@ -837,7 +838,7 @@
         &_container {
 
             position: relative;
-            height: 400vh;
+            height: 500vh;
             width: 100vw;
             background-color: #e9d98d;
 
@@ -888,7 +889,7 @@
                         }
                         
                         &--1 {
-                            top: 55%;
+                            top: 45%;
                             height: 58rem;
                             opacity: 0.03;
                             mix-blend-mode: difference;
@@ -898,20 +899,20 @@
                             }
                         }
                         &--2 {
-                            top: 40%;
+                            top: 30%;
                             @include respond(laptop-small-1) {
                                 height: 35rem;
                             }
                         }
                         &--3 {
-                            top: 30%;
+                            top: 15%;
                             opacity: 0.1;
                             @include respond(laptop-small-1) {
                                 height: 35rem;
                             }
                         }
                         &--4 {
-                            top: 15%;
+                            top: 5%;
                             opacity: 0.2;
                             @include respond(laptop-small-1) {
                                 height: 35rem;
@@ -946,7 +947,7 @@
                     min-width: 100vw;
                     height: 100vh;
                     display: flex;
-                    align-items: end;
+                    align-items: center;
                     z-index: 1;
 
                     &--01 {
@@ -967,52 +968,48 @@
 
                         position: relative;
                         display: flex;
-                        align-items: end;
+                        align-items: center;
                         justify-content: space-between;
-                        gap: 2rem;
+                        gap: 8rem;
                         width: 100%;
-                        margin-top: 6rem;
-                        margin-bottom: 18rem;
-                        margin-left: 10rem;
-                        margin-right: 10rem;
+                        margin-top: 15rem;
+                        margin-bottom: 6rem;
+                        margin-left: 15rem;
+                        margin-right: 15rem;
                         z-index: 3;
 
                         @include respond(laptop) {
-                            margin-bottom: 12rem;
+
                         }
                         @include respond(laptop-small-1) {
-                            margin-bottom: 10rem;
+
                         }
                         @include respond(tablet-small-3) {
-                            margin-bottom: 12rem;
+                            margin-left: 10rem;
+                            margin-right: 10rem;
                         }
 
                         &-intro {
-                            font-size: 2.8rem;
-                            font-weight: 600;
+                            font-size: 6rem;
+                            font-weight: 400;
                             text-wrap: nowrap;
                             text-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-
-                            &--span {
-                                font-size: 4rem;
-                                margin-left: 3rem;
-                                display: none;
-                            }
                         }
                         &-line {
                             width: 10%;
-                            min-width: 20px;
+                            min-width: 15rem;
                             height: 1px;
                             opacity: .3;
                         }
-                        &-headerbox {
+                        &-infobox {
 
                             display: flex;
                             flex-direction: column;
-                            gap: 2rem;
+                            align-items: start;
+                            gap: 3rem;
 
                             &--header {
-                                font-size: 6.2rem;
+                                font-size: 5.2rem;
                                 font-weight: 400;
                                 text-wrap: nowrap;
                                 text-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
@@ -1025,17 +1022,10 @@
                             }
                         }
                         &-image {
-                            
-                            height: 50rem;
+                            height: 40rem;
                             width: auto;
                             pointer-events: none;
-                            margin-left: 4rem;
-                            animation: FloatAnimation01 3s ease-in-out infinite;
-
-                            &--custom {
-                                height: 35rem;
-                                width: auto;
-                            }
+                            animation: FloatAnimation01 7s ease-in-out infinite;
                         }
                     }
                 }
@@ -1171,6 +1161,10 @@
                     font-size: 3.8rem;
                     font-weight: 600;
                     color: var(--color-dark-1);
+
+                    @include respond(tablet-small-3) {
+                        font-size: 3.2rem;
+                    }
                 }
 
                 &-item {
