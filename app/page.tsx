@@ -140,7 +140,7 @@ export default function Home() {
               </p>
               <div className="allergy-extracts__intro_content-linksbox">
                 <div className="allergy-extracts__intro_content-link">
-                  <ButtonPrimary href="/product-catalogue" label="Product Catalogue" />
+                  <ButtonPrimary href="/product-catalogue" target="" label="Product Catalogue" />
                 </div>
                 <div className="allergy-extracts__intro_content-link">
                   <ButtonSecondary href="/order-forms" label="Order Forms" />
@@ -150,8 +150,8 @@ export default function Home() {
 
             <div className="allergy-extracts__intro_photos">
               <div className="allergy-extracts__intro_photos-container">
-                  <CircularImage img_href={beeImage} classNameContainer="allergy-extracts__intro_photos-1" classNameImage="allergy-extracts__intro_photos-1--image" classNameFilter="allergy-extracts__intro_photos-1--filter" ParallaxSpeed={-50} ParallaxTranslateY={30} ParallaxScale={1} />
-                  <CircularImage img_href={apDogImage} classNameContainer="allergy-extracts__intro_photos-2" classNameImage="allergy-extracts__intro_photos-2--image" classNameFilter="allergy-extracts__intro_photos-2--filter" ParallaxSpeed={-50} ParallaxTranslateY={30} ParallaxScale={1} />
+                  <CircularImage img_href={beeImage} classNameContainer="allergy-extracts__intro_photos-1" classNameImage="allergy-extracts__intro_photos-1--image" classNameFilter="allergy-extracts__intro_photos-1--filter" ParallaxSpeed={-50} ParallaxTranslateY={10} ParallaxScale={1} />
+                  <CircularImage img_href={apDogImage} classNameContainer="allergy-extracts__intro_photos-2" classNameImage="allergy-extracts__intro_photos-2--image" classNameFilter="allergy-extracts__intro_photos-2--filter" ParallaxSpeed={-50} ParallaxTranslateY={10} ParallaxScale={1} />
               </div>
             </div>
           </div>
@@ -198,7 +198,7 @@ export default function Home() {
                 <span className="marg-left-small"></span>Our skin test device systems, ComforTen® and Quintip®, offer you quick and easy setup for efficient and reproducible testing experiences.
               </p>
               <div className="skin-tests__container_content-link">
-                <ButtonPrimary href="/skin-test-devices" label="Learn More" />
+                <ButtonPrimary href="/skin-test-devices" target="" label="Learn More" />
               </div>
             </div>
 

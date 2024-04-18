@@ -22,8 +22,8 @@ const AllergyExtract: React.FC<AllergyExtractProps> = ({ title, description, ima
               {
               image: imageURL,
               speed: -50,
-              translateY: [0, 10],
-              scale: [1, 1.1, 'easeOutCubic'],
+              translateY: [0, 0],
+              scale: [1, 1.2, 'easeOutCubic'],
               shouldAlwaysCompleteAnimation: true,
               },
           ]}

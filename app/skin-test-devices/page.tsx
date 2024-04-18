@@ -25,7 +25,7 @@ const SkinTestPage = () => {
   const Comforten_Img03_URL = "/assets/images/comforten-3.png";
 
   // Video file path
-  const SkinTestVideo_URL = "/assets/videos/comforten-video.mp4";
+  const SkinTestVideo_URL = "/assets/videos/comforten-video-subbed.mp4";
 
   // State to manage the visibility of the video container
   const [showVideo, setShowVideo] = useState(false);

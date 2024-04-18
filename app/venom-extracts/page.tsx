@@ -11,10 +11,10 @@ import Map_Icon_Large from "@/public/assets/svgs/map_icon_large.svg";
 import Allergist_Icon from "@/public/assets/svgs/allergist_info-icon.svg";
 import Plus_Icon_Dark from '@/public/assets/svgs/plus_icon-dark.svg';
 import Vespids_Diagram from '@/public/assets/images/venom_extracts-upscaled-edited.png';
-import Honey_Bee_Diagram from '@/public/assets/images/ext-options-1-blacktext-noshadow.png';
-import Hornet_Diagram from '@/public/assets/images/ext-options-2.png';
-import Wasp_Diagram from '@/public/assets/images/ext-options-3.png';
-import Yellow_Jacket_Diagram from '@/public/assets/images/ext-options-4.png';
+import Honey_Bee_Diagram from '@/public/assets/images/honey_bee_diagram.png';
+import Hornet_Diagram from '@/public/assets/images/hornet_diagram.png';
+import Wasp_Diagram from '@/public/assets/images/wasps_diagram.png';
+import Yellow_Jacket_Diagram from '@/public/assets/images/yellow_jacket_diagram.png';
 import BeeAware_Img from '@/public/assets/images/beeaware-img.png';
 import Allergist_CTA_Icon from '@/public/assets/svgs/location-custom-icon.svg';
 import Footer from '@/components/Footer';
@@ -34,11 +34,12 @@ import ButtonSecondary from '@/components/ButtonSecondary'
 const VenomPage = () => {
 
   // Video URL
-  const IntroVideo_MP4_URL = "/assets/videos/outdoors-1.mp4";
-  const IntroVideo_WEBM_URL = "/assets/videos/park_swing.webm";
+  const IntroVideo_MP4_URL = "/assets/videos/venom-banner.mp4";
+  const IntroVideo_WEBM_URL = "/assets/videos/venom-banner.webm";
   const WaspVideo_MP4_URL = "/assets/videos/wasp_closeup.mp4";
   const WaspVideo_WEBM_URL = "/assets/videos/wasp_closeup.webm";
-  const VITSuccessVideo_MP4_URL = "/assets/videos/outdoors-7.mp4";
+  const VITSuccessVideo_MP4_URL = "/assets/videos/nature_park.mp4";
+  const VITSuccessVideo_WEBM_URL = "/assets/videos/nature_park.webm";
 
   // Images for ParallaxBanner
   const Now_Image_URL = "/assets/images/ambulance-1-cropped.jpg";
@@ -53,7 +54,7 @@ const VenomPage = () => {
   // Descriptions of Journey Steps
   const NowDescription = (
     <p className="journey-card__container_text">
-      Venom immunotherapy (VIT) is a game-changer for those at risk of life-threatening reactions to bee and wasp stings. In Canada, roughly 25,000 people will visit the emergency room each year after being stung.<sup>1</sup>
+      A deadly allergic reaction can occur within minutes after a sting.<sup>2</sup> If you notice any difficulty breathing or other serious symptoms, call 911.
     </p>
   );
   const TodayDescription = (
@@ -86,7 +87,7 @@ const VenomPage = () => {
   const { scrollYProgress: optionsScrollYProgress } = useScroll({
     target: optionsTargetRef,
   });
-  const optionsX = useTransform(optionsScrollYProgress, [0, 1], ["0%", "-90%"]);
+  const optionsX = useTransform(optionsScrollYProgress, [0, 1], ["0%", "-94%"]);
 
 
   return (
@@ -128,15 +129,15 @@ const VenomPage = () => {
 
           <div className="venom__intro__container__videobox">
             <video className="venom__intro__container__videobox_video" autoPlay muted loop>
-              <source src={IntroVideo_MP4_URL} type="video/mp4" />
               <source src={IntroVideo_WEBM_URL} type="video/webm" />
+              <source src={IntroVideo_MP4_URL} type="video/mp4" />
               {/* Add more source elements for different formats if necessary */}
               Your browser does not support the video tag. Time to switch!
             </video>
             <div className="venom__intro__container__videobox_filter"></div>
             <div className="venom__intro__container__videobox_frame"></div>
             <div className="venom__intro__container__videobox_banner">
-              <p className="venom__intro__container__videobox_banner-text"><span className="venom__intro__container__videobox_banner-text--span">Venom</span> Immunotherapy Saves Lives • <span className="venom__intro__container__videobox_banner-text--span">Venom</span> Immunotherapy Saves Lives •</p>
+              <p className="venom__intro__container__videobox_banner-text"><span className="color-venom">Venom</span> Immunotherapy Saves Lives • <span className="color-venom">Venom</span> Immunotherapy Saves Lives • <span className="color-venom">Venom</span> Immunotherapy Saves Lives •</p>
             </div>
           </div>
         </div>
@@ -168,8 +169,8 @@ const VenomPage = () => {
       <section id='venon-immunotherapy' className="venom__venom-immunotherapy">
         <div className="venom__venom-immunotherapy__container">
           <video className="venom__venom-immunotherapy__container_video" autoPlay muted loop>
-            <source src={WaspVideo_MP4_URL} type="video/mp4" />
             <source src={WaspVideo_WEBM_URL} type="video/webm" />
+            <source src={WaspVideo_MP4_URL} type="video/mp4" />
             {/* Add more source elements for different formats if necessary */}
             Your browser does not support the video tag. Time to switch!
           </video>
@@ -309,8 +310,8 @@ const VenomPage = () => {
 
       <section className="venom__success">
         <video className="venom__success_video" autoPlay muted loop>
+        <source src={VITSuccessVideo_WEBM_URL} type="video/webm" />
           <source src={VITSuccessVideo_MP4_URL} type="video/mp4" />
-          <source src={VITSuccessVideo_MP4_URL} type="video/webm" />
           {/* Add more source elements for different formats if necessary */}
           Your browser does not support the video tag. Time to switch!
         </video>
@@ -344,10 +345,10 @@ const VenomPage = () => {
         <div className="venom__allergist-info_container">
           <div className="venom__allergist-info_container-contents">
             <h1 className="header-secondary venom__allergist-info_container-contents--header">Allergist Info</h1>
-            <p className="text-secondary venom__allergist-info_container-contents--text">Are you an allergist looking to set up your practice? Our New Fellow Program is designed specifically for you!</p>
-            <p className="text-primary venom__allergist-info_container-contents--subtext">Through this program, we provide valuable insights, resources, and discounts on initial orders to help you succeed in your practice. Interested in learning more about this opportunity?</p>
+            <p className="text-secondary venom__allergist-info_container-contents--text">Offering venom immunotherapy (VIT) in your clinic can change lives!</p>
+            <p className="text-primary venom__allergist-info_container-contents--subtext">With an impressive efficacy rating of up to 98%<sup>3</sup>, VIT significantly reduces the risk of systemic reactions, making it possible for patients to once again enjoy being outdoors.</p>
             <div className="venom__allergist-info_container-contents--link">
-              <ButtonPrimary href="/product-catalogue" label="Venom Order Form" />
+              <ButtonPrimary href="/assets/files/Viva_Allergy_Venom_Form_Colour.pdf" target='blank' label="Venom Order Form" />
             </div>
           </div>
         </div>
@@ -457,44 +458,41 @@ const VenomPage = () => {
             <motion.div style={{ x: optionsX }} className="venom__options_container-slider">
               <div className="venom__options_container-slider__section venom__options_container-slider__section--01">
                 <div className="venom__options_container-slider__section_container">
-                  <h2 className="color-dark-1 venom__options_container-slider__section_container-intro">Our Collection<span className="venom__options_container-slider__section_container-intro--span">:</span></h2>
+                  <h2 className="color-dark-1 venom__options_container-slider__section_container-intro">Our Collections</h2>
                   <div className="bg-black venom__options_container-slider__section_container-line"></div>
-                  <div className="venom__options_container-slider__section_container-headerbox">
-                    <h3 className="color-dark-1 venom__options_container-slider__section_container-headerbox--header">Honey Bee</h3>
+                  <div className="venom__options_container-slider__section_container-infobox">
+                    <h3 className="color-dark-1 venom__options_container-slider__section_container-infobox--header">Honey Bee</h3>
                   </div>
                   <Image src={Honey_Bee_Diagram} alt="options image" unoptimized={true} className="venom__options_container-slider__section_container-image venom__options_container-slider__section_container-image--custom" />
                 </div>
               </div>
               <div className="venom__options_container-slider__section venom__options_container-slider__section--02">
                 <div className="venom__options_container-slider__section_container">
-                  <h2 className="color-white venom__options_container-slider__section_container-intro">Vespid<span className="venom__options_container-slider__section_container-intro--span">:</span></h2>
-                  <div className="bg-white venom__options_container-slider__section_container-line"></div>
-                  <div className="venom__options_container-slider__section_container-headerbox">
-                    <h3 className="color-white venom__options_container-slider__section_container-headerbox--header">Hornet</h3>
-                    <h3 className="color-white venom__options_container-slider__section_container-headerbox--text">Dolichovespula</h3>
+                  <div className="venom__options_container-slider__section_container-infobox">
+                    <h3 className="color-white venom__options_container-slider__section_container-infobox--header">Hornet</h3>
+                    <h3 className="color-white venom__options_container-slider__section_container-infobox--text">Dolichovespula</h3>
                   </div>
+                  <div className="bg-white venom__options_container-slider__section_container-line"></div>
                   <Image src={Hornet_Diagram} alt="options image" unoptimized={true} className="venom__options_container-slider__section_container-image venom__options_container-slider__section_container-image--custom" />
                 </div>
               </div>
               <div className="venom__options_container-slider__section venom__options_container-slider__section--03">
                 <div className="venom__options_container-slider__section_container">
-                  <h2 className="color-white venom__options_container-slider__section_container-intro">Vespid<span className="venom__options_container-slider__section_container-intro--span">:</span></h2>
-                  <div className="bg-white venom__options_container-slider__section_container-line"></div>
-                  <div className="venom__options_container-slider__section_container-headerbox">
-                    <h3 className="color-white venom__options_container-slider__section_container-headerbox--header">Wasp</h3>
-                    <h3 className="color-white venom__options_container-slider__section_container-headerbox--text">Polistes</h3>
+                  <div className="venom__options_container-slider__section_container-infobox">
+                    <h3 className="color-white venom__options_container-slider__section_container-infobox--header">Wasp</h3>
+                    <h3 className="color-white venom__options_container-slider__section_container-infobox--text">Polistes</h3>
                   </div>
+                  <div className="bg-white venom__options_container-slider__section_container-line"></div>
                   <Image src={Wasp_Diagram} alt="options image" unoptimized={true} className="venom__options_container-slider__section_container-image" />
                 </div>
               </div>
               <div className="venom__options_container-slider__section venom__options_container-slider__section--04">
                 <div className="venom__options_container-slider__section_container">
-                  <h2 className="color-dark-1 venom__options_container-slider__section_container-intro">Vespid<span className="venom__options_container-slider__section_container-intro--span">:</span></h2>
-                  <div className="bg-black venom__options_container-slider__section_container-line"></div>
-                  <div className="venom__options_container-slider__section_container-headerbox">
-                    <h3 className="color-dark-1 venom__options_container-slider__section_container-headerbox--header">Yellow Jacket</h3>
-                    <h3 className="color-dark-1 venom__options_container-slider__section_container-headerbox--text">Vespula</h3>
+                  <div className="venom__options_container-slider__section_container-infobox">
+                    <h3 className="color-dark-1 venom__options_container-slider__section_container-infobox--header">Yellow Jacket</h3>
+                    <h3 className="color-dark-1 venom__options_container-slider__section_container-infobox--text">Vespula</h3>
                   </div>
+                  <div className="bg-black venom__options_container-slider__section_container-line"></div>
                   <Image src={Yellow_Jacket_Diagram} alt="options image" unoptimized={true} className="venom__options_container-slider__section_container-image" />
                 </div>
               </div>
@@ -515,7 +513,7 @@ const VenomPage = () => {
               </div>
             </div>
             <div className="venom__options_contents-box--link">
-              <ButtonPrimary href="/product-catalogue" label="Product Catalogue" />
+              <ButtonPrimary href="/product-catalogue" target='' label="Product Catalogue" />
             </div>
           </div>
         </div>
@@ -581,7 +579,7 @@ const VenomPage = () => {
           <div className="venom__beeaware__container_content">
             <h3 className="header-primary venom__beeaware__container_content-header">
               BeeAware Allergy: <br/>
-              <span className="marg-left-small"></span>Empowering Patients, Supporting Physicians
+              Empowering Patients, Supporting Physicians
             </h3>
             <div className="venom__beeaware__container_content-item">
               <div className="venom__beeaware__container_content-item--bullet"></div>
@@ -618,7 +616,7 @@ const VenomPage = () => {
           <h3 className="venom__allergist-cta_container-header">Are You Offering Venom Immunotherapy?</h3>
           <p className="venom__allergist-cta_container-text">Help more patients by adding your clinic to the locator!</p>
           <div className="venom__allergist-cta_container-link">
-            <ButtonPrimary href="/contacts" label="Contact Us" />
+            <ButtonPrimary href="/contacts" target='' label="Contact Us" />
           </div>
         </div>
       </section>
