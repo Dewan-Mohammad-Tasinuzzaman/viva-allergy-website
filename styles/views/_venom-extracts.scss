@@ -100,16 +100,19 @@
                 }
 
                 &_img {
-                    display: none;
+                    position: absolute !important;
+                    display: inline-block;
+                    top: 0;
+                    left: 0;
                     width: 100%;
                     height: 100%;
-                    object-fit: cover;
 
                     @include respond(tablet-small-3) {
-                        display: block;
+
                     }
                 }
                 &_video {
+                    position: relative;
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
@@ -275,7 +278,7 @@
             }
 
             &_img {
-                display: none;
+                display: inline-block;
                 position: absolute !important;
                 top: 0;
                 left: 0;
@@ -283,7 +286,7 @@
                 height: 100%;
 
                 @include respond(tablet-small-3) {
-                    display: inline-block;
+
                 }
             }
 
@@ -615,8 +618,7 @@
 
 
         &_img {
-
-            display: none;
+            display: inline-block;
             position: absolute !important;
             top: 0;
             left: 0;
@@ -624,7 +626,7 @@
             height: 100%;
 
             @include respond(tablet-small-3) {
-                display: inline-block;
+
             }
         }
         &_video {
@@ -699,6 +701,7 @@
 
 
         &_banner {
+            display: inline-block;
             position: absolute !important;
             top: 0;
             left: 0;
