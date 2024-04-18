@@ -3,6 +3,8 @@
 
 
 // Other Helper Classes (Pop-ups etc.)
+
+// SUCCESS
 .success-notification-container {
 
     position: fixed;
@@ -42,7 +44,7 @@
             height: 10rem;
             width: auto;
             transform: scale(1);
-            animation: CheckIconAnimation 1s ease-in-out infinite alternate-reverse;
+            animation: FormPopUpIconAnimation 1s ease-in-out infinite alternate-reverse;
         }
         &_text {
             // display: none;
@@ -55,6 +57,80 @@
     }
 }
 
+
+
+// FAIL
+.fail-notification-container {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(172, 80, 80);
+    padding: 10rem;
+    z-index: 150;
+    overflow: hidden;
+    opacity: 1;
+    transform: translateY(100%);
+    animation: FormPopUpAnimation 2s cubic-bezier(0.65, 0, 0.35, 1) 1 forwards; //cubic-bezier(0,.76,1,.23) - Reverse-Ease-In-Out  and  cubic-bezier(0.65, 0, 0.35, 1) Ease-In-Out-Cubic
+
+    &__contents {
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+
+
+        &_icon-viva {
+            display: none;
+            @include absolute-center;
+            transform: translate(-50%, -50%) rotate(10deg);
+            width: 30%;
+            height: auto;
+            opacity: 0.05;
+        }
+        &_icon-check {
+            height: 10rem;
+            width: auto;
+            transform: scale(1);
+            animation: FormPopUpIconAnimation 1s ease-in-out infinite alternate-reverse;
+        }
+        &_text {
+            // display: none;
+            text-align: center;
+            font-size: 5.2rem;
+            color: white;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//  Animations
 
 @keyframes FormPopUpAnimation {
     0% {
@@ -75,7 +151,7 @@
 }
 
 
-@keyframes CheckIconAnimation {
+@keyframes FormPopUpIconAnimation {
     0% {
         transform: scale(1);
     }

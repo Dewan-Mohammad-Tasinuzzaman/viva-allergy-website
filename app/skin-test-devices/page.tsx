@@ -23,6 +23,7 @@ const SkinTestPage = () => {
   const Comforten_Img01_URL = "/assets/images/comforten-1.png";
   const Comforten_Img02_URL = "/assets/images/comforten-2.png";
   const Comforten_Img03_URL = "/assets/images/comforten-3.png";
+  const Quintip_Banner_Img_URL = "/assets/images/3d_quintip_img.png";
 
   // Video file path
   const SkinTestVideo_URL = "/assets/videos/comforten-video-subbed.mp4";
@@ -63,6 +64,18 @@ const SkinTestPage = () => {
       
       {/* 3D - Viewer */}
       <div className="skintests__3dcontainer">
+        <ParallaxBanner
+          layers={[
+              {
+              image: Quintip_Banner_Img_URL,
+              speed: -50,
+              translateY: [0, 10],
+              scale: [1.1, 1, 'easeOutCubic'],
+              shouldAlwaysCompleteAnimation: true,
+              },
+          ]}
+          className={`skintests__3dcontainer_img`}
+        />
         <div className="skintests__3dcontainer_3dviewer">
           <Spline className='skintests__3dcontainer_3dviewer-scene' scene="https://prod.spline.design/Gri41IhbhKqM7uP5/scene.splinecode" />
         </div>

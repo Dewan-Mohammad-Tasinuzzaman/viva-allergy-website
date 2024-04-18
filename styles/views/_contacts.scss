@@ -121,11 +121,11 @@
 
             &_image {
                 width: 100%;
-                height: 100%;
+                height: 40rem;
                 border-radius: 5px;
 
-                @include respond(laptop-small-2) {
-                    
+                @include respond(tablet-small-4) {
+                    height: 100%;
                 }
             }
 
@@ -163,12 +163,12 @@
 
             &_image {
                 width: 100%;
-                height: 100%;
+                height: 40rem;
                 border-radius: 5px;
                 cursor: pointer;
 
-                @include respond(laptop-small-2) {
-                    
+                @include respond(tablet-small-4) {
+                    height: 100%;
                 }
             }
 

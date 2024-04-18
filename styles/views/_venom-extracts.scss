@@ -89,19 +89,34 @@
 
             &__videobox {
 
+                height: auto;
                 width: 45%;
                 position: relative;
                 overflow: hidden;
 
                 @include respond(tablet) {
-                    height: 50vh;
+                    height: 54vh;
                     width: 100%;
                 }
 
+                &_img {
+                    display: none;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+
+                    @include respond(tablet-small-3) {
+                        display: block;
+                    }
+                }
                 &_video {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
+
+                    @include respond(tablet-small-3) {
+                        display: none;
+                    }
                 }
                 &_filter {
                     position: absolute;
@@ -259,6 +274,19 @@
                 align-items: end;
             }
 
+            &_img {
+                display: none;
+                position: absolute !important;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+
+                @include respond(tablet-small-3) {
+                    display: inline-block;
+                }
+            }
+
             &_video {
                 position: absolute;
                 top: 0;
@@ -266,6 +294,10 @@
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+
+                @include respond(tablet-small-3) {
+                    display: none;
+                }
             }
 
             &_contents {
@@ -293,6 +325,9 @@
                     width: 100%;
                     height: fit-content;
                     background-color: rgba(255, 255, 255, 0.1);
+                }
+                @include respond(tablet-small-3) {
+                    padding: 6rem;
                 }
 
                 &::before {
@@ -578,6 +613,20 @@
         width: 100%;
         min-height: 80vh;
 
+
+        &_img {
+
+            display: none;
+            position: absolute !important;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            @include respond(tablet-small-3) {
+                display: inline-block;
+            }
+        }
         &_video {
             position: absolute;
             bottom: 0;
@@ -586,6 +635,10 @@
             height: 100%;
             object-fit: cover;
             object-position: bottom;
+
+            @include respond(tablet-small-3) {
+                display: none;
+            }
         }
         &_video-filter01 {
             position: absolute;
@@ -990,9 +1043,10 @@
                         }
 
                         &-intro {
-                            font-size: 6rem;
+                            font-size: 4rem;
                             font-weight: 400;
                             text-wrap: nowrap;
+                            color: black;
                             text-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
                         }
                         &-line {

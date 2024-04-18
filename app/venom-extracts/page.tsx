@@ -42,6 +42,9 @@ const VenomPage = () => {
   const VITSuccessVideo_WEBM_URL = "/assets/videos/nature_park.webm";
 
   // Images for ParallaxBanner
+  const Intro_Banner_Img_URL = "/assets/images/venom-banner-img.png";
+  const Wasp_Banner_Img_URL = "/assets/images/wasp_closeup_img.png";
+  const Park_Banner_Img_URL = "/assets/images/nature_park_img.png";
   const Now_Image_URL = "/assets/images/ambulance-1-cropped.jpg";
   const Today_Image_URL = "/assets/images/clock-time-4.jpg";
   const Tomorrow_Image_URL = "/assets/images/laptop-research-3.jpg";
@@ -128,9 +131,21 @@ const VenomPage = () => {
           </div>
 
           <div className="venom__intro__container__videobox">
+            <ParallaxBanner
+              layers={[
+                  {
+                  image: Intro_Banner_Img_URL,
+                  speed: -50,
+                  translateY: [0, 25],
+                  scale: [1, 1.05, 'easeOutCubic'],
+                  shouldAlwaysCompleteAnimation: true,
+                  },
+              ]}
+              className={`venom__intro__container__videobox_img`}
+            />
             <video className="venom__intro__container__videobox_video" autoPlay muted loop>
-              <source src={IntroVideo_WEBM_URL} type="video/webm" />
               <source src={IntroVideo_MP4_URL} type="video/mp4" />
+              <source src={IntroVideo_WEBM_URL} type="video/webm" />
               {/* Add more source elements for different formats if necessary */}
               Your browser does not support the video tag. Time to switch!
             </video>
@@ -168,9 +183,21 @@ const VenomPage = () => {
 
       <section id='venon-immunotherapy' className="venom__venom-immunotherapy">
         <div className="venom__venom-immunotherapy__container">
+          <ParallaxBanner
+            layers={[
+                {
+                image: Wasp_Banner_Img_URL,
+                speed: -50,
+                translateY: [0, 20],
+                scale: [1, 1.1, 'easeOutCubic'],
+                shouldAlwaysCompleteAnimation: true,
+                },
+            ]}
+            className={`venom__venom-immunotherapy__container_img`}
+          />
           <video className="venom__venom-immunotherapy__container_video" autoPlay muted loop>
-            <source src={WaspVideo_WEBM_URL} type="video/webm" />
             <source src={WaspVideo_MP4_URL} type="video/mp4" />
+            <source src={WaspVideo_WEBM_URL} type="video/webm" />
             {/* Add more source elements for different formats if necessary */}
             Your browser does not support the video tag. Time to switch!
           </video>
@@ -309,9 +336,21 @@ const VenomPage = () => {
       </section>
 
       <section className="venom__success">
+        <ParallaxBanner
+          layers={[
+              {
+              image: Park_Banner_Img_URL,
+              speed: -50,
+              translateY: [0, 40],
+              scale: [1, 1.05, 'easeOutCubic'],
+              shouldAlwaysCompleteAnimation: true,
+              },
+          ]}
+          className={`venom__success_img`}
+        />
         <video className="venom__success_video" autoPlay muted loop>
-        <source src={VITSuccessVideo_WEBM_URL} type="video/webm" />
           <source src={VITSuccessVideo_MP4_URL} type="video/mp4" />
+          <source src={VITSuccessVideo_WEBM_URL} type="video/webm" />
           {/* Add more source elements for different formats if necessary */}
           Your browser does not support the video tag. Time to switch!
         </video>
@@ -332,7 +371,7 @@ const VenomPage = () => {
           layers={[
               {
               image: Allergists_Image_URL,
-              speed: -10,
+              speed: -50,
               translateY: [0, 20],
               scale: [1, 1.15, 'easeOutCubic'],
               shouldAlwaysCompleteAnimation: true,
@@ -528,7 +567,7 @@ const VenomPage = () => {
                 layers={[
                     {
                     image: Bee_Image_URL_03,
-                    speed: -30,
+                    speed: -50,
                     translateY: [0, 40],
                     scale: [1, 1.15, 'easeOutCubic'],
                     shouldAlwaysCompleteAnimation: true,
@@ -543,7 +582,7 @@ const VenomPage = () => {
                 layers={[
                     {
                     image: Bee_Image_URL_02,
-                    speed: -30,
+                    speed: -50,
                     translateY: [0, 40],
                     scale: [1, 1.15, 'easeOutCubic'],
                     shouldAlwaysCompleteAnimation: true,
@@ -558,7 +597,7 @@ const VenomPage = () => {
                 layers={[
                     {
                     image: Bee_Image_URL_01,
-                    speed: -30,
+                    speed: -50,
                     translateY: [0, 40],
                     scale: [1, 1.15, 'easeOutCubic'],
                     shouldAlwaysCompleteAnimation: true,
