@@ -1,6 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 const sgMail = require('@sendgrid/mail');
 
+// API KEY
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
