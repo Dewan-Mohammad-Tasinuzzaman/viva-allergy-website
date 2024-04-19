@@ -27,7 +27,7 @@
         justify-content: space-between;
 
         @include respond(tablet) {
-            backdrop-filter: blur(3px);
+            backdrop-filter: blur(0px);
             background-image: linear-gradient(to bottom, rgb(255, 249, 240) 0%, rgb(255, 228, 196, 0) 100%);
         }
 
