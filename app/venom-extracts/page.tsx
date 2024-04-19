@@ -131,21 +131,45 @@ const VenomPage = () => {
 
           </div>
 
+          <ParallaxBanner
+              layers={[
+                  {
+                  image: Intro_Banner_Img_URL,
+                  speed: -50,
+                  translateY: [0, 25],
+                  scale: [1, 1.05, 'easeOutCubic'],
+                  shouldAlwaysCompleteAnimation: true,
+                  },
+              ]}
+              className={`aspect-2-1 w-full venom__intro__container__videobox_img`}
+            />
+
+            <ParallaxBanner
+              layers={[
+                  {
+                  image: Intro_Banner_Img_URL,
+                  speed: -50,
+                  translateY: [0, 25],
+                  scale: [1, 1.05, 'easeOutCubic'],
+                  shouldAlwaysCompleteAnimation: true,
+                  },
+              ]}
+              className={`aspect-2-1 w-full venom__intro__container__videobox_img`}
+            />
+
           <div className="venom__intro__container__videobox">
-            <ParallaxProvider>
-              <ParallaxBanner
-                layers={[
-                    {
-                    image: Intro_Banner_Img_URL,
-                    speed: -50,
-                    translateY: [0, 25],
-                    scale: [1, 1.05, 'easeOutCubic'],
-                    shouldAlwaysCompleteAnimation: true,
-                    },
-                ]}
-                className={`aspect-2-1 w-full venom__intro__container__videobox_img`}
-              />
-            </ParallaxProvider>
+            <ParallaxBanner
+              layers={[
+                  {
+                  image: Intro_Banner_Img_URL,
+                  speed: -50,
+                  translateY: [0, 25],
+                  scale: [1, 1.05, 'easeOutCubic'],
+                  shouldAlwaysCompleteAnimation: true,
+                  },
+              ]}
+              className={`aspect-2-1 w-full venom__intro__container__videobox_img`}
+            />
             
             <video className="venom__intro__container__videobox_video" autoPlay muted loop>
               <source src={IntroVideo_MP4_URL} type="video/mp4" />
