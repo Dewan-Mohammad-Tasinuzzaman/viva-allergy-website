@@ -131,32 +131,6 @@ const VenomPage = () => {
 
           </div>
 
-          <ParallaxBanner
-              layers={[
-                  {
-                  image: Intro_Banner_Img_URL,
-                  speed: -50,
-                  translateY: [0, 25],
-                  scale: [1, 1.05, 'easeOutCubic'],
-                  shouldAlwaysCompleteAnimation: true,
-                  },
-              ]}
-              className={`aspect-2-1 w-full venom__intro__container__videobox_img`}
-            />
-
-            <ParallaxBanner
-              layers={[
-                  {
-                  image: Intro_Banner_Img_URL,
-                  speed: -50,
-                  translateY: [0, 25],
-                  scale: [1, 1.05, 'easeOutCubic'],
-                  shouldAlwaysCompleteAnimation: true,
-                  },
-              ]}
-              className={`aspect-2-1 w-full venom__intro__container__videobox_img`}
-            />
-
           <div className="venom__intro__container__videobox">
             <ParallaxBanner
               layers={[
@@ -168,9 +142,8 @@ const VenomPage = () => {
                   shouldAlwaysCompleteAnimation: true,
                   },
               ]}
-              className={`aspect-2-1 w-full venom__intro__container__videobox_img`}
+              className={`aspect-1-1 w-full venom__intro__container__videobox_img`}
             />
-            
             <video className="venom__intro__container__videobox_video" autoPlay muted loop>
               <source src={IntroVideo_MP4_URL} type="video/mp4" />
               <source src={IntroVideo_WEBM_URL} type="video/webm" />
@@ -211,21 +184,18 @@ const VenomPage = () => {
 
       <section id='venon-immunotherapy' className="venom__venom-immunotherapy">
         <div className="venom__venom-immunotherapy__container">
-        <ParallaxProvider>
           <ParallaxBanner
-              layers={[
-                  {
-                  image: Wasp_Banner_Img_URL,
-                  speed: -50,
-                  translateY: [0, 20],
-                  scale: [1, 1.1, 'easeOutCubic'],
-                  shouldAlwaysCompleteAnimation: true,
-                  },
-              ]}
-              className={`aspect-2-1 w-full venom__venom-immunotherapy__container_img`}
-            />
-        </ParallaxProvider>
-          
+            layers={[
+                {
+                image: Wasp_Banner_Img_URL,
+                speed: -50,
+                translateY: [0, 20],
+                scale: [1, 1.1, 'easeOutCubic'],
+                shouldAlwaysCompleteAnimation: true,
+                },
+            ]}
+            className={`aspect-1-1 w-full venom__venom-immunotherapy__container_img`}
+          />
           <video className="venom__venom-immunotherapy__container_video" autoPlay muted loop>
             <source src={WaspVideo_MP4_URL} type="video/mp4" />
             <source src={WaspVideo_WEBM_URL} type="video/webm" />
@@ -367,21 +337,18 @@ const VenomPage = () => {
       </section>
 
       <section className="venom__success">
-        <ParallaxProvider>
-          <ParallaxBanner
-            layers={[
-                {
-                image: Park_Banner_Img_URL,
-                speed: -50,
-                translateY: [0, 40],
-                scale: [1, 1.05, 'easeOutCubic'],
-                shouldAlwaysCompleteAnimation: true,
-                },
-            ]}
-            className={`aspect-1-1 w-full venom__success_img`}
-          />
-        </ParallaxProvider>
-        
+        <ParallaxBanner
+          layers={[
+              {
+              image: Park_Banner_Img_URL,
+              speed: -50,
+              translateY: [0, 40],
+              scale: [1, 1.05, 'easeOutCubic'],
+              shouldAlwaysCompleteAnimation: true,
+              },
+          ]}
+          className={`aspect-1-1 w-full venom__success_img`}
+        />
         <video className="venom__success_video" autoPlay muted loop>
           <source src={VITSuccessVideo_MP4_URL} type="video/mp4" />
           <source src={VITSuccessVideo_WEBM_URL} type="video/webm" />
