@@ -150,8 +150,8 @@ export default function Home() {
 
             <div className="allergy-extracts__intro_photos">
               <div className="allergy-extracts__intro_photos-container">
-                  <CircularImage img_href={beeImage} classNameContainer="allergy-extracts__intro_photos-1" classNameImage="allergy-extracts__intro_photos-1--image" classNameFilter="allergy-extracts__intro_photos-1--filter" ParallaxSpeed={-50} ParallaxTranslateY={10} ParallaxScale={1} />
-                  <CircularImage img_href={apDogImage} classNameContainer="allergy-extracts__intro_photos-2" classNameImage="allergy-extracts__intro_photos-2--image" classNameFilter="allergy-extracts__intro_photos-2--filter" ParallaxSpeed={-50} ParallaxTranslateY={10} ParallaxScale={1} />
+                  <CircularImage img_href={beeImage} classNameContainer="allergy-extracts__intro_photos-1" classNameImage="allergy-extracts__intro_photos-1--image" classNameFilter="allergy-extracts__intro_photos-1--filter" ParallaxSpeed={-50} ParallaxTranslateY={5} ParallaxScale={1.1} />
+                  <CircularImage img_href={apDogImage} classNameContainer="allergy-extracts__intro_photos-2" classNameImage="allergy-extracts__intro_photos-2--image" classNameFilter="allergy-extracts__intro_photos-2--filter" ParallaxSpeed={-50} ParallaxTranslateY={5} ParallaxScale={1.1} />
               </div>
             </div>
           </div>

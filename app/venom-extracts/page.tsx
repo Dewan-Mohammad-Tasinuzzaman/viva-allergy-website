@@ -43,9 +43,9 @@ const VenomPage = () => {
   const VITSuccessVideo_WEBM_URL = "/assets/videos/nature_park.webm";
 
   // Images for ParallaxBanner
-  const Intro_Banner_Img_URL = "/assets/images/venom-banner-img.png";
-  const Wasp_Banner_Img_URL = "/assets/images/wasp_closeup_img.png";
-  const Park_Banner_Img_URL = "/assets/images/nature_park_img.png";
+  const Intro_Banner_Img_URL = "/assets/images/venom-banner-img.jpg";
+  const Wasp_Banner_Img_URL = "/assets/images/wasp_closeup_img.jpg";
+  const Park_Banner_Img_URL = "/assets/images/nature_park_img.jpg";
   const Now_Image_URL = "/assets/images/ambulance-1-cropped.jpg";
   const Today_Image_URL = "/assets/images/clock-time-4.jpg";
   const Tomorrow_Image_URL = "/assets/images/laptop-research-3.jpg";
@@ -135,7 +135,7 @@ const VenomPage = () => {
             <ParallaxBanner
               layers={[
                   {
-                  image: Bee_Image_URL_02,
+                  image: Intro_Banner_Img_URL,
                   speed: -50,
                   translateY: [0, 25],
                   scale: [1, 1.05, 'easeOutCubic'],
