@@ -135,7 +135,7 @@ const VenomPage = () => {
             <ParallaxBanner
               layers={[
                   {
-                  image: Intro_Banner_Img_URL,
+                  image: Bee_Image_URL_02,
                   speed: -50,
                   translateY: [0, 25],
                   scale: [1, 1.05, 'easeOutCubic'],
