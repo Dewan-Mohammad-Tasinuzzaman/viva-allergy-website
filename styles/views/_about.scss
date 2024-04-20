@@ -192,7 +192,7 @@
 
             @include respond(tablet) {
                 width: 100%;
-                border-radius: 20px;
+                border-radius: 0;
             }
             @include respond(phone-small-1) {
                 padding: 10rem 2rem;
