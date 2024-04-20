@@ -184,7 +184,7 @@ const SkinTestPage = () => {
           </div>
 
 
-          <div className="skintests__instructions">
+          <div id='video' className="skintests__instructions">
             <div className="page-margins-big skintests__instructions_container">
               <div className="skintests__instructions_video">
                   <div className="skintests__instructions_video-logobox">
