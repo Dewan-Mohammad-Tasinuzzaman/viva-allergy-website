@@ -97,7 +97,7 @@ const VenomPage = () => {
   return (
     <main className='pos-relative venom'>
       
-      <section className="venom__intro">
+      <section id='intro' className="venom__intro">
         <div className="venom__intro__container">
           <div className="venom__intro__container__content">
 

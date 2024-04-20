@@ -157,7 +157,7 @@ export default function Home() {
           </div>
 
           <div className="allergy-extracts__extracts">
-            <Link href="/venom-extracts">
+            <Link href="/venom-extracts#intro">
               <AllergyExtract className="allergy-extracts__extracts_extract" title="Venom" description="" imageURL={allergyImageVenom} onClick={() => {}} />
             </Link>
             <AllergyExtract className="allergy-extracts__extracts_extract" title="Epidermal" description="" imageURL={allergyImageEpidermal} onClick={() => openModal("Epidermal", "Our AP Dog is the only extract on the market fulfilling the practice parameter's recommended dosing of 15 mcg of Can ft1.", "If your patients are still battling the distressing symptoms of dog allergies, even after treatment, it could be due to the use of lower-concentration extracts. This leaves patients without the much-needed relief from their dog allergies.", "Give your patients the relief they deserve with our premium AP extracts.", allergyImageEpidermal)} />
