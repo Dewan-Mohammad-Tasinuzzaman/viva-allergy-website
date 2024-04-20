@@ -25,6 +25,7 @@ import { ParallaxBanner } from "react-scroll-parallax";
 import PatientJourneyCard from '@/components/PatientJourneyCard';
 import KeepScrolling from '@/components/KeepScrolling';
 import Viva_Icon_White from "@/public/assets/svgs/logo_icon-white.svg";
+import Viva_Logo_Icon from "@/public/assets/images/viva-icon-square-green.png";
 import Check_Icon from "@/public/assets/svgs/check-icon.svg";
 import Syringe_Icon from "@/public/assets/svgs/syringe_icon-angled.svg";
 import Innovative_Icon from '@/public/assets/svgs/innovative_icon.svg';
@@ -91,7 +92,7 @@ const VenomPage = () => {
   const { scrollYProgress: optionsScrollYProgress } = useScroll({
     target: optionsTargetRef,
   });
-  const optionsX = useTransform(optionsScrollYProgress, [0, 1], ["0%", "-94%"]);
+  const optionsX = useTransform(optionsScrollYProgress, [0, 1], ["0%", "-100%"]);
 
 
   return (
@@ -490,6 +491,11 @@ const VenomPage = () => {
             </div>
             <div className="venom__options_container-bgbox-bg venom__options_container-bgbox-bg--4">
               <Image src={Viva_Icon_White} alt="viva allergy icon" unoptimized={true} className="venom__options_container-bgbox-bg-icon venom__options_container-bgbox-bg-icon--4" />
+              <div className="venom__options_container-bgbox-bg--4---iconbox">
+                <Image src={Viva_Logo_Icon} alt="viva allergy icon" unoptimized={true} className="venom__options_container-bgbox-bg--4---iconbox-icon" />
+                <div className="venom__options_container-bgbox-bg--4---iconbox-filter"></div>
+              </div>
+              <h2 className=" venom__options_container-bgbox-bg--4---header">Venom Extract Options</h2>
             </div>
           </div>
           
@@ -541,7 +547,7 @@ const VenomPage = () => {
         </div>
         <div className="venom__options_contents">
           <div className="page-margins-small venom__options_contents-box">
-            <h2 className="venom__options_contents-box--header">Venom Extract Options</h2>
+            {/* <h2 className="venom__options_contents-box--header">Venom Extract Options</h2> */}
             <div className="venom__options_contents-box--categories">
               <div className="venom__options_contents-box--categories__category">
                 <h3 className="venom__options_contents-box--categories__category_title">Comprehensive Selection</h3>

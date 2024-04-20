@@ -896,7 +896,7 @@
         &_container {
 
             position: relative;
-            height: 500vh;
+            height: 550vh;
             width: 100vw;
             background-color: #e9d98d;
 
@@ -923,10 +923,52 @@
 
                     }
                     &--3 {
-
+                        background-color: #a1965a;
                     }
                     &--4 {
+                        background-color: white;
 
+                        &---iconbox {
+                            @include absolute-center;
+                            top: 60%;
+                            overflow: hidden;
+                            border-radius: 50%;
+                            width: 35rem;
+                            height: 35rem;
+
+                            @include respond(phone-small-1) {
+                                width: 25rem;
+                                height: 25rem;
+                            }
+
+                            &-icon {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: auto;
+                            }
+                            &-filter {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                border-radius: 50%;
+                                box-shadow: inset -10px 10px 15px rgba(255, 255, 255, 0.5), inset 10px -10px 15px rgba(0, 0, 0, 0.25);
+                            }
+                        }
+                        &---header {
+                            position: absolute;
+                            left: 50%;
+                            bottom: 8%;
+                            transform: translate(-50%, 0);
+                            font-size: 4.2rem;
+                            font-weight: 600;
+                            text-align: center;
+                            columns: var(--color-dark-1);
+                            width: 100%;
+                        }
                     }
 
 
@@ -947,7 +989,7 @@
                         }
                         
                         &--1 {
-                            top: 45%;
+                            top: 35%;
                             height: 58rem;
                             opacity: 0.03;
                             mix-blend-mode: difference;
@@ -957,20 +999,20 @@
                             }
                         }
                         &--2 {
-                            top: 30%;
+                            top: 15%;
                             @include respond(laptop-small-1) {
                                 height: 35rem;
                             }
                         }
                         &--3 {
-                            top: 15%;
+                            top: -10%;
                             opacity: 0.1;
                             @include respond(laptop-small-1) {
                                 height: 35rem;
                             }
                         }
                         &--4 {
-                            top: 5%;
+                            top: -20%;
                             opacity: 0.2;
                             @include respond(laptop-small-1) {
                                 height: 35rem;
@@ -1018,6 +1060,7 @@
                         background-color: #1f1f1f;
                     }
                     &--04 {
+                        padding-right: 10rem;
                         background-color: #e9d98d;
                     }
 
@@ -1099,7 +1142,7 @@
 
             &-box {
 
-                margin-top: 12rem;
+                // margin-top: 12rem;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
