@@ -184,6 +184,7 @@
             background-color: rgba(35, 35, 35, 0.88);
             flex: 1;
             padding: 10rem;
+            border-start-end-radius: 30px;
 
             display: flex;
             align-items: center;
@@ -191,6 +192,7 @@
 
             @include respond(tablet) {
                 width: 100%;
+                border-radius: 20px;
             }
             @include respond(phone-small-1) {
                 padding: 10rem 2rem;
