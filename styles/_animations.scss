@@ -195,3 +195,32 @@
   }
 
 }
+
+@keyframes InfiniteMoveX_2 {
+
+  0% {
+    transform: translateX(0) translateY(-50%);
+  }
+  20% {
+
+  }
+  40% {
+
+  }
+  50% {
+
+  }
+  51% {
+
+  }
+  60% {
+
+  }
+  99.9999% {
+    transform: translateX(-33.3333333%) translateY(-50%);
+  }
+  100% {
+    transform: translateX(0) translateY(-50%);
+  }
+
+}

@@ -57,6 +57,7 @@
                 width: 90%;
             }
             @include respond(tablet) {
+                width: 100%;
                 text-align: center;
             }
         }
@@ -191,6 +192,9 @@
             @include respond(tablet) {
                 width: 100%;
             }
+            @include respond(phone-small-1) {
+                padding: 10rem 2rem;
+              }
 
             &_container {
 

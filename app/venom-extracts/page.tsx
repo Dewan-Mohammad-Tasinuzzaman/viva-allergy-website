@@ -154,7 +154,7 @@ const VenomPage = () => {
             <div className="venom__intro__container__videobox_filter"></div>
             <div className="venom__intro__container__videobox_frame"></div>
             <div className="venom__intro__container__videobox_banner">
-              <p className="venom__intro__container__videobox_banner-text"><span className="color-venom">Venom</span> Immunotherapy Saves Lives • <span className="color-venom">Venom</span> Immunotherapy Saves Lives • <span className="color-venom">Venom</span> Immunotherapy Saves Lives •</p>
+              <p className="venom__intro__container__videobox_banner-text"><span className="color-venom">Venom</span> Immunotherapy Saves Lives • <span className="color-venom">Venom</span> Immunotherapy Saves Lives • <span className="color-venom">Venom</span> Immunotherapy Saves Lives •&nbsp;</p>
             </div>
           </div>
         </div>
@@ -206,7 +206,7 @@ const VenomPage = () => {
           <div className="venom__venom-immunotherapy__container_contents">
             <div className="venom__venom-immunotherapy__container_contents_box">
               <h1 className="venom__venom-immunotherapy__container_contents_box-header">What Is Venom Immunothepary?</h1>
-              <p className="venom__venom-immunotherapy__container_contents_box-text">VIT is a series of injections that introduces minute  amounts of venom into your body. The amount is  gradually increased over time to help your immune  system build a tolerance to the venom proteins. This  process is continued until your body has enough  immunity to tolerate a bee or wasp sting.<sup>2</sup></p>
+              <p className="venom__venom-immunotherapy__container_contents_box-text">VIT is a series of injections that introduces minute  amounts of venom into your body. The amount is  gradually increased over time to help your immune  system build a tolerance to the venom proteins. This  process is continued until your body has enough  immunity to tolerate a bee or wasp sting.<sup>3</sup></p>
             </div>
           </div>
         </div>
@@ -261,7 +261,7 @@ const VenomPage = () => {
                 <div className="venom__epi-vs-vit__comparison_list-container-item--containerRight">
                   <h4 className="venom__epi-vs-vit__comparison_list-container-item--containerRight__header">Proactive</h4>
                   <p className="venom__epi-vs-vit__comparison_list-container-item--containerRight__text">
-                    Shown to be 98% effective at eliminating a systemic reaction following an insect sting.<sup>3</sup>
+                    Shown to be 98% effective at eliminating a systemic reaction following an insect sting.<sup>4</sup>
                   </p>
                 </div>
               </div>
@@ -271,7 +271,7 @@ const VenomPage = () => {
                 <div className="venom__epi-vs-vit__comparison_list-container-item--containerLeft">
                   <h4 className="venom__epi-vs-vit__comparison_list-container-item--containerLeft__header">Self-Administered</h4>
                   <p className="venom__epi-vs-vit__comparison_list-container-item--containerLeft__text">
-                    Epinephrine is often self-administered in a  crisis situation and can  be difficult to administer  correctly.<sup>4</sup>
+                    Epinephrine is often self-administered in a  crisis situation and can  be difficult to administer  correctly.<sup>5</sup>
                   </p>
                 </div>
                 <div className="venom__epi-vs-vit__comparison_list-container-item--containerMiddle">
@@ -327,7 +327,7 @@ const VenomPage = () => {
                 <div className="venom__epi-vs-vit__comparison_list-container-item--containerRight">
                   <h4 className="venom__epi-vs-vit__comparison_list-container-item--containerRight__header">Free From Fear</h4>
                   <p className="venom__epi-vs-vit__comparison_list-container-item--containerRight__text">
-                    Venom Immunotherapy  reduces fear and  improves patient quality of life.<sup>1,3</sup>
+                    Venom Immunotherapy  reduces fear and  improves patient quality of life.<sup>4,6</sup>
                   </p>
                 </div>
               </div>
@@ -387,7 +387,7 @@ const VenomPage = () => {
           <div className="venom__allergist-info_container-contents">
             <h1 className="header-secondary venom__allergist-info_container-contents--header">Allergist Info</h1>
             <p className="text-secondary venom__allergist-info_container-contents--text">Offering venom immunotherapy (VIT) in your clinic can change lives!</p>
-            <p className="text-primary venom__allergist-info_container-contents--subtext">With an impressive efficacy rating of up to 98%<sup>3</sup>, VIT significantly reduces the risk of systemic reactions, making it possible for patients to once again enjoy being outdoors.</p>
+            <p className="text-primary venom__allergist-info_container-contents--subtext">With an impressive efficacy rating of up to 98%<sup>7</sup>, VIT significantly reduces the risk of systemic reactions, making it possible for patients to once again enjoy being outdoors.</p>
             <div className="venom__allergist-info_container-contents--link">
               <ButtonPrimary href="/assets/files/Viva_Allergy_Venom_Form_Colour.pdf" target='blank' label="Venom Order Form" />
             </div>
@@ -671,23 +671,47 @@ const VenomPage = () => {
       <section className="references">
         <Image src={Viva_Icon_White} alt="Bee Illustration" unoptimized={true} className="references_illustration" />
         <div className="page-margins-big references_container">
-          <h4 className="references_container-header">References</h4>
+          <h4 className="references_container-header">References:</h4>
           <div className="references_container-item">
             <span className="references_container-item--number">[1]</span>
             <p className="references_container-item--text">
-              Throughout this program the term “bees and wasps” is used as a generalized description of stinging insects. The complete list of VIT insects include: honey bee, wasp, white-faced hornet, yellow hornet, and yellow jacket
+              --
             </p>
           </div>
           <div className="references_container-item">
             <span className="references_container-item--number">[2]</span>
             <p className="references_container-item--text">
-              Throughout this program the term “bees and wasps” is used as a generalized description of stinging insects. The complete list of VIT insects include: honey bee, wasp, white-faced hornet, yellow hornet, and yellow jacket
+              Posner, Camargo. (2017). Update on the usage and safety of epinephrine auto-injectors. Drug, Healthcare and Patient Safety.
             </p>
           </div>
           <div className="references_container-item">
             <span className="references_container-item--number">[3]</span>
             <p className="references_container-item--text">
-              Throughout this program the term “bees and wasps” is used as a generalized description of stinging insects. The complete list of VIT insects include: honey bee, wasp, white-faced hornet, yellow hornet, and yellow jacket
+              Throughout this program the term “bees and wasps” is used as a generalized description of stinging insects. The complete list of VIT insects includes honey bee, wasp, white-faced hornet, yellow hornet, and yellow jacket.
+            </p>
+          </div>
+          <div className="references_container-item">
+            <span className="references_container-item--number">[4]</span>
+            <p className="references_container-item--text">
+              Golden. (2007, May). Insect Sting Anaphylaxis. Immunology and Allergy Clinics of North America, 27(2), 261-272.
+            </p>
+          </div>
+          <div className="references_container-item">
+            <span className="references_container-item--number">[5]</span>
+            <p className="references_container-item--text">
+              Boyle. (n.d.). Epinephrine Auto Injector Use One Year after Training: A Randomized Controlled Comparison of Two Different Devices. Journal of Allergy and Clinical Immunology, 135(2), Abstracts AB 209.
+            </p>
+          </div>
+          <div className="references_container-item">
+            <span className="references_container-item--number">[6]</span>
+            <p className="references_container-item--text">
+              Ludman, Boyle. (2015). Stinging insect allergy: current perspectives on venom immunotherapy. Journal of Asthma and Allergy, 8, 75-86.
+            </p>
+          </div>
+          <div className="references_container-item">
+            <span className="references_container-item--number">[7]</span>
+            <p className="references_container-item--text">
+              --
             </p>
           </div>
         </div>

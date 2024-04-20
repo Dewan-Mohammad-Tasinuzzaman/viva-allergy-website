@@ -188,3 +188,74 @@
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
     mix-blend-mode: color-burn;
 }
+
+
+
+
+
+
+
+
+
+// SPECIAL
+
+// Infinite Text Movement
+.infinite-text-container {
+
+    position: relative;
+    width: 100%;
+    padding: 15rem 0;
+    overflow: hidden;
+    background-color: #fffef0;
+
+
+    // background banner
+    &__banner {
+        position: absolute !important;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    &__filter01 {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #9c9c9c;
+        mix-blend-mode: multiply;
+    }
+    &__filter02 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #333333;
+        mix-blend-mode: lighten;
+    }
+
+    // can be anything
+    &__content {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateX(0) translateY(-50%);
+        font-size: 9rem;
+        font-weight: 300;
+        letter-spacing: 0px;
+        text-transform: uppercase;
+        color: #000000;
+        opacity: 0.75;
+        display: block;
+        width: auto;
+        white-space: nowrap;
+        animation: InfiniteMoveX_2 10s linear infinite forwards;
+
+        @include respond(phone) {
+            font-size: 6.4rem;
+        }
+    }
+}

@@ -23,6 +23,9 @@ const AboutPage = () => {
   const MissionBannerImage_URL = "/assets/images/immunotherapy-treatment-img.jpg";
   const VivaGreenImage_URL = "/assets/images/viva-icon-round-green.png";
   const AboutBannerImage_URL = "/assets/images/about-banner-image.jpg";
+  const InfiniteTextBannerImage_URL = "/assets/images/immunotherapy-treatment-img-cropped.jpg";
+
+
   // Other Images
   const RepImage01_URL = "/assets/images/viva-alain.jpg";
   const RepImage02_URL = "/assets/images/viva-hussein.jpg";
@@ -49,6 +52,27 @@ const AboutPage = () => {
             </div>
           </div>
         </section>
+
+        <div className="infinite-text-container about__taglineBox">
+          <ParallaxBanner
+            layers={[
+              {
+                image: InfiniteTextBannerImage_URL,
+                speed: -50,
+                translateY: [0, 50],
+                opacity: [1, 1],
+                scale: [1.1, 1, 'easeOutCubic'],
+                shouldAlwaysCompleteAnimation: true,
+              },
+            ]}
+            className="w-full aspect-2-1 infinite-text-container__banner about__taglineBox_banner"
+          />
+          <div className="infinite-text-container__filter01 about__taglineBox_filter01"></div>
+          <div className="infinite-text-container__filter02 about__taglineBox_filter02"></div>
+          <div className="infinite-text-container__content about__taglineBox_content">
+            Innovative Change For a Healthier Tomorrow • Innovative Change For a Healthier Tomorrow • Innovative Change For a Healthier Tomorrow •&nbsp;
+          </div>
+        </div>
 
 
         <section id='about-mission' className="about__mission">

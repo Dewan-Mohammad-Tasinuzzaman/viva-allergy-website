@@ -204,7 +204,11 @@ const SkinTestPage = () => {
 
               <div className="skintests__instructions_info">
                 <h2 className="header-secondary skintests__instructions_info-title">Comforten® - Device in Action</h2>
-                <p className="text-primary skintests__instructions_info-text">Watch this video to learn more about the skin test device system. You’ll discover how ComforTen® elevates the allergy testing experience and receive a demo on how easy it is.</p>
+                <p className="text-primary skintests__instructions_info-text">
+                  Watch this video to learn more about the skin test device system. You&apos;ll discover how ComforTen® elevates the allergy testing experience and receive a demo on how easy it is.
+                  <br/>
+                  We provide this product in partnership with <span className="text-primary skintests__instructions_info-text--span">HollisterSteir</span>.
+                </p>
               </div>
             </div>
           </div>
