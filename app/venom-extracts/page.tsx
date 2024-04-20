@@ -723,7 +723,7 @@ const VenomPage = () => {
       <Footer showRequestQuote={false} />
 
       {/* Loading Animation */}
-      <LoadingAnimation customClassName="" />
+      <LoadingAnimation customClassName="venom-loader" />
     </main>
   )
 }
