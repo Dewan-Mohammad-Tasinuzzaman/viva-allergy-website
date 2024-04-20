@@ -208,6 +208,10 @@
     overflow: hidden;
     background-color: #fffef0;
 
+    @include respond(tablet-small-3) {
+        padding: 8rem 0;
+    }
+
 
     // background banner
     &__banner {
@@ -256,6 +260,9 @@
 
         @include respond(phone) {
             font-size: 6.4rem;
+        }
+        @include respond(tablet-small-3) {
+            font-size: 4.2rem;
         }
     }
 }
