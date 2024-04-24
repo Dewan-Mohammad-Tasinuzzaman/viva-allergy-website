@@ -169,7 +169,7 @@ export default function VenomPage({ params: { lng } }: VenomPageProps) {
             <div className="venom__intro__container__videobox_filter"></div>
             <div className="venom__intro__container__videobox_frame"></div>
             <div className="venom__intro__container__videobox_banner">
-              <p className="venom__intro__container__videobox_banner-text"><span className="color-venom">Venom</span> Immunotherapy Saves Lives • <span className="color-venom">Venom</span> Immunotherapy Saves Lives • <span className="color-venom">Venom</span> Immunotherapy Saves Lives •&nbsp;</p>
+              <p className="venom__intro__container__videobox_banner-text"><span className="color-venom">Venom</span> Immunotherapy Saves Lives • <span className="color-venom">Venom</span> Immunotherapy Saves Lives • <span className="color-venom">Venom</span> Immunotherapy Saves Lives • </p>
             </div>
           </div>
         </div>
@@ -388,8 +388,8 @@ export default function VenomPage({ params: { lng } }: VenomPageProps) {
           layers={[
               {
               image: Allergists_Image_URL,
-              speed: -50,
-              translateY: [0, 20],
+              speed: -20,
+              translateY: [0, 30],
               scale: [1, 1.15, 'easeOutCubic'],
               shouldAlwaysCompleteAnimation: true,
               },
@@ -402,7 +402,7 @@ export default function VenomPage({ params: { lng } }: VenomPageProps) {
           <div className="venom__allergist-info_container-contents">
             <h1 className="header-secondary venom__allergist-info_container-contents--header">Allergist Info</h1>
             <p className="text-secondary venom__allergist-info_container-contents--text">Offering venom immunotherapy (VIT) in your clinic can change lives!</p>
-            <p className="text-primary venom__allergist-info_container-contents--subtext">With an impressive efficacy rating of up to 98%<sup>7</sup>, VIT significantly reduces the risk of systemic reactions, making it possible for patients to once again enjoy being outdoors.</p>
+            <p className="text-primary venom__allergist-info_container-contents--subtext">With an impressive efficacy rating of up to 98%<sup>4</sup>, VIT significantly reduces the risk of systemic reactions, making it possible for patients to once again enjoy being outdoors.</p>
             <div className="venom__allergist-info_container-contents--link">
               <ButtonPrimary href="/assets/files/Viva_Allergy_Venom_Form_Colour.pdf" target='blank' label="Venom Order Form" />
             </div>

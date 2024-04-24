@@ -229,6 +229,53 @@
 
             }
         }
+        &_langswitch {
+
+            position: relative;
+            width: 5.9rem;
+            height: 5.9rem;
+            border-radius: 50%;
+            background-color: rgb(46, 46, 46);
+            overflow: hidden;
+            box-shadow: inset -4px 4px 9px rgba(255, 255, 255, 0.274), inset 4px -4px 9px rgba(0, 0, 0, 0.788);
+            transform: scale(1);
+            transition: all .3s ease-out;
+
+            @include respond(tablet) {
+                margin-top: 3rem;
+            }
+
+            &:hover {
+                transform: scale(1.1);
+                background-color: rgb(255, 255, 255);
+                box-shadow: inset -4px 4px 9px rgb(255, 255, 255), inset 4px -4px 9px rgba(255, 255, 255, 0), 0 4px 10px rgba(0, 0, 0, 0.09);
+
+                .navbar__options_langswitch-link {
+                    color: rgb(46, 46, 46);
+                }
+            }
+
+            &-link {
+                @include absolute-center;
+                left: 42%;
+                width: auto;
+                height: auto;
+                text-transform: uppercase;
+                text-align: center;
+                font-size: 1.6rem;
+                font-weight: 600;
+                color: rgb(231, 231, 231);
+                transition: all .3s ease-out;
+
+                &:hover {
+                    
+                }
+
+                @include respond(tablet) {
+                    left: 65%;
+                }
+            }
+        }
     }
 
     &__expand-btn {
