@@ -244,7 +244,7 @@
             &:hover {
 
                 .navbar__options_langswitch-text {
-                    display: block;
+                    display: inline-block;
                     position: absolute;
                     bottom: -160%;
                     right: 0;
@@ -252,6 +252,16 @@
                     padding: 2rem;
                     border-radius: 2px 2px 2px 2px;
                     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+                    @include respond(tablet) {
+                        position: relative;
+                        bottom: 0;
+                        right: 0;
+                        background-color: rgba(255, 255, 255, 0);
+                        padding: 0;
+                        border-radius: 0;
+                        box-shadow: none;
+                    }
                 }
             }
 
