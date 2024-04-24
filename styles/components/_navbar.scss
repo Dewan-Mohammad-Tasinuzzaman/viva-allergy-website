@@ -185,6 +185,7 @@
                 margin-right: 3rem;
                 @include respond(tablet) {
                     margin-right: 0;
+                    width: 100%;
                 }
             }
 
@@ -213,6 +214,7 @@
                 @include respond(tablet) {
                     padding: 0;
                     padding-right: 1.5rem;
+                    width: 100%;
                 }
             }
 

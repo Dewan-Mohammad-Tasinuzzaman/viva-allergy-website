@@ -201,7 +201,7 @@
     align-items: center;
     width: 100%;
 
-    @include respond(phone) {
+    @include respond(laptop-small-1) {
         flex-direction: column;
     }
 

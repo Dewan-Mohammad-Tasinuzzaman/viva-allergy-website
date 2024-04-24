@@ -36,7 +36,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-, "components/SmoothScroll.jsx"  ],
+, "components/SmoothScroll.jsx", "middleware.js"  ],
   "exclude": [
     "node_modules"
   ]
