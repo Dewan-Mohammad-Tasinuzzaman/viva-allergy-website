@@ -229,50 +229,113 @@
 
             }
         }
-        &_langswitch {
 
+        &_langswitch {
+            
             position: relative;
-            width: 5.9rem;
-            height: 5.9rem;
-            border-radius: 50%;
-            background-color: rgb(46, 46, 46);
-            overflow: hidden;
-            box-shadow: inset -4px 4px 9px rgba(255, 255, 255, 0.274), inset 4px -4px 9px rgba(0, 0, 0, 0.788);
-            transform: scale(1);
-            transition: all .3s ease-out;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
 
             @include respond(tablet) {
-                margin-top: 3rem;
+                // flex-direction: row-reverse;
             }
 
             &:hover {
-                transform: scale(1.1);
-                background-color: rgb(255, 255, 255);
-                box-shadow: inset -4px 4px 9px rgb(255, 255, 255), inset 4px -4px 9px rgba(255, 255, 255, 0), 0 4px 10px rgba(0, 0, 0, 0.09);
 
-                .navbar__options_langswitch-link {
-                    color: rgb(46, 46, 46);
+                .navbar__options_langswitch-text {
+                    display: block;
+                    position: absolute;
+                    bottom: -160%;
+                    right: 0;
+                    background-color: white;
+                    padding: 2rem;
+                    border-radius: 2px 2px 2px 2px;
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
                 }
             }
 
-            &-link {
-                @include absolute-center;
-                left: 42%;
-                width: auto;
-                height: auto;
-                text-transform: uppercase;
-                text-align: center;
-                font-size: 1.6rem;
-                font-weight: 600;
-                color: rgb(231, 231, 231);
-                transition: all .3s ease-out;
+            &-text {
 
-                &:hover {
-                    
-                }
+                display: none;
+                pointer-events: none;
+                text-wrap: nowrap;
 
                 @include respond(tablet) {
-                    left: 65%;
+                    display: inline-block;
+                }
+
+                &--span {
+                    text-transform: uppercase;
+                    font-weight: 600;
+                }
+            }
+            &-btn {
+
+                position: relative;
+                width: 5.9rem;
+                height: 5.9rem;
+                border-radius: 50%;
+                background-color: rgb(46, 46, 46);
+                overflow: hidden;
+                box-shadow: inset -4px 4px 9px rgba(255, 255, 255, 0.274), inset 4px -4px 9px rgba(0, 0, 0, 0.788);
+                transform: scale(1);
+                transition: all .3s ease-out;
+
+                @include respond(tablet) {
+
+                }
+
+                &:hover {
+                    transform: scale(1.1);
+                    background-color: var(--color-venoms);
+                    box-shadow: inset -4px 4px 9px rgba(255, 255, 255, 0.4), inset 4px -4px 9px rgba(0, 0, 0, 0.15), 0 4px 10px rgba(0, 0, 0, 0.09);
+
+                    .navbar__options_langswitch-btn--current {
+                        color: rgb(255, 255, 255);
+                        top: -150%;
+                    }
+                    .navbar__options_langswitch-btn--link {
+                        color: rgb(255, 255, 255);
+                        top: 50%;
+                    }
+                }
+                &:active {
+                    transform: scale(0.95);
+                }
+
+                &--current {
+                    @include absolute-center;
+                    width: auto;
+                    height: auto;
+                    padding: 5rem;
+                    text-transform: uppercase;
+                    text-align: center;
+                    font-size: 1.6rem;
+                    font-weight: 600;
+                    color: rgb(231, 231, 231);
+                    transition: all .3s ease;
+
+                    @include respond(tablet) {
+                        top: -150%;
+                    }
+                }
+                &--link {
+                    @include absolute-center;
+                    top: 150%;
+                    width: auto;
+                    height: auto;
+                    padding: 5rem;
+                    text-transform: uppercase;
+                    text-align: center;
+                    font-size: 1.6rem;
+                    font-weight: 600;
+                    color: rgb(231, 231, 231);
+                    transition: all .3s ease;
+
+                    @include respond(tablet) {
+                        top: 50%;
+                    }
                 }
             }
         }

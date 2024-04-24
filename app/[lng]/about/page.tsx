@@ -151,10 +151,10 @@ export default function AboutPage({ params: { lng } }: AboutPageProps) {
             <h2 className="header-secondary about__reps_header">{t('reps-title')}</h2>
             <div className="about__reps_container">
               <div className="about__reps_container-rep about__reps_container-rep01">
-                <RepresentativeContact img_href={RepImage01_URL} name='Alain Bouchahine' title={t('reps-01-position')} phone='+1 (437) 425 3452' email='abouchahine@omegalabs.ca' />
+                <RepresentativeContact img_href={RepImage01_URL} name='Alain Bouchahine' title={t('reps-01-position')} phone='+1 (437) 425 3452' email_btn_label={t('email')} email='abouchahine@omegalabs.ca' />
               </div>
               <div className="about__reps_container-rep about__reps_container-rep02">
-                <RepresentativeContact img_href={RepImage02_URL} name='Hussein Nahle' title={t('reps-02-position')} phone='+1 (514) 578 8124' email='hnahle@omegalabs.ca' />
+                <RepresentativeContact img_href={RepImage02_URL} name='Hussein Nahle' title={t('reps-02-position')} phone='+1 (514) 578 8124' email_btn_label={t('email')} email='hnahle@omegalabs.ca' />
               </div>
             </div>
           </div>
