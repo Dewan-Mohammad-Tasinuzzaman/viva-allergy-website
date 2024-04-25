@@ -37,7 +37,7 @@ export default async function AllergistLocator({ params: { lng } }: AllergistLoc
                 </div>
             </div>
             
-            <iframe className='allergist-locator__iframe' src='https://www.bullseyelocations.com/pages/Main_BeeAware?f=1' />
+            <iframe className='allergist-locator__iframe' src='https://beeawareallergy.bullseyelocations.com/local/Main_BeeawareReact?f=1' />
         </div>
 
         {/* FOOTER */}
