@@ -11,10 +11,11 @@ interface RepresentativeContactProps {
     name: string;
     title: string;
     phone: string;
+    email_btn_label: string;
     email: string;
 }
 
-const RepresentativeContact: React.FC<RepresentativeContactProps> = ({ img_href, name, title, phone, email }) => {
+const RepresentativeContact: React.FC<RepresentativeContactProps> = ({ img_href, name, title, phone, email_btn_label, email }) => {
 
     const handleEmailButtonClick = () => {
         window.location.href = 'mailto:' + email;
@@ -38,7 +39,7 @@ const RepresentativeContact: React.FC<RepresentativeContactProps> = ({ img_href,
                     <p className="representative__container_details-info--text">{email}</p>
                 </div>
                 <div className='representative__container_details-button' onClick={handleEmailButtonClick}>
-                    <div className="representative__container_details-button--text">Email</div>
+                    <div className="representative__container_details-button--text">{email_btn_label}</div>
                     <Image src={Email_Icon_White} fill={false} alt="email icon" unoptimized={true} className="representative__container_details-button--icon" />
                 </div>
             </div>

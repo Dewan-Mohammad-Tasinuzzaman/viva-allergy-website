@@ -10,6 +10,7 @@ import Map_Icon from "@/public/assets/svgs/map_icon.svg";
 import Map_Icon_Large from "@/public/assets/svgs/map_icon_large.svg";
 import Allergist_Icon from "@/public/assets/svgs/allergist_info-icon.svg";
 import Plus_Icon_Dark from '@/public/assets/svgs/plus_icon-dark.svg';
+import Plus_Icon_White from '@/public/assets/svgs/plus_icon.svg';
 import Vespids_Diagram from '@/public/assets/images/venom_extracts-upscaled-edited.png';
 import Honey_Bee_Diagram from '@/public/assets/images/honey_bee_diagram.png';
 import Hornet_Diagram from '@/public/assets/images/hornet_diagram.png';
@@ -74,22 +75,22 @@ export default function VenomPage({ params: { lng } }: VenomPageProps) {
   // Descriptions of Journey Steps
   const NowDescription = (
     <p className="journey-card__container_text">
-      A deadly allergic reaction can occur within minutes after a sting.<sup>2</sup> If you notice any difficulty breathing or other serious symptoms, call 911.
+      {t('step01-description-span01')}<sup>2</sup>{t('step01-description-span02')}
     </p>
   );
   const TodayDescription = (
     <p className="journey-card__container_text">
-      Allergic reactions can be delayed up to 12+ hours. Watch for symptoms such as runny nose and vomiting that may indicate an allergy.
+      {t('step02-description-span01')}{t('step02-description-span02')}
     </p>
   );
   const TomorrowDescription = (
     <p className="journey-card__container_text">
-      Reflect on the incident. If the symptoms were anything more than slight swelling, consider calling a medical professional to discuss Venom Immunotherapy.
+      {t('step03-description-span01')}{t('step03-description-span02')}
     </p>
   );
   const NextTimeDescription = (
     <p className="journey-card__container_text">
-      Discover the risk of an allergic reaction in a doctor&apos;s office instead of during your next sting.
+      {t('step04-description-span01')}{t('step04-description-span02')}
     </p>
   );
 
@@ -119,12 +120,12 @@ export default function VenomPage({ params: { lng } }: VenomPageProps) {
 
             <div className="venom__intro__container__content_infobox">
               <div className="page-margins-small venom__intro__container__content_infobox_contents">
-                <h1 className="venom__intro__container__content_infobox_contents-heading01">Allergic To Bee <span className="venom__intro__container__content_infobox_contents-heading01--span">Stings?</span></h1>
-                <h2 className="venom__intro__container__content_infobox_contents-heading02">Don&apos;t Let It Keep You Indoors</h2>
-                <p className="venom__intro__container__content_infobox_contents-text">Venom immunotherapy (VIT) is a game-changer for those at risk of life-threatening reactions to bee and wasp stings. In Canada, roughly 25,000 people will visit the emergency room each year after being stung.<sup>1</sup></p>
+                <h1 className="venom__intro__container__content_infobox_contents-heading01">{t('title-span01')}<span className="venom__intro__container__content_infobox_contents-heading01--span">{t('title-span02')}</span></h1>
+                <h2 className="venom__intro__container__content_infobox_contents-heading02">{t('subheader')}</h2>
+                <p className="venom__intro__container__content_infobox_contents-text">{t('description-span01')}<sup>1</sup>{t('description-span02')}</p>
                 <div className="keepScrolling venom__intro__container__content_infobox_contents-keepScrolling">
                   <Image src={Plus_Icon_Dark} alt="plus icon" unoptimized={true} className="keepScrolling__icons keepScrolling__icons_1 venom__intro__container__content_infobox_contents-keepScrolling--icons" />
-                  <p className="keepScrolling__text venom__intro__container__content_infobox_contents-keepScrolling--text">Keep Scrolling</p>
+                  <p className="keepScrolling__text venom__intro__container__content_infobox_contents-keepScrolling--text">{t('keep-scrolling')}</p>
                   <Image src={Plus_Icon_Dark} alt="plus icon" unoptimized={true} className="keepScrolling__icons keepScrolling__icons_2 venom__intro__container__content_infobox_contents-keepScrolling--icons" />
                 </div>
               </div>
@@ -133,13 +134,13 @@ export default function VenomPage({ params: { lng } }: VenomPageProps) {
             <div className="button-group venom__intro__container__content_buttonsbox">
               <a className="button-group__button button-group__button--dark" href="#patient-journey">
                 <div className="button-group__button_content">
-                  <p className="button-group__button_content-text">Patient Journey</p>
+                  <p className="button-group__button_content-text">{t('patient-journey')}</p>
                   <Image src={Map_Icon} alt="map icon" unoptimized={true} className="button-group__button_content-icon" />
                 </div>
               </a>
               <a className="button-group__button button-group__button--light" href="#allergist-info">
                 <div className="button-group__button_content">
-                  <p className="button-group__button_content-text">Allergist Info</p>
+                  <p className="button-group__button_content-text">{t('allergist-info')}</p>
                   <Image src={Allergist_Icon} alt="allergist icon" unoptimized={true} className="button-group__button_content-icon" />
                 </div>
               </a>
@@ -169,7 +170,7 @@ export default function VenomPage({ params: { lng } }: VenomPageProps) {
             <div className="venom__intro__container__videobox_filter"></div>
             <div className="venom__intro__container__videobox_frame"></div>
             <div className="venom__intro__container__videobox_banner">
-              <p className="venom__intro__container__videobox_banner-text"><span className="color-venom">Venom</span> Immunotherapy Saves Lives • <span className="color-venom">Venom</span> Immunotherapy Saves Lives • <span className="color-venom">Venom</span> Immunotherapy Saves Lives • </p>
+              <p className="venom__intro__container__videobox_banner-text"><span className="color-venom">{t('vit-saves-lives-span01')}</span>{t('vit-saves-lives-span02')}<span className="color-venom">{t('vit-saves-lives-span01')}</span>{t('vit-saves-lives-span02')}<span className="color-venom">{t('vit-saves-lives-span01')}</span>{t('vit-saves-lives-span02')}</p>
             </div>
           </div>
         </div>
@@ -183,16 +184,20 @@ export default function VenomPage({ params: { lng } }: VenomPageProps) {
           <motion.div style={{ x }} className="venom__patient-journey_container_slider">
             <div className="venom__patient-journey_container_slider-intro">
               <div className="venom__patient-journey_container_slider-intro--contents">
-                <h2 className="venom__patient-journey_container_slider-intro--contents__header">Patient <span className="venom__patient-journey_container_slider-intro--contents__header-span">Journey</span></h2>
-                <div className="venom__patient-journey_container_slider-intro--contents__keepScrolling">
-                  <KeepScrolling />
+                <h2 className="venom__patient-journey_container_slider-intro--contents__header">{t('patient')}<span className="venom__patient-journey_container_slider-intro--contents__header-span">{t('journey')}</span></h2>
+
+                <div className="keepScrolling venom__patient-journey_container_slider-intro--contents__keepScrolling">
+                  <Image src={Plus_Icon_White} alt="plus icon" unoptimized={true} className="keepScrolling__icons keepScrolling__icons_1" />
+                  <p className="keepScrolling__text">{t('keep-scrolling')}</p>
+                  <Image src={Plus_Icon_White} alt="plus icon" unoptimized={true} className="keepScrolling__icons keepScrolling__icons_2" />
                 </div>
+
               </div>
             </div>
-            <PatientJourneyCard header='Now' step_number='01' colorClassName='bg-mites' description={NowDescription} banner_URL={Now_Image_URL} />
-            <PatientJourneyCard header='Today' step_number='02' colorClassName='bg-insects' description={TodayDescription} banner_URL={Today_Image_URL} />
-            <PatientJourneyCard header='Tomorrow' step_number='03' colorClassName='bg-venom' description={TomorrowDescription} banner_URL={Tomorrow_Image_URL} />
-            <PatientJourneyCard header='Next Time' step_number='04' colorClassName='bg-trees' description={NextTimeDescription} banner_URL={NextTime_Image_URL} />
+            <PatientJourneyCard header={t('step01-title')} step_number='01' colorClassName='bg-mites' description={NowDescription} banner_URL={Now_Image_URL} />
+            <PatientJourneyCard header={t('step02-title')} step_number='02' colorClassName='bg-insects' description={TodayDescription} banner_URL={Today_Image_URL} />
+            <PatientJourneyCard header={t('step03-title')} step_number='03' colorClassName='bg-venom' description={TomorrowDescription} banner_URL={Tomorrow_Image_URL} />
+            <PatientJourneyCard header={t('step04-title')} step_number='04' colorClassName='bg-trees' description={NextTimeDescription} banner_URL={NextTime_Image_URL} />
           </motion.div>
         </div>
       </section>
@@ -220,8 +225,8 @@ export default function VenomPage({ params: { lng } }: VenomPageProps) {
           </video>
           <div className="venom__venom-immunotherapy__container_contents">
             <div className="venom__venom-immunotherapy__container_contents_box">
-              <h1 className="venom__venom-immunotherapy__container_contents_box-header">What Is Venom Immunothepary?</h1>
-              <p className="venom__venom-immunotherapy__container_contents_box-text">VIT is a series of injections that introduces minute  amounts of venom into your body. The amount is  gradually increased over time to help your immune  system build a tolerance to the venom proteins. This  process is continued until your body has enough  immunity to tolerate a bee or wasp sting.<sup>3</sup></p>
+              <h1 className="venom__venom-immunotherapy__container_contents_box-header">{t('vit-title')}</h1>
+              <p className="venom__venom-immunotherapy__container_contents_box-text">{t('vit-description')}<sup>3</sup></p>
             </div>
           </div>
         </div>
@@ -231,11 +236,11 @@ export default function VenomPage({ params: { lng } }: VenomPageProps) {
         <div className="page-margins-big venom__epi-vs-vit__intro">
           <div className="venom__epi-vs-vit__intro_container">
             <h2 className="venom__epi-vs-vit__intro_container-header">
-              Reactive or Proactive Treatment For Bee and Wasp Allergies?
+              {t('comparison-title01')}
               <br/>
-              <span className="venom__epi-vs-vit__intro_container-header--span">The Choice Is Yours</span>
+              <span className="venom__epi-vs-vit__intro_container-header--span">{t('comparison-title02')}</span>
             </h2>
-            <p className="venom__epi-vs-vit__intro_container-text">VIT is proactive treatment that prevents a life threatening emergency before it happens. An EAI is  the first step of emergency treatment after an allergic  reaction occurs.</p>
+            <p className="venom__epi-vs-vit__intro_container-text">{t('comparison-description')}</p>
           </div>
         </div>
 
@@ -245,14 +250,14 @@ export default function VenomPage({ params: { lng } }: VenomPageProps) {
           <div className="venom__epi-vs-vit__comparison_headerbox">
             <div className="venom__epi-vs-vit__comparison_headerbox-box">
               <div className="venom__epi-vs-vit__comparison_headerbox-box-container">
-                <h3 className="venom__epi-vs-vit__comparison_headerbox-box-container--header01">EAI</h3>
-                <h3 className="venom__epi-vs-vit__comparison_headerbox-box-container--header02">Epinephrine Auto-Injector</h3>
+                <h3 className="venom__epi-vs-vit__comparison_headerbox-box-container--header01">{t('comparison-eai')}</h3>
+                <h3 className="venom__epi-vs-vit__comparison_headerbox-box-container--header02">{t('comparison-eai-full')}</h3>
               </div>
             </div>
             <div className="venom__epi-vs-vit__comparison_headerbox-box">
               <div className="venom__epi-vs-vit__comparison_headerbox-box-container">
-                <h3 className="venom__epi-vs-vit__comparison_headerbox-box-container--header01">VIT</h3>
-                <h3 className="venom__epi-vs-vit__comparison_headerbox-box-container--header02">Venom Immunotherapy</h3>
+                <h3 className="venom__epi-vs-vit__comparison_headerbox-box-container--header01">{t('comparison-vit')}</h3>
+                <h3 className="venom__epi-vs-vit__comparison_headerbox-box-container--header02">{t('comparison-vit-full')}</h3>
               </div>
             </div>
           </div>
@@ -262,9 +267,9 @@ export default function VenomPage({ params: { lng } }: VenomPageProps) {
 
               <div className="venom__epi-vs-vit__comparison_list-container-item">
                 <div className="venom__epi-vs-vit__comparison_list-container-item--containerLeft">
-                  <h4 className="venom__epi-vs-vit__comparison_list-container-item--containerLeft__header">Reactive</h4>
+                  <h4 className="venom__epi-vs-vit__comparison_list-container-item--containerLeft__header">{t('comparison-eai-01-title')}</h4>
                   <p className="venom__epi-vs-vit__comparison_list-container-item--containerLeft__text">
-                    It does not prevent an emergency; it&apos;s simply the first step of emergency treatment.
+                    {t('comparison-eai-01-text')}
                   </p>
                 </div>
                 <div className="venom__epi-vs-vit__comparison_list-container-item--containerMiddle">
@@ -274,9 +279,9 @@ export default function VenomPage({ params: { lng } }: VenomPageProps) {
                   </div>
                 </div>
                 <div className="venom__epi-vs-vit__comparison_list-container-item--containerRight">
-                  <h4 className="venom__epi-vs-vit__comparison_list-container-item--containerRight__header">Proactive</h4>
+                  <h4 className="venom__epi-vs-vit__comparison_list-container-item--containerRight__header">{t('comparison-vit-01-title')}</h4>
                   <p className="venom__epi-vs-vit__comparison_list-container-item--containerRight__text">
-                    Shown to be 98% effective at eliminating a systemic reaction following an insect sting.<sup>4</sup>
+                    {t('comparison-vit-01-text')}<sup>4</sup>
                   </p>
                 </div>
               </div>
@@ -284,9 +289,9 @@ export default function VenomPage({ params: { lng } }: VenomPageProps) {
 
               <div className="venom__epi-vs-vit__comparison_list-container-item">
                 <div className="venom__epi-vs-vit__comparison_list-container-item--containerLeft">
-                  <h4 className="venom__epi-vs-vit__comparison_list-container-item--containerLeft__header">Self-Administered</h4>
+                  <h4 className="venom__epi-vs-vit__comparison_list-container-item--containerLeft__header">{t('comparison-eai-02-title')}</h4>
                   <p className="venom__epi-vs-vit__comparison_list-container-item--containerLeft__text">
-                    Epinephrine is often self-administered in a  crisis situation and can  be difficult to administer  correctly.<sup>5</sup>
+                    {t('comparison-eai-02-text')}<sup>5</sup>
                   </p>
                 </div>
                 <div className="venom__epi-vs-vit__comparison_list-container-item--containerMiddle">
@@ -296,9 +301,9 @@ export default function VenomPage({ params: { lng } }: VenomPageProps) {
                   </div>
                 </div>
                 <div className="venom__epi-vs-vit__comparison_list-container-item--containerRight">
-                  <h4 className="venom__epi-vs-vit__comparison_list-container-item--containerRight__header">Professional</h4>
+                  <h4 className="venom__epi-vs-vit__comparison_list-container-item--containerRight__header">{t('comparison-vit-02-title')}</h4>
                   <p className="venom__epi-vs-vit__comparison_list-container-item--containerRight__text">
-                    Venom Immunotherapy is administered by a licensed health care professional in a clinical setting.
+                    {t('comparison-vit-02-text')}
                   </p>
                 </div>
               </div>
@@ -306,9 +311,9 @@ export default function VenomPage({ params: { lng } }: VenomPageProps) {
 
               <div className="venom__epi-vs-vit__comparison_list-container-item">
                 <div className="venom__epi-vs-vit__comparison_list-container-item--containerLeft">
-                  <h4 className="venom__epi-vs-vit__comparison_list-container-item--containerLeft__header">Dependent</h4>
+                  <h4 className="venom__epi-vs-vit__comparison_list-container-item--containerLeft__header">{t('comparison-eai-03-title')}</h4>
                   <p className="venom__epi-vs-vit__comparison_list-container-item--containerLeft__text">
-                    Remembering to carry epinephrine every day  can be inconvenient,  meaning it may not  be available when it&apos;s  needed most.
+                    {t('comparison-eai-03-text')}
                   </p>
                 </div>
                 <div className="venom__epi-vs-vit__comparison_list-container-item--containerMiddle">
@@ -318,9 +323,9 @@ export default function VenomPage({ params: { lng } }: VenomPageProps) {
                   </div>
                 </div>
                 <div className="venom__epi-vs-vit__comparison_list-container-item--containerRight">
-                  <h4 className="venom__epi-vs-vit__comparison_list-container-item--containerRight__header">Prepared</h4>
+                  <h4 className="venom__epi-vs-vit__comparison_list-container-item--containerRight__header">{t('comparison-vit-03-title')}</h4>
                   <p className="venom__epi-vs-vit__comparison_list-container-item--containerRight__text">
-                    With VIT, your protection is always with you meaning  you are prepared and  protected, wherever you are.
+                    {t('comparison-vit-03-text')}
                   </p>
                 </div>
               </div>
@@ -328,9 +333,9 @@ export default function VenomPage({ params: { lng } }: VenomPageProps) {
 
               <div className="venom__epi-vs-vit__comparison_list-container-item">
                 <div className="venom__epi-vs-vit__comparison_list-container-item--containerLeft">
-                  <h4 className="venom__epi-vs-vit__comparison_list-container-item--containerLeft__header">Worry</h4>
+                  <h4 className="venom__epi-vs-vit__comparison_list-container-item--containerLeft__header">{t('comparison-eai-04-title')}</h4>
                   <p className="venom__epi-vs-vit__comparison_list-container-item--containerLeft__text">
-                    Relying on a reactive approach can mean constant fear and worry.
+                    {t('comparison-eai-04-text')}
                   </p>
                 </div>
                 <div className="venom__epi-vs-vit__comparison_list-container-item--containerMiddle">
@@ -340,9 +345,9 @@ export default function VenomPage({ params: { lng } }: VenomPageProps) {
                   </div>
                 </div>
                 <div className="venom__epi-vs-vit__comparison_list-container-item--containerRight">
-                  <h4 className="venom__epi-vs-vit__comparison_list-container-item--containerRight__header">Free From Fear</h4>
+                  <h4 className="venom__epi-vs-vit__comparison_list-container-item--containerRight__header">{t('comparison-vit-04-title')}</h4>
                   <p className="venom__epi-vs-vit__comparison_list-container-item--containerRight__text">
-                    Venom Immunotherapy  reduces fear and  improves patient quality of life.<sup>4,6</sup>
+                    {t('comparison-vit-04-text')}<sup>4,6</sup>
                   </p>
                 </div>
               </div>
@@ -374,9 +379,9 @@ export default function VenomPage({ params: { lng } }: VenomPageProps) {
         <div className="venom__success_video-filter01"></div>
         <div className="venom__success_video-filter02"></div>
         <div className="venom__success_container">
-          <h1 className="venom__success_container-header">Live Life To The Fullest</h1>
+          <h1 className="venom__success_container-header">{t('vid-banner-text')}</h1>
           <div className="venom__success_container-link">
-            <ButtonSecondary href="/contacts" label="Contact Us" />
+            <ButtonSecondary href="/contacts" label={t('contact-us')} />
           </div>
         </div>
       </section>
@@ -400,11 +405,11 @@ export default function VenomPage({ params: { lng } }: VenomPageProps) {
 
         <div className="venom__allergist-info_container">
           <div className="venom__allergist-info_container-contents">
-            <h1 className="header-secondary venom__allergist-info_container-contents--header">Allergist Info</h1>
-            <p className="text-secondary venom__allergist-info_container-contents--text">Offering venom immunotherapy (VIT) in your clinic can change lives!</p>
-            <p className="text-primary venom__allergist-info_container-contents--subtext">With an impressive efficacy rating of up to 98%<sup>4</sup>, VIT significantly reduces the risk of systemic reactions, making it possible for patients to once again enjoy being outdoors.</p>
+            <h1 className="header-secondary venom__allergist-info_container-contents--header">{t('allergist-title')}</h1>
+            <p className="text-secondary venom__allergist-info_container-contents--text">{t('allergist-subheader')}</p>
+            <p className="text-primary venom__allergist-info_container-contents--subtext">{t('allergist-text-span01')}<sup>4</sup>{t('allergist-text-span02')}</p>
             <div className="venom__allergist-info_container-contents--link">
-              <ButtonPrimary href="/assets/files/Viva_Allergy_Venom_Form_Colour.pdf" target='blank' label="Venom Order Form" />
+              <ButtonPrimary href="/assets/files/Viva_Allergy_Venom_Form_Colour.pdf" target='blank' label={t('venom-order-form')} />
             </div>
           </div>
         </div>
@@ -412,7 +417,7 @@ export default function VenomPage({ params: { lng } }: VenomPageProps) {
 
 
       <section id='venom-extraction-process' className="page-margins-big venom__extraction">
-        <div className="venom__extraction_header">From Field to Patient:<br/>Our Venom Extraction Process</div>
+        <div className="venom__extraction_header">{t('extraction-header-span01')}<br/>{t('extraction-header-span02')}</div>
         <div className="venom__extraction_container">
 
           <div className="venom__extraction_container-item">
@@ -422,8 +427,8 @@ export default function VenomPage({ params: { lng } }: VenomPageProps) {
               </div>
             </div>
             <div className="venom__extraction_container-item--contents">
-              <h3 className="venom__extraction_container-item--contents---title">Collection</h3>
-              <p className="venom__extraction_container-item--contents---text">Through a nationwide network of collectors, we gather thousands of pounds of wasps and vespids annually. Additionally, we sustainably breed honeybees, meticulously selecting up to 14 different species.</p>
+              <h3 className="venom__extraction_container-item--contents---title">{t('extraction-item01-title')}</h3>
+              <p className="venom__extraction_container-item--contents---text">{t('extraction-item01-description')}</p>
             </div>
           </div>
 
@@ -434,8 +439,8 @@ export default function VenomPage({ params: { lng } }: VenomPageProps) {
               </div>
             </div>
             <div className="venom__extraction_container-item--contents">
-              <h3 className="venom__extraction_container-item--contents---title">Vespid Dissection</h3>
-              <p className="venom__extraction_container-item--contents---text">With precision and care, venom sacs, the size of a pinhead, are manually extracted in our facility, taking 520 staff-hours for a single batch of raw material.</p>
+              <h3 className="venom__extraction_container-item--contents---title">{t('extraction-item02-title')}</h3>
+              <p className="venom__extraction_container-item--contents---text">{t('extraction-item02-description')}</p>
             </div>
           </div>
 
@@ -446,8 +451,8 @@ export default function VenomPage({ params: { lng } }: VenomPageProps) {
               </div>
             </div>
             <div className="venom__extraction_container-item--contents">
-              <h3 className="venom__extraction_container-item--contents---title">Processing</h3>
-              <p className="venom__extraction_container-item--contents---text">Significant investments in venom-related equipment ensure the consistent supply of high-quality venom extracts.</p>
+              <h3 className="venom__extraction_container-item--contents---title">{t('extraction-item03-title')}</h3>
+              <p className="venom__extraction_container-item--contents---text">{t('extraction-item03-description')}</p>
             </div>
           </div>
 
@@ -458,8 +463,8 @@ export default function VenomPage({ params: { lng } }: VenomPageProps) {
               </div>
             </div>
             <div className="venom__extraction_container-item--contents">
-              <h3 className="venom__extraction_container-item--contents---title">Filling</h3>
-              <p className="venom__extraction_container-item--contents---text">Our dual lyophilizer and filler setup ensures an uninterrupted supply of venom extracts to the market.</p>
+              <h3 className="venom__extraction_container-item--contents---title">{t('extraction-item04-title')}</h3>
+              <p className="venom__extraction_container-item--contents---text">{t('extraction-item04-description')}</p>
             </div>
           </div>
 
@@ -470,8 +475,8 @@ export default function VenomPage({ params: { lng } }: VenomPageProps) {
               </div>
             </div>
             <div className="venom__extraction_container-item--contents">
-              <h3 className="venom__extraction_container-item--contents---title">Finishing</h3>
-              <p className="venom__extraction_container-item--contents---text">Each batch undergoes rigorous manual inspection, labeling, and packaging before release, ensuring the highest standards of quality and safety.</p>
+              <h3 className="venom__extraction_container-item--contents---title">{t('extraction-item05-title')}</h3>
+              <p className="venom__extraction_container-item--contents---text">{t('extraction-item05-description')}</p>
             </div>
           </div>
 
@@ -482,8 +487,8 @@ export default function VenomPage({ params: { lng } }: VenomPageProps) {
               </div>
             </div>
             <div className="venom__extraction_container-item--contents">
-              <h3 className="venom__extraction_container-item--contents---title">Release</h3>
-              <p className="venom__extraction_container-item--contents---text">Each batch must pass a minimum of 15 separate quality checks before it is released for shipment.</p>
+              <h3 className="venom__extraction_container-item--contents---title">{t('extraction-item06-title')}</h3>
+              <p className="venom__extraction_container-item--contents---text">{t('extraction-item06-description')}</p>
             </div>
           </div>
 
@@ -510,7 +515,7 @@ export default function VenomPage({ params: { lng } }: VenomPageProps) {
                 <Image src={Viva_Logo_Icon} alt="viva allergy icon" unoptimized={true} className="venom__options_container-bgbox-bg--4---iconbox-icon" />
                 <div className="venom__options_container-bgbox-bg--4---iconbox-filter"></div>
               </div>
-              <h2 className=" venom__options_container-bgbox-bg--4---header">Venom Extract Options</h2>
+              <h2 className=" venom__options_container-bgbox-bg--4---header">{t('options-title')}</h2>
             </div>
           </div>
           
@@ -519,10 +524,10 @@ export default function VenomPage({ params: { lng } }: VenomPageProps) {
             <motion.div style={{ x: optionsX }} className="venom__options_container-slider">
               <div className="venom__options_container-slider__section venom__options_container-slider__section--01">
                 <div className="venom__options_container-slider__section_container">
-                  <h2 className="color-dark-1 venom__options_container-slider__section_container-intro">Our Collections</h2>
+                  <h2 className="color-dark-1 venom__options_container-slider__section_container-intro">{t('collection-title')}</h2>
                   <div className="bg-black venom__options_container-slider__section_container-line"></div>
                   <div className="venom__options_container-slider__section_container-infobox">
-                    <h3 className="color-dark-1 venom__options_container-slider__section_container-infobox--header">Honey Bee</h3>
+                    <h3 className="color-dark-1 venom__options_container-slider__section_container-infobox--header">{t('collection-type01')}</h3>
                   </div>
                   <Image src={Honey_Bee_Diagram} alt="options image" unoptimized={true} className="venom__options_container-slider__section_container-image venom__options_container-slider__section_container-image--custom" />
                 </div>
@@ -530,8 +535,8 @@ export default function VenomPage({ params: { lng } }: VenomPageProps) {
               <div className="venom__options_container-slider__section venom__options_container-slider__section--02">
                 <div className="venom__options_container-slider__section_container">
                   <div className="venom__options_container-slider__section_container-infobox">
-                    <h3 className="color-white venom__options_container-slider__section_container-infobox--header">Hornet</h3>
-                    <h3 className="color-white venom__options_container-slider__section_container-infobox--text">Dolichovespula</h3>
+                    <h3 className="color-white venom__options_container-slider__section_container-infobox--header">{t('collection-type02')}</h3>
+                    <h3 className="color-white venom__options_container-slider__section_container-infobox--text">{t('collection-type02-sub')}</h3>
                   </div>
                   <div className="bg-white venom__options_container-slider__section_container-line"></div>
                   <Image src={Hornet_Diagram} alt="options image" unoptimized={true} className="venom__options_container-slider__section_container-image venom__options_container-slider__section_container-image--custom" />
@@ -540,8 +545,8 @@ export default function VenomPage({ params: { lng } }: VenomPageProps) {
               <div className="venom__options_container-slider__section venom__options_container-slider__section--03">
                 <div className="venom__options_container-slider__section_container">
                   <div className="venom__options_container-slider__section_container-infobox">
-                    <h3 className="color-white venom__options_container-slider__section_container-infobox--header">Wasp</h3>
-                    <h3 className="color-white venom__options_container-slider__section_container-infobox--text">Polistes</h3>
+                    <h3 className="color-white venom__options_container-slider__section_container-infobox--header">{t('collection-type03')}</h3>
+                    <h3 className="color-white venom__options_container-slider__section_container-infobox--text">{t('collection-type03-sub')}</h3>
                   </div>
                   <div className="bg-white venom__options_container-slider__section_container-line"></div>
                   <Image src={Wasp_Diagram} alt="options image" unoptimized={true} className="venom__options_container-slider__section_container-image" />
@@ -550,8 +555,8 @@ export default function VenomPage({ params: { lng } }: VenomPageProps) {
               <div className="venom__options_container-slider__section venom__options_container-slider__section--04">
                 <div className="venom__options_container-slider__section_container">
                   <div className="venom__options_container-slider__section_container-infobox">
-                    <h3 className="color-dark-1 venom__options_container-slider__section_container-infobox--header">Yellow Jacket</h3>
-                    <h3 className="color-dark-1 venom__options_container-slider__section_container-infobox--text">Vespula</h3>
+                    <h3 className="color-dark-1 venom__options_container-slider__section_container-infobox--header">{t('collection-type04')}</h3>
+                    <h3 className="color-dark-1 venom__options_container-slider__section_container-infobox--text">{t('collection-type04-sub')}</h3>
                   </div>
                   <div className="bg-black venom__options_container-slider__section_container-line"></div>
                   <Image src={Yellow_Jacket_Diagram} alt="options image" unoptimized={true} className="venom__options_container-slider__section_container-image" />
@@ -565,16 +570,16 @@ export default function VenomPage({ params: { lng } }: VenomPageProps) {
             {/* <h2 className="venom__options_contents-box--header">Venom Extract Options</h2> */}
             <div className="venom__options_contents-box--categories">
               <div className="venom__options_contents-box--categories__category">
-                <h3 className="venom__options_contents-box--categories__category_title">Comprehensive Selection</h3>
-                <p className="venom__options_contents-box--categories__category_description">We offer five distinct venom extracts for testing and treatment, including Honeybee, White-Faced Hornet, Yellow Hornet, Wasp, and Yellow Jacket, each available in a 5-dose vial.</p>
+                <h3 className="venom__options_contents-box--categories__category_title">{t('options-selection01-title')}</h3>
+                <p className="venom__options_contents-box--categories__category_description">{t('options-selection01-text')}</p>
               </div>
               <div className="venom__options_contents-box--categories__category">
-                <h3 className="venom__options_contents-box--categories__category_title">Mixed Vespid Product</h3>
-                <p className="venom__options_contents-box--categories__category_description">Specifically designed for highly sensitive patients, our Mixed Vespid product combines Yellow Jacket, White-Faced Hornet, and Yellow Hornet extracts. 5-dose vial.</p>
+                <h3 className="venom__options_contents-box--categories__category_title">{t('options-selection02-title')}</h3>
+                <p className="venom__options_contents-box--categories__category_description">{t('options-selection02-text')}</p>
               </div>
             </div>
             <div className="venom__options_contents-box--link">
-              <ButtonPrimary href="/product-catalogue" target='' label="Product Catalogue" />
+              <ButtonPrimary href="/product-catalogue" target='' label={t('product-catalogue')} />
             </div>
           </div>
         </div>
@@ -639,30 +644,30 @@ export default function VenomPage({ params: { lng } }: VenomPageProps) {
           <Image src={BeeAware_Img} alt="BeeAware Image" unoptimized={true} className="venom__beeaware__container_img" />
           <div className="venom__beeaware__container_content">
             <h3 className="header-primary venom__beeaware__container_content-header">
-              BeeAware Allergy: <br/>
-              Empowering Patients, Supporting Physicians
+              {t('beeaware-title-span01')}<br/>
+              {t('beeaware-title-span02')}
             </h3>
             <div className="venom__beeaware__container_content-item">
               <div className="venom__beeaware__container_content-item--bullet"></div>
               <div className="venom__beeaware__container_content-item--info">
-                <h4 className="venom__beeaware__container_content-item--info---title">Patient Education Campaign:</h4>
-                <p className="venom__beeaware__container_content-item--info---description">BeeAware Allergy educates patients and physicians alike on bee sting allergies and the benefits of venom immunotherapy, ensuring access to effective treatment and resources.</p>
+                <h4 className="venom__beeaware__container_content-item--info---title">{t('beeaware-item01-title')}</h4>
+                <p className="venom__beeaware__container_content-item--info---description">{t('beeaware-item01-info')}</p>
               </div>
             </div>
             <div className="venom__beeaware__container_content-item">
               <div className="venom__beeaware__container_content-item--bullet"></div>
               <div className="venom__beeaware__container_content-item--info">
-                <h4 className="venom__beeaware__container_content-item--info---title">Allergist Locator:</h4>
-                <p className="venom__beeaware__container_content-item--info---description">Our user-friendly directory connects patients with local allergists specializing in venom immunotherapy, facilitating convenient access to essential care.</p>
-                <Link className='venom__beeaware__container_content-item--info---link' href="/allergist-locator">Find a Provider</Link>
+                <h4 className="venom__beeaware__container_content-item--info---title">{t('beeaware-item02-title')}</h4>
+                <p className="venom__beeaware__container_content-item--info---description">{t('beeaware-item02-info')}</p>
+                <Link className='venom__beeaware__container_content-item--info---link' href="/allergist-locator">{t('beeaware-item02-link')}</Link>
               </div>
             </div>
             <div className="venom__beeaware__container_content-item">
               <div className="venom__beeaware__container_content-item--bullet"></div>
               <div className="venom__beeaware__container_content-item--info">
-                <h4 className="venom__beeaware__container_content-item--info---title">Community Support:</h4>
-                <p className="venom__beeaware__container_content-item--info---description">Through personal stories and shared experiences, BeeAware fosters a supportive community for individuals with bee sting allergies, promoting collaboration between patients and healthcare providers.</p>
-                <Link className='venom__beeaware__container_content-item--info---link' href="https://www.beeawareallergy.com/">Explore BeeAware</Link>
+                <h4 className="venom__beeaware__container_content-item--info---title">{t('beeaware-item03-title')}</h4>
+                <p className="venom__beeaware__container_content-item--info---description">{t('beeaware-item03-info')}</p>
+                <Link className='venom__beeaware__container_content-item--info---link' href="https://www.beeawareallergy.com/">{t('beeaware-item03-link')}</Link>
               </div>
             </div>
           </div>
@@ -674,10 +679,10 @@ export default function VenomPage({ params: { lng } }: VenomPageProps) {
       <section className="venom__allergist-cta">
         <Image src={Allergist_CTA_Icon} alt="Bee Illustration" unoptimized={true} className="venom__allergist-cta_illustration" />
         <div className="venom__allergist-cta_container">
-          <h3 className="venom__allergist-cta_container-header">Are You Offering Venom Immunotherapy?</h3>
-          <p className="venom__allergist-cta_container-text">Help more patients by adding your clinic to the locator!</p>
+          <h3 className="venom__allergist-cta_container-header">{t('allergist-cta-title')}</h3>
+          <p className="venom__allergist-cta_container-text">{t('allergist-cta-info')}</p>
           <div className="venom__allergist-cta_container-link">
-            <ButtonPrimary href="/contacts" target='' label="Contact Us" />
+            <ButtonPrimary href="/contacts" target='' label={t('contact-us')} />
           </div>
         </div>
       </section>
@@ -686,47 +691,41 @@ export default function VenomPage({ params: { lng } }: VenomPageProps) {
       <section className="references">
         <Image src={Viva_Icon_White} alt="Bee Illustration" unoptimized={true} className="references_illustration" />
         <div className="page-margins-big references_container">
-          <h4 className="references_container-header">References:</h4>
+          <h4 className="references_container-header">{t('references-title')}</h4>
           <div className="references_container-item">
             <span className="references_container-item--number">[1]</span>
             <p className="references_container-item--text">
-              --
+              {t('references-ref01')}
             </p>
           </div>
           <div className="references_container-item">
             <span className="references_container-item--number">[2]</span>
             <p className="references_container-item--text">
-              Posner, Camargo. (2017). Update on the usage and safety of epinephrine auto-injectors. Drug, Healthcare and Patient Safety.
+              {t('references-ref02')}
             </p>
           </div>
           <div className="references_container-item">
             <span className="references_container-item--number">[3]</span>
             <p className="references_container-item--text">
-              Throughout this program the term “bees and wasps” is used as a generalized description of stinging insects. The complete list of VIT insects includes honey bee, wasp, white-faced hornet, yellow hornet, and yellow jacket.
+              {t('references-ref03')}
             </p>
           </div>
           <div className="references_container-item">
             <span className="references_container-item--number">[4]</span>
             <p className="references_container-item--text">
-              Golden. (2007, May). Insect Sting Anaphylaxis. Immunology and Allergy Clinics of North America, 27(2), 261-272.
+              {t('references-ref04')}
             </p>
           </div>
           <div className="references_container-item">
             <span className="references_container-item--number">[5]</span>
             <p className="references_container-item--text">
-              Boyle. (n.d.). Epinephrine Auto Injector Use One Year after Training: A Randomized Controlled Comparison of Two Different Devices. Journal of Allergy and Clinical Immunology, 135(2), Abstracts AB 209.
+              {t('references-ref05')}
             </p>
           </div>
           <div className="references_container-item">
             <span className="references_container-item--number">[6]</span>
             <p className="references_container-item--text">
-              Ludman, Boyle. (2015). Stinging insect allergy: current perspectives on venom immunotherapy. Journal of Asthma and Allergy, 8, 75-86.
-            </p>
-          </div>
-          <div className="references_container-item">
-            <span className="references_container-item--number">[7]</span>
-            <p className="references_container-item--text">
-              --
+              {t('references-ref06')}
             </p>
           </div>
         </div>

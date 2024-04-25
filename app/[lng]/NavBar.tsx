@@ -148,10 +148,14 @@ export default function NavBar({ params: { lng } }: NavBarProps) {
           </li>
           {languages.filter((l) => lng !== l).map((l, index) => {
             return (
-              <span className='navbar__options_item navbar__options_langswitch' key={l}>
-                {index > 0 && (' or ')}
-                <Link className='navbar__options_item-link navbar__options_langswitch-link' href={`/${l}`}>{l}</Link>
-              </span>
+              <div key={l} className='navbar__options_item navbar__options_langswitch'>
+                <p className="navbar__options_langswitch-text">{t('translate')}</p>
+                <span className='navbar__options_langswitch-btn'>
+                  {index > 0 && (' or ')}
+                  <p className="navbar__options_langswitch-btn--current">{lng}</p>
+                  <Link className='navbar__options_item-link navbar__options_langswitch-btn--link' href={`/${l}`}>{l}</Link>
+                </span>
+              </div>
             )
           })}
         </ul>
