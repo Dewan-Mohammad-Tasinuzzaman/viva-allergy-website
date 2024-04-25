@@ -14,7 +14,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         const msg = {
             to: 'poallergie@omegalabs.ca', // Change to your recipient
             from: 'sender@vivaallergy.ca', // Change to your verified sender
-            subject: 'Viva Allergy Website - DO NOT REPLY',
+            subject: 'Viva Allergy Website - DO NOT REPLY HERE',
             text: `Hello,\nYou have received a new entry from:\nName: ${first_name} ${last_name}\nEmail: ${email}\nCategory: ${category}\nPhone: ${phone}\nPostal Code: ${zip}\nDetails: ${details}`,
         };
 
