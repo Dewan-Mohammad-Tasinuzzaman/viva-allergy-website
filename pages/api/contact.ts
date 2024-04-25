@@ -12,18 +12,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
         // SendGrid
         const msg = {
-            to: 'dewanmohammad.tasinuzzaman@ontariotechu.net', // Change to your recipient
+            to: 'poallergie@omegalabs.ca', // Change to your recipient
             from: 'sender@vivaallergy.ca', // Change to your verified sender
-            subject: 'Viva Allergy - DO NOT REPLY',
-            text: ` Hello,\n
-                    You have received a new entry from:\n
-                    Name: ${first_name} ${last_name}\n
-                    Email: ${email}\n
-                    Category: ${category}\n
-                    Phone: ${phone}\n
-                    Postal Code: ${zip}\n
-                    Details: ${details}
-            `,
+            subject: 'Viva Allergy Website - DO NOT REPLY',
+            text: `Hello,\nYou have received a new entry from:\nName: ${first_name} ${last_name}\nEmail: ${email}\nCategory: ${category}\nPhone: ${phone}\nPostal Code: ${zip}\nDetails: ${details}`,
         };
 
         await sgMail.send(msg);
