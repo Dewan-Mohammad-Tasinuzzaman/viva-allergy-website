@@ -114,7 +114,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ lng }) => {
             name="category"
             required
           >
-            <option className='contacts__container__formContainer_form_group-input-select--option' disabled selected hidden>{t('category-select')}</option>
+            <option className='contacts__container__formContainer_form_group-input-select--option' value="" disabled selected hidden>{t('category-select')}</option>
             <option className='contacts__container__formContainer_form_group-input-select--option' value={t('category-opt01')}>{t('category-opt01')}</option>
             <option className='contacts__container__formContainer_form_group-input-select--option' value={t('category-opt02')}>{t('category-opt02')}</option>
             <option className='contacts__container__formContainer_form_group-input-select--option' value={t('category-opt03')}>{t('category-opt03')}</option>
