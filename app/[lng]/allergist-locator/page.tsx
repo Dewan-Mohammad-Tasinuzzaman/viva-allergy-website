@@ -7,8 +7,6 @@ import { useTranslation } from '../../i18n';
 
 
 
-
-
 type AllergistLocatorProps = {
   params: {
     lng: string;
@@ -36,8 +34,16 @@ export default async function AllergistLocator({ params: { lng } }: AllergistLoc
                     <Image src={VivaIcon_White} alt="Logo" unoptimized={true} className="allergist-locator__content_logobox-icon" />
                 </div>
             </div>
-            
-            <iframe className='allergist-locator__iframe' src='https://beeawareallergy.bullseyelocations.com/local/Main_BeeawareReact?f=1' />
+
+            <iframe
+              className='allergist-locator__iframe'
+              id='bullseye_iframe'
+              title='Bullseye Locations Search'
+              allowFullScreen
+              src='https://beeawareallergy.bullseyelocations.com/local/Main_BeeawareReact?f=1'
+              allow='geolocation'
+            />
+
         </div>
 
         {/* FOOTER */}
