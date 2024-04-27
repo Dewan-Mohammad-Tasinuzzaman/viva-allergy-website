@@ -154,10 +154,10 @@ export default function SkinTestPage({ params: { lng } }: SkinTestPageProps) {
                 layers={[
                   {
                     image: Quintip_Img_URL,
-                    speed: -50,
-                    translateY: [0, 35],
+                    speed: 0,
+                    translateY: [0, 0],
                     opacity: [1, 1],
-                    scale: [1.1, 1, 'easeOutCubic'],
+                    scale: [1, 1, 'easeOutCubic'],
                     shouldAlwaysCompleteAnimation: true,
                   },
                 ]}
