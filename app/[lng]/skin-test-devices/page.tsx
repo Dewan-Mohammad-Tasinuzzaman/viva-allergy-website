@@ -58,7 +58,7 @@ export default function SkinTestPage({ params: { lng } }: SkinTestPageProps) {
   const Comforten_Img01_URL = "/assets/images/comforten-1.png";
   const Comforten_Img02_URL = "/assets/images/comforten-2.png";
   const Comforten_Img03_URL = "/assets/images/comforten-3.png";
-  const Quintip_Banner_Img_URL = "/assets/images/3d_quintip_img.png";
+  const Quintip_Banner_Img_URL = "/assets/images/3d_quintip_img.jpg";
 
   // State to manage the visibility of the video container
   const [showVideo, setShowVideo] = useState(false);
