@@ -11,12 +11,13 @@
     left: 0;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
     z-index: 1;
 
     &_img {
         display: none;
         position: relative;
-        width: 100%;
+        width: auto;
         height: 100%;
 
         @include respond(tablet-small-3) {

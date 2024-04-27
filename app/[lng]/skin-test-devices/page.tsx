@@ -11,6 +11,7 @@ import Comforten_Illustration from '@/public/assets/svgs/skin-tests_illustration
 import Comforten_Img01 from '@/public/assets/images/comforten-1.png';
 import Comforten_Img02 from '@/public/assets/images/comforten-2.png';
 import Comforten_Img03 from '@/public/assets/images/comforten-3.png';
+import Quintip_3D_Img from '@/public/assets/images/3d_quintip_img.jpg';
 import Play_Icon from '@/public/assets/svgs/play_icon-grey.svg';
 import Video_Image from '@/public/assets/images/allergy_skin-test_products-edited-notitle.png';
 import { ParallaxBanner } from "react-scroll-parallax";
@@ -83,18 +84,7 @@ export default function SkinTestPage({ params: { lng } }: SkinTestPageProps) {
       
       {/* 3D - Viewer */}
       <div className="skintests__3dcontainer">
-        <ParallaxBanner
-          layers={[
-              {
-              image: Quintip_Banner_Img_URL,
-              speed: -50,
-              translateY: [0, 10],
-              scale: [1.1, 1, 'easeOutCubic'],
-              shouldAlwaysCompleteAnimation: true,
-              },
-          ]}
-          className={`skintests__3dcontainer_img`}
-        />
+        <Image src={Quintip_3D_Img} alt="Skin-Test Device (Quintip) 3D Image" unoptimized={true} className="skintests__3dcontainer_img" />
         {screenWidth && screenWidth > 650 && (
           <div className="skintests__3dcontainer_3dviewer">
             <Spline className='skintests__3dcontainer_3dviewer-scene' scene="https://prod.spline.design/Gri41IhbhKqM7uP5/scene.splinecode" />
@@ -154,10 +144,10 @@ export default function SkinTestPage({ params: { lng } }: SkinTestPageProps) {
                 layers={[
                   {
                     image: Quintip_Img_URL,
-                    speed: 0,
-                    translateY: [0, 0],
+                    speed: -50,
+                    translateY: [0, 30],
                     opacity: [1, 1],
-                    scale: [1, 1, 'easeOutCubic'],
+                    scale: [1.1, 1, 'easeOutCubic'],
                     shouldAlwaysCompleteAnimation: true,
                   },
                 ]}
@@ -178,7 +168,7 @@ export default function SkinTestPage({ params: { lng } }: SkinTestPageProps) {
                   {
                     image: selectedImage,
                     speed: -50,
-                    translateY: [0, 35],
+                    translateY: [0, 30],
                     opacity: [1, 1],
                     scale: [1.1, 1, 'easeOutCubic'],
                     shouldAlwaysCompleteAnimation: true,
