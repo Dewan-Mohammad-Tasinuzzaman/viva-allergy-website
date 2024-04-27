@@ -2,7 +2,7 @@
 
 
 import LoadingAnimation from '@/components/LoadingAnimation'
-import React from 'react'
+import React, { useRef, useState, useEffect } from 'react';
 import { ReactLenis, useLenis, Lenis } from '@studio-freight/react-lenis'
 import Link from 'next/link'
 import Image from "next/image";
@@ -20,7 +20,6 @@ import BeeAware_Img from '@/public/assets/images/beeaware-img.png';
 import Allergist_CTA_Icon from '@/public/assets/svgs/location-custom-icon.svg';
 import Footer from '@/components/Footer';
 import { motion, useTransform, useScroll } from 'framer-motion';
-import { useRef } from 'react';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import { ParallaxBanner } from "react-scroll-parallax";
 import PatientJourneyCard from '@/components/PatientJourneyCard';
@@ -49,6 +48,23 @@ export default function VenomPage({ params: { lng } }: VenomPageProps) {
 
   // Language
   const { t } = useTranslation(lng, 'venom-page');
+
+  // To Un-render Videos
+  const [screenWidth, setScreenWidth] = useState<number | null>(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+    // Check if window is defined (client-side) before adding event listener
+    if (typeof window !== 'undefined') {
+      setScreenWidth(window.innerWidth);
+      window.addEventListener('resize', handleResize);
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }
+  }, []);
 
 
   // Video URL
@@ -161,12 +177,14 @@ export default function VenomPage({ params: { lng } }: VenomPageProps) {
               ]}
               className={`aspect-1-1 w-full venom__intro__container__videobox_img`}
             />
-            <video className="venom__intro__container__videobox_video" autoPlay muted loop>
-              <source src={IntroVideo_MP4_URL} type="video/mp4" />
-              <source src={IntroVideo_WEBM_URL} type="video/webm" />
-              {/* Add more source elements for different formats if necessary */}
-              Your browser does not support the video tag. Time to switch!
-            </video>
+            {screenWidth && screenWidth > 650 && (
+              <video className="venom__intro__container__videobox_video" autoPlay muted loop>
+                <source src={IntroVideo_MP4_URL} type="video/mp4" />
+                <source src={IntroVideo_WEBM_URL} type="video/webm" />
+                {/* Add more source elements for different formats if necessary */}
+                Your browser does not support the video tag. Time to switch!
+              </video>
+            )}
             <div className="venom__intro__container__videobox_filter"></div>
             <div className="venom__intro__container__videobox_frame"></div>
             <div className="venom__intro__container__videobox_banner">
@@ -217,12 +235,14 @@ export default function VenomPage({ params: { lng } }: VenomPageProps) {
             ]}
             className={`aspect-1-1 w-full venom__venom-immunotherapy__container_img`}
           />
-          <video className="venom__venom-immunotherapy__container_video" autoPlay muted loop>
-            <source src={WaspVideo_MP4_URL} type="video/mp4" />
-            <source src={WaspVideo_WEBM_URL} type="video/webm" />
-            {/* Add more source elements for different formats if necessary */}
-            Your browser does not support the video tag. Time to switch!
-          </video>
+          {screenWidth && screenWidth > 650 && (
+            <video className="venom__venom-immunotherapy__container_video" autoPlay muted loop>
+              <source src={WaspVideo_MP4_URL} type="video/mp4" />
+              <source src={WaspVideo_WEBM_URL} type="video/webm" />
+              {/* Add more source elements for different formats if necessary */}
+              Your browser does not support the video tag. Time to switch!
+            </video>
+          )}
           <div className="venom__venom-immunotherapy__container_contents">
             <div className="venom__venom-immunotherapy__container_contents_box">
               <h1 className="venom__venom-immunotherapy__container_contents_box-header">{t('vit-title')}</h1>
@@ -370,12 +390,14 @@ export default function VenomPage({ params: { lng } }: VenomPageProps) {
           ]}
           className={`aspect-1-1 w-full venom__success_img`}
         />
-        <video className="venom__success_video" autoPlay muted loop>
-          <source src={VITSuccessVideo_MP4_URL} type="video/mp4" />
-          <source src={VITSuccessVideo_WEBM_URL} type="video/webm" />
-          {/* Add more source elements for different formats if necessary */}
-          Your browser does not support the video tag. Time to switch!
-        </video>
+        {screenWidth && screenWidth > 650 && (
+          <video className="venom__success_video" autoPlay muted loop>
+            <source src={VITSuccessVideo_MP4_URL} type="video/mp4" />
+            <source src={VITSuccessVideo_WEBM_URL} type="video/webm" />
+            {/* Add more source elements for different formats if necessary */}
+            Your browser does not support the video tag. Time to switch!
+          </video>
+        )}
         <div className="venom__success_video-filter01"></div>
         <div className="venom__success_video-filter02"></div>
         <div className="venom__success_container">

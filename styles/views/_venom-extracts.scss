@@ -117,9 +117,7 @@
                     height: 100%;
                     object-fit: cover;
 
-                    @include respond(tablet-small-3) {
-                        display: none;
-                    }
+                    // Un-rendered at <=650px screen-width.
                 }
                 &_filter {
                     position: absolute;
@@ -298,9 +296,7 @@
                 height: 100%;
                 object-fit: cover;
 
-                @include respond(tablet-small-3) {
-                    display: none;
-                }
+                // Un-rendered at <=650px screen-width.
             }
 
             &_contents {
@@ -641,9 +637,7 @@
             object-fit: cover;
             object-position: bottom;
 
-            @include respond(tablet-small-3) {
-                display: none;
-            }
+            // Un-rendered at <=650px screen-width.
         }
         &_video-filter01 {
             position: absolute;

@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react';
+import ReactPlayer from 'react-player';
 import Spline from '@splinetool/react-spline';
 import Image from 'next/image';
 import Logo_Icon_White from '@/public/assets/svgs/logo_icon-white.svg';
@@ -34,6 +35,23 @@ export default function SkinTestPage({ params: { lng } }: SkinTestPageProps) {
   const { t } = useTranslation(lng, 'skin-tests-page');
 
 
+  // To Un-render 3D-Scene
+  const [screenWidth, setScreenWidth] = useState<number | null>(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+    // Check if window is defined (client-side) before adding event listener
+    if (typeof window !== 'undefined') {
+      setScreenWidth(window.innerWidth);
+      window.addEventListener('resize', handleResize);
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }
+  }, []);
+
 
   // Images for ParallaxBanner
   const Quintip_Img_URL = "/assets/images/quintip.png";
@@ -42,29 +60,13 @@ export default function SkinTestPage({ params: { lng } }: SkinTestPageProps) {
   const Comforten_Img03_URL = "/assets/images/comforten-3.png";
   const Quintip_Banner_Img_URL = "/assets/images/3d_quintip_img.png";
 
-  // Video file path
-  const SkinTestVideo_URL = "/assets/videos/comforten-video-subbed.mp4";
-
   // State to manage the visibility of the video container
   const [showVideo, setShowVideo] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
 
-  // Reference to the video element
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  // Function to toggle the visibility of the video container and play/pause the video
   const toggleVideo = () => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    // If video is currently playing, pause it and hide the container
-    if (showVideo) {
-      video.pause();
-      setShowVideo(false);
-    } else {
-      // If video is not playing, play it and show the container
-      video.play();
-      setShowVideo(true);
-    }
+    setShowVideo(!showVideo);
+    setIsPlaying(!isPlaying);
   };
 
 
@@ -93,9 +95,11 @@ export default function SkinTestPage({ params: { lng } }: SkinTestPageProps) {
           ]}
           className={`skintests__3dcontainer_img`}
         />
-        <div className="skintests__3dcontainer_3dviewer">
-          <Spline className='skintests__3dcontainer_3dviewer-scene' scene="https://prod.spline.design/Gri41IhbhKqM7uP5/scene.splinecode" />
-        </div>
+        {screenWidth && screenWidth > 650 && (
+          <div className="skintests__3dcontainer_3dviewer">
+            <Spline className='skintests__3dcontainer_3dviewer-scene' scene="https://prod.spline.design/Gri41IhbhKqM7uP5/scene.splinecode" />
+          </div>
+        )}
       </div>
 
       {/* Main - Content */}
@@ -208,7 +212,7 @@ export default function SkinTestPage({ params: { lng } }: SkinTestPageProps) {
                     <Image src={Logo_Icon_White} alt="Logo" unoptimized={true} className="skintests__instructions_video-logobox--logo" />
                     <div className="skintests__instructions_video-logobox--filter"></div>
                   </div>
-                <div className="skintests__instructions_video-card" onClick={toggleVideo}>
+                <div onClick={toggleVideo} className="skintests__instructions_video-card">
                   <div className="skintests__instructions_video-card--imageContainer">
                     <Image src={Video_Image} alt="video-thumbnail" unoptimized={true} className="skintests__instructions_video-card--imageContainer---image" />
                     <div className="skintests__instructions_video-card--imageContainer---filter"></div>
@@ -240,15 +244,21 @@ export default function SkinTestPage({ params: { lng } }: SkinTestPageProps) {
       {/* VIDEO POP-UP */}
       <div className={`skin-tests-vidcontainer ${showVideo ? 'show-skin-test-video' : ''}`}>
         <div className="skin-tests-vidcontainer-elementsContainer">
-          <div className="skin-tests-vidcontainer__button" onClick={toggleVideo}>
+          <div onClick={toggleVideo} className="skin-tests-vidcontainer__button">
             <Image src={Plus_Icon_White} alt="cross icon" unoptimized={true} className="skin-tests-vidcontainer__button_icon" />
           </div>
-          <video ref={videoRef} className="skin-tests-vidcontainer__source" controls>
-            <source src={SkinTestVideo_URL} type="video/mp4" />
-            <source src={SkinTestVideo_URL} type="video/webm" />
-            {/* Add more source elements for different formats if necessary */}
-            Your browser does not support the video tag. Time to switch!
-          </video>
+          <div className="skin-tests-vidcontainer__wrapper">
+            <ReactPlayer
+              url='https://youtu.be/5sVsz9rmHLY'
+              className='skin-tests-vidcontainer__wrapper-source'
+              playing={isPlaying}
+              width='100%'
+              height='100%'
+              loop={false}
+              muted={false}
+              controls={true}
+            />
+          </div>
         </div>
       </div>
 
