@@ -194,6 +194,12 @@
                 padding: 2rem 0rem;
             }
 
+            &:hover {
+                .navbar__options_item-arrow {
+                    transform: rotate(180deg);
+                }
+            }
+
             &-link {
                 font-size: 1.8rem;
                 font-weight: 400;
@@ -205,10 +211,6 @@
 
                 &:hover {
                     color: var(--color-viva-lightgreen);
-
-                    .navbar__options_item-arrow {
-                        // Not working???
-                    }
                 }
 
                 @include respond(tablet) {

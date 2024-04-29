@@ -617,6 +617,13 @@
         flex-direction: column;
         gap: 30px;
     }
+    &__interaction-div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+    }
     &__button {
 
         cursor: pointer;
@@ -655,11 +662,17 @@
         z-index: 200;
         box-shadow: 0 4px 50px rgba(0, 0, 0, 0.6);
 
+        @include respond(phone) {
+            height: 50vh;
+        }
+
         &-source {
             position: absolute;
             top: 0;
             left: 0;
         }
+
+
     }
 }
 .show-skin-test-video {

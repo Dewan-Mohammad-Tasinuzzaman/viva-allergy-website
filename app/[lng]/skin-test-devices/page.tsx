@@ -234,6 +234,7 @@ export default function SkinTestPage({ params: { lng } }: SkinTestPageProps) {
       {/* VIDEO POP-UP */}
       <div className={`skin-tests-vidcontainer ${showVideo ? 'show-skin-test-video' : ''}`}>
         <div className="skin-tests-vidcontainer-elementsContainer">
+          <div onClick={toggleVideo} className="skin-tests-vidcontainer__interaction-div"></div>
           <div onClick={toggleVideo} className="skin-tests-vidcontainer__button">
             <Image src={Plus_Icon_White} alt="cross icon" unoptimized={true} className="skin-tests-vidcontainer__button_icon" />
           </div>
