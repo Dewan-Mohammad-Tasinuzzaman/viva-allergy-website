@@ -33,6 +33,7 @@ import Empower_Icon from '@/public/assets/svgs/empowerment_icon.svg';
 import ButtonPrimary from "@/components/ButtonPrimary";
 import ButtonSecondary from '@/components/ButtonSecondary'
 import { useTranslation } from '../../i18n/client';
+import CustomCursor from '@/components/CustomCursor';
 
 
 
@@ -754,6 +755,8 @@ export default function VenomPage({ params: { lng } }: VenomPageProps) {
       </section>
 
 
+      {/* CUSTOM CURSOR */}
+      <CustomCursor />
 
       {/* FOOTER */}
       <Footer params={{ lng }} showRequestQuote={false} />

@@ -18,6 +18,7 @@ import { ParallaxBanner } from "react-scroll-parallax";
 import Footer from '@/components/Footer';
 import LoadingAnimation from '@/components/LoadingAnimation';
 import { useTranslation } from '../../i18n/client';
+import CustomCursor from '@/components/CustomCursor';
 
 
 
@@ -252,6 +253,11 @@ export default function SkinTestPage({ params: { lng } }: SkinTestPageProps) {
           </div>
         </div>
       </div>
+
+
+
+      {/* CUSTOM CURSOR */}
+      <CustomCursor />
 
 
       {/* FOOTER */}

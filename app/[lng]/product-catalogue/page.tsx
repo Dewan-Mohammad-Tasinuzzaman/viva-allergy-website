@@ -4,6 +4,7 @@ import LoadingAnimation from "@/components/LoadingAnimation";
 import Footer from "@/components/Footer";
 import ButtonPrimary from "@/components/ButtonPrimary";
 import { useTranslation } from '../../i18n';
+import CustomCursor from '@/components/CustomCursor';
 
 
 
@@ -44,6 +45,10 @@ export default async function ProductCatalogue({ params: { lng } }: ProductCatal
       </div>
 
 
+
+
+      {/* CUSTOM CURSOR */}
+      <CustomCursor />
 
       {/* FOOTER */}
       <Footer params={{ lng }} showRequestQuote={true} />

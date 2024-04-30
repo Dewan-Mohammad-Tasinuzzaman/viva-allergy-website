@@ -18,6 +18,7 @@ import LoadingAnimation from "@/components/LoadingAnimation";
 import Footer from "@/components/Footer";
 import ButtonSecondary from "@/components/ButtonSecondary";
 import { useTranslation } from '../i18n/client';
+import CustomCursor from "@/components/CustomCursor";
 
 
 
@@ -227,6 +228,11 @@ export default function Home({ params: { lng } }: HomePageProps) {
       <div className={isModalOpen ? "sideModalContainer sideModalContainer__show" : "sideModalContainer"}>
         <SideModal isOpen={isModalOpen} onClose={closeModal} imageURL01={selectedImage} imageURL02="" imageURL03="" title={selectedTitle} description_01={selectedDescription_01} description_02={selectedDescription_02} description_03={selectedDescription_03} />
       </div>
+
+
+
+      {/* CUSTOM CURSOR */}
+      <CustomCursor />
       
 
       {/* FOOTER */}

@@ -6,6 +6,7 @@ import LoadingAnimation from "@/components/LoadingAnimation";
 import Footer from "@/components/Footer";
 import {ContactForm} from '@/components/ContactForm';
 import { useTranslation } from '../../i18n/client';
+import CustomCursor from '@/components/CustomCursor';
 
 
 
@@ -102,6 +103,8 @@ export default function ContactsPage({ params: { lng } }: ContactsPageProps) {
       </div>
 
 
+      {/* CUSTOM CURSOR */}
+      <CustomCursor />
 
       {/* FOOTER */}
       <Footer params={{ lng }} showRequestQuote={false} />

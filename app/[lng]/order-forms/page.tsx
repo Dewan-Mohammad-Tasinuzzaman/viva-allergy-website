@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import DownloadIcon_Dark from "@/public/assets/svgs/download_icon-dark.svg";
 import DownloadIcon_White from "@/public/assets/svgs/download_icon-white.svg";
 import { useTranslation } from '../../i18n/client';
+import CustomCursor from '@/components/CustomCursor';
 
 
 type OrderFormsPageProps = {
@@ -74,6 +75,8 @@ export default function OrderFormsPage({ params: { lng } }: OrderFormsPageProps)
       </div>
       
 
+      {/* CUSTOM CURSOR */}
+      <CustomCursor />
 
       {/* FOOTER */}
       <Footer params={{ lng }} showRequestQuote={false} />

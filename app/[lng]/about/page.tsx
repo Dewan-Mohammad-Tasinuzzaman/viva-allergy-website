@@ -15,6 +15,7 @@ import Footer from "@/components/Footer";
 import RepresentativeContact from '@/components/RepresentativeContact';
 import Logo_Black from '@/public/assets/svgs/logo_icon-black.svg';
 import { useTranslation } from '../../i18n/client';
+import CustomCursor from '@/components/CustomCursor';
 
 
 
@@ -163,6 +164,10 @@ export default function AboutPage({ params: { lng } }: AboutPageProps) {
       </div>
 
 
+      
+
+      {/* CUSTOM CURSOR */}
+      <CustomCursor />
 
       {/* FOOTER */}
       <Footer params={{ lng }} showRequestQuote={true} />
