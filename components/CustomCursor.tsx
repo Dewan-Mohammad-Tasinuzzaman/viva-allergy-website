@@ -26,7 +26,7 @@ const CustomCursor = () => {
               top: `${posY}px`
             },
             {
-              duration: 1000,
+              duration: 700,
               fill: 'forwards'
             }
           );
