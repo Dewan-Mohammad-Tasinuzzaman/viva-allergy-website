@@ -7,10 +7,11 @@ const CustomCursor = () => {
     const initCursor = () => {
       const cursorIcon = document.querySelector<HTMLElement>("[data-cursor-icon]");
       const cursorOutline = document.querySelector<HTMLElement>("[data-cursor-outline]");
+      const cursorOutline02 = document.querySelector<HTMLElement>("[data-cursor-outline-2]");
       const skinTestsVideoContainer = document.querySelector<HTMLElement>(".skin-tests-vidcontainer__wrapper-source");
 
       const moveCursor = (e: MouseEvent) => {
-        if (cursorIcon && cursorOutline) {
+        if (cursorIcon && cursorOutline && cursorOutline02) {
           const posX = e.clientX;
           const posY = e.clientY;
 
@@ -20,7 +21,20 @@ const CustomCursor = () => {
           cursorOutline.style.left = `${posX}px`;
           cursorOutline.style.top = `${posY}px`;
 
+          cursorOutline02.style.left = `${posX}px`;
+          cursorOutline02.style.top = `${posY}px`;
+
           cursorOutline.animate(
+            {
+              left: `${posX}px`,
+              top: `${posY}px`
+            },
+            {
+              duration: 1000,
+              fill: 'forwards'
+            }
+          );
+          cursorOutline02.animate(
             {
               left: `${posX}px`,
               top: `${posY}px`
@@ -34,30 +48,34 @@ const CustomCursor = () => {
       };
 
       const handleLinkHover = () => {
-        if (cursorIcon && cursorOutline) {
+        if (cursorIcon && cursorOutline && cursorOutline02) {
           cursorIcon.classList.add("cursor-icon-link-hover");
           cursorOutline.classList.add("cursor-outline-link-hover");
+          cursorOutline02.classList.add("cursor-outline-2-link-hover");
         }
       };
 
       const handleLinkLeave = () => {
-        if (cursorIcon && cursorOutline) {
+        if (cursorIcon && cursorOutline && cursorOutline02) {
           cursorIcon.classList.remove("cursor-icon-link-hover");
           cursorOutline.classList.remove("cursor-outline-link-hover");
+          cursorOutline02.classList.remove("cursor-outline-2-link-hover");
         }
       };
 
       const handleSkinTestsHover = () => {
-        if (cursorIcon && cursorOutline) {
+        if (cursorIcon && cursorOutline && cursorOutline02) {
           cursorIcon.classList.add("cursor-disappear");
           cursorOutline.classList.add("cursor-disappear");
+          cursorOutline02.classList.add("cursor-disappear");
         }
       };
 
       const handleSkinTestsLeave = () => {
-        if (cursorIcon && cursorOutline) {
+        if (cursorIcon && cursorOutline && cursorOutline02) {
           cursorIcon.classList.remove("cursor-disappear");
           cursorOutline.classList.remove("cursor-disappear");
+          cursorOutline02.classList.remove("cursor-disappear");
         }
       };
 
@@ -94,6 +112,7 @@ const CustomCursor = () => {
   return (
     <>
       <div className="cursor-icon" data-cursor-icon></div>
+      <div className="cursor-outline-2" data-cursor-outline-2></div>
       <div className="cursor-outline" data-cursor-outline></div>
     </>
   );
