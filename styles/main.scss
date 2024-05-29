@@ -99,7 +99,7 @@ body {
   line-height: 1;
   letter-spacing: 0.4px;
   margin: 0;
-  cursor: none; // For Custom Cursor
+  cursor: default; // For Custom Cursor
 
   @include respond(laptop-small-1) {
     cursor: default;
