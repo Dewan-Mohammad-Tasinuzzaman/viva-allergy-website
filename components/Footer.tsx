@@ -101,6 +101,12 @@ export default function Footer({ params: { lng }, showRequestQuote }: FooterProp
                 </div>
             </div>
         </div>
+        <div className="footer__general-links-box">
+            <h4 className="footer__general-links-box_header">More Information</h4>
+            <div className="footer__general-links-box_container">
+                <a href="/assets/files/DroitsHumainJunoFR.pdf" target="_blank" className="footer-link">{t('human-rights-text')}</a>
+            </div>
+        </div>
         <div className="footer__copyrightbox">
             <h5 className="footer__copyrightbox_text">©{currentYear} <span className="footer__copyrightbox_text-span">VIVA ALLERGY</span> | {t('copyright-text')}</h5>
         </div>
