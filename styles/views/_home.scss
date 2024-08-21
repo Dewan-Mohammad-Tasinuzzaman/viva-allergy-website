@@ -331,6 +331,20 @@
     &__form {
         min-width: 60%;
     }
+
+
+    // Custom corner
+    &__custom-corner {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 18rem;
+        height: auto;
+
+        @include respond(tablet-small-4) {
+            width: 12rem;
+        }
+    }
 }
 
 
