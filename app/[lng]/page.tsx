@@ -12,6 +12,7 @@ import ButtonPrimary from "@/components/ButtonPrimary";
 import CircularImage from "@/components/CircularImage";
 import AllergyExtract from "@/components/AllergyExtract";
 import Logo_Black from '@/public/assets/svgs/logo_icon-black.svg';
+import Custom_Corner from '@/public/assets/svgs/hero-custom-corner.svg';
 import { useEffect, useState } from "react";
 import SideModal from "@/components/SideModal";
 import LoadingAnimation from "@/components/LoadingAnimation";
@@ -99,6 +100,7 @@ export default function Home({ params: { lng } }: HomePageProps) {
         />
         <div className="hero__filter"></div>
         <div className="banner-shadow"></div>
+        <Image src={Custom_Corner} alt="" unoptimized={true} className="hero__custom-corner" />
         
 
         <div className="hero__maincontainer">

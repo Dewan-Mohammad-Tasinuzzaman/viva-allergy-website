@@ -1,3 +1,149 @@
+
+// On-Load Animations
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes FadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes FadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes FadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes FadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+
+
+
+// On-Scroll Animations
+@keyframes appear-opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes appear-right {
+  0% {
+    opacity: 0;
+    transform: translateX(6rem);
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes appear-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-6rem);
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes appear-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(5rem);
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes appear-top {
+  0% {
+    opacity: 0;
+    transform: translateY(-5rem);
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes onscroll-borderradius-increase {
+  0% {
+    border-radius: 0;
+  }
+  100% {
+    border-radius: 5px;
+  }
+}
+@keyframes onscroll-borderradius-decrease {
+  0% {
+    border-radius: 5px;
+  }
+  100% {
+    border-radius: 0;
+  }
+}
+@keyframes onscroll-home-skintests-img {
+  0% {
+    border-top-right-radius: 80px;
+  }
+  100% {
+    border-top-right-radius: 5px;
+  }
+}
+
+
+
+
+
+// Custom Animations
 @keyframes bannerBlurAnimation {
   0% {
     backdrop-filter: blur(0);

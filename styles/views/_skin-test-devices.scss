@@ -72,6 +72,10 @@
         }
 
         &_header {
+
+            opacity: 0;
+            animation: FadeInRight 0.8s ease-out forwards;
+            animation-delay: 1.2s;
             
             &-span {
                 font-weight: 300;
@@ -79,6 +83,11 @@
         }
         &_body {
             width: 60%;
+
+            opacity: 0;
+            animation: FadeInRight 0.8s ease-out forwards;
+            animation-delay: 1.4s;
+
             @include respond(tablet) {
                 width: 90%;
             }
@@ -89,6 +98,10 @@
             background-color: rgba(255, 255, 255, 0);
             color: var(--color-black) !important;
             margin-top: -1rem;
+
+            opacity: 0;
+            animation: FadeInRight 0.8s ease-out forwards;
+            animation-delay: 1.6s;
 
             &-icons {
                 opacity: 1 !important;

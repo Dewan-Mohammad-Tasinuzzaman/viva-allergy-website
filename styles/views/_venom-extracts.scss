@@ -55,6 +55,10 @@
                             font-weight: 600;
                             color: var(--color-dark-1);
 
+                            opacity: 0;
+                            animation: FadeInRight 1s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+                            animation-delay: 1.2s;
+
                             &--span {
                                 color: var(--color-venoms);
                             }
@@ -63,13 +67,25 @@
                             font-size: 2.8rem;
                             font-weight: 400;
                             color: #555555;
+
+                            opacity: 0;
+                            animation: FadeInRight 1s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+                            animation-delay: 1.4s;
                         }
                         &-text {
                             font-size: 1.8rem;
+
+                            opacity: 0;
+                            animation: FadeInRight 1s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+                            animation-delay: 1.6s;
                         }
                         &-keepScrolling {
                             
                             margin-top: 1rem;
+
+                            opacity: 0;
+                            animation: FadeInRight 1s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+                            animation-delay: 1.8s;
 
                             &--text {
                                 color: var(--color-black);
@@ -81,8 +97,10 @@
                     }
                 }
 
-                &_buttonbox {
-
+                &_buttonsbox {
+                    opacity: 0;
+                    animation: FadeInUp 1s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+                    animation-delay: 1.8s;
                 }
             }
 
@@ -137,11 +155,13 @@
                     bottom: 0;
                     left: 0;
                     width: 100%;
-                    // height: 10rem;
                     height: 25rem;
-                    // background-color: rgba(36, 36, 39, 0.9);
                     overflow: hidden;
-                    background-image: linear-gradient(to top, rgba(36, 36, 39, 1), rgba(0, 0, 0, 0));
+                    background-image: linear-gradient(to top, rgba(36, 36, 39, 0.88), rgba(0, 0, 0, 0));
+
+                    opacity: 0;
+                    animation: FadeInUp 1s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+                    animation-delay: 1.8s;
 
                     &-text {
                         position: absolute;
@@ -459,6 +479,10 @@
                         align-items: center;
                         justify-content: center;
 
+                        animation: appear-bottom linear forwards;
+                        animation-timeline: view();
+                        animation-range: entry 0% cover 15%;
+
                         &--header01 {
                             font-size: 4.2rem;
                             font-weight: 600;
@@ -502,6 +526,10 @@
                         align-items: center;
                         justify-content: space-between;
                         gap: 4rem;
+
+                        animation: appear-top linear forwards;
+                        animation-timeline: view();
+                        animation-range: entry 0% cover 30%;
 
                         @include respond(tablet) {
                             gap: 2rem;
@@ -752,17 +780,27 @@
                 align-items: start;
 
                 &--header {
-
+                    animation: appear-left linear forwards;
+                    animation-timeline: view();
+                    animation-range: entry 0% cover 25%;
                 }
                 &--text {
                     font-size: 2.2rem;
                     color: var(--color-black);
+
+                    animation: appear-left linear forwards;
+                    animation-timeline: view();
+                    animation-range: entry 0% cover 25%;
                 }
                 &--subtext {
                     position: relative;
                     color: var(--color-dark-1);
                     margin-left: 2rem;
                     margin-top: 2rem;
+
+                    animation: appear-bottom linear forwards;
+                    animation-timeline: view();
+                    animation-range: entry 0% cover 25%;
 
                     &::after {
                         content: "";
@@ -778,6 +816,10 @@
                 }
                 &--link {
                     margin-top: 3rem;
+
+                    animation: appear-bottom linear forwards;
+                    animation-timeline: view();
+                    animation-range: entry 0% cover 25%;
                 }
             }
         }
@@ -822,6 +864,10 @@
                 align-items: start;
                 gap: 3.5rem;
                 width: 100%;
+
+                animation: appear-left linear forwards;
+                animation-timeline: view();
+                animation-range: entry 0% cover 30%;
 
                 @include respond(tablet-small-3) {
                     flex-direction: column;
