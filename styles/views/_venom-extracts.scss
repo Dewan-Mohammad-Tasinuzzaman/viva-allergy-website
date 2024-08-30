@@ -780,27 +780,17 @@
                 align-items: start;
 
                 &--header {
-                    animation: appear-left linear forwards;
-                    animation-timeline: view();
-                    animation-range: entry 0% cover 25%;
+                    
                 }
                 &--text {
                     font-size: 2.2rem;
                     color: var(--color-black);
-
-                    animation: appear-left linear forwards;
-                    animation-timeline: view();
-                    animation-range: entry 0% cover 25%;
                 }
                 &--subtext {
                     position: relative;
                     color: var(--color-dark-1);
                     margin-left: 2rem;
                     margin-top: 2rem;
-
-                    animation: appear-bottom linear forwards;
-                    animation-timeline: view();
-                    animation-range: entry 0% cover 25%;
 
                     &::after {
                         content: "";
@@ -816,10 +806,6 @@
                 }
                 &--link {
                     margin-top: 3rem;
-
-                    animation: appear-bottom linear forwards;
-                    animation-timeline: view();
-                    animation-range: entry 0% cover 25%;
                 }
             }
         }
