@@ -163,6 +163,10 @@
                     animation: FadeInUp 1s cubic-bezier(0.33, 1, 0.68, 1) forwards;
                     animation-delay: 1.8s;
 
+                    @include respond(tablet) {
+                        animation-delay: 1.2s;
+                    }
+
                     &-text {
                         position: absolute;
                         bottom: 20px;
