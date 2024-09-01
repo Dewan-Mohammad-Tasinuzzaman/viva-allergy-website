@@ -62,6 +62,26 @@
     opacity: 1;
   }
 }
+@keyframes appear-scale-in {
+  0% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes appear-scale-out {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 @keyframes appear-right {
   0% {
     opacity: 0;
@@ -138,7 +158,6 @@
     border-top-right-radius: 5px;
   }
 }
-
 
 
 

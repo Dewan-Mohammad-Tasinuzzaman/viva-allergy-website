@@ -100,7 +100,10 @@ export default function Home({ params: { lng } }: HomePageProps) {
         />
         <div className="hero__filter"></div>
         <div className="banner-shadow"></div>
-        <Image src={Custom_Corner} alt="" unoptimized={true} className="hero__custom-corner" />
+        <div className="hero__separator">
+          <Image src={Custom_Corner} alt="" unoptimized={true} className="hero__separator_corner" />
+          <div className="hero__separator_bar"></div>
+        </div>
         
 
         <div className="hero__maincontainer">

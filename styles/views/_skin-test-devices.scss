@@ -163,9 +163,13 @@
                 align-items: center;
                 gap: 20px;
 
+                animation: appear-right linear forwards;
+                animation-timeline: view();
+                animation-range: entry 0% cover 30%;
+
                 &--bullet {
-                    width: 15px;
-                    height: 4px;
+                    width: 8px;
+                    height: 8px;
                     border-radius: 1000px;
                     background-color: var(--color-dark-1);
                 }
@@ -290,10 +294,14 @@
             }
 
             &-title {
-
+                animation: appear-left linear forwards;
+                animation-timeline: view();
+                animation-range: entry 0% cover 25%;
             }
             &-text {
-
+                animation: appear-right linear forwards;
+                animation-timeline: view();
+                animation-range: entry 0% cover 25%;
             }
         }
     }
@@ -412,10 +420,14 @@
             }
 
             &-title {
-
+                animation: appear-left linear forwards;
+                animation-timeline: view();
+                animation-range: entry 0% cover 25%;
             }
             &-text {
-
+                animation: appear-right linear forwards;
+                animation-timeline: view();
+                animation-range: entry 0% cover 25%;
             }
         }
     }
@@ -584,8 +596,16 @@
 
             &-title {
                 font-size: 3.4rem !important;
+
+                animation: appear-left linear forwards;
+                animation-timeline: view();
+                animation-range: entry 0% cover 25%;
             }
             &-text {
+
+                animation: appear-right linear forwards;
+                animation-timeline: view();
+                animation-range: entry 0% cover 25%;
 
                 &--span {
                     font-weight: 600;
