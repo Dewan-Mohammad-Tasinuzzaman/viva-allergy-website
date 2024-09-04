@@ -368,7 +368,7 @@
     &__reps {
 
         position: relative;
-        background-color: #262626;
+        background-color: rgb(33, 33, 33);
         padding-bottom: 20rem;
 
         display: flex;
@@ -379,6 +379,7 @@
         overflow: hidden;
 
         &_illustration {
+            display: none;
             position: absolute;
             bottom: 0;
             left: 50%;

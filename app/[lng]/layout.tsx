@@ -3,13 +3,15 @@ import { Lato } from "next/font/google";
 import "../../styles/main.scss";
 import NavBar from "./NavBar";
 import { Providers } from './Providers';
-import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
+import { ReactLenis, useLenis } from '@studio-freight/react-lenis';
 import SmoothScroll from "@/components/SmoothScroll";
-import { SpeedInsights } from "@vercel/speed-insights/next"
-import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 import Footer from "@/components/Footer";
-import { dir } from 'i18next'
-import { languages } from '../i18n/settings'
+import LoadingAnimation from "@/components/BackgroundAnimation";
+import { dir } from 'i18next';
+import { languages } from '../i18n/settings';
+import BackgroundAnimation from "@/components/BackgroundAnimation";
 
 
 
@@ -52,6 +54,7 @@ export default function RootLayout({ children, params }: RootLayoutProps) {
   return (
     <html lang={lng} dir={dir(lng)}>
       <body className={lato.className}>
+        <BackgroundAnimation />
         <NavBar params={params} />
         <Providers>
           <SmoothScroll>

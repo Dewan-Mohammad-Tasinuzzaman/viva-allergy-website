@@ -929,7 +929,7 @@
             position: relative;
             height: 550vh;
             width: 100vw;
-            background-color: #e9d98d;
+            // background-color: #e9d98d;
 
             &-bgbox {
                 
@@ -957,7 +957,7 @@
                         background-color: #afa573;
                     }
                     &--4 {
-                        background-color: white;
+                        // background-color: white;
 
                         &---iconbox {
                             @include absolute-center;
@@ -1082,7 +1082,7 @@
                     z-index: 1;
 
                     &--01 {
-                        background-color: #ffffff;
+                        // background-color: #ffffff;
                     }
                     &--02 {
                         background-color: var(--color-trees);
