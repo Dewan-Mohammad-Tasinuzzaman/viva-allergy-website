@@ -241,7 +241,7 @@ export default function SkinTestPage({ params: { lng } }: SkinTestPageProps) {
           </div>
           <div className="skin-tests-vidcontainer__wrapper">
             <ReactPlayer
-              url='https://youtu.be/5sVsz9rmHLY'
+              url='https://youtu.be/z7NXZueqFK4'
               className='skin-tests-vidcontainer__wrapper-source'
               playing={isPlaying}
               width='100%'
