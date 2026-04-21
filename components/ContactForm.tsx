@@ -1,3 +1,5 @@
+// components/ContactForm.tsx
+
 'use client';
 
 import React, { FormEvent, useState, useEffect } from 'react'
@@ -114,7 +116,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ lng }) => {
             name="category"
             required
           >
-            <option className='contacts__container__formContainer_form_group-input-select--option' value="" disabled selected hidden>{t('category-select')}</option>
+            <option className='contacts__container__formContainer_form_group-input-select--option' value="" disabled hidden>{t('category-select')}</option>
             <option className='contacts__container__formContainer_form_group-input-select--option' value={t('category-opt01')}>{t('category-opt01')}</option>
             <option className='contacts__container__formContainer_form_group-input-select--option' value={t('category-opt02')}>{t('category-opt02')}</option>
             <option className='contacts__container__formContainer_form_group-input-select--option' value={t('category-opt03')}>{t('category-opt03')}</option>
@@ -127,7 +129,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ lng }) => {
           <input 
             value={email} 
             onChange={(e) => setEmail(e.target.value)}
-            type="text" 
+            type="email" 
             className="contacts__container__formContainer_form_group-input" id="email" name='email' placeholder="" required 
           />
         </div>

@@ -1,29 +1,45 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-const sgMail = require('@sendgrid/mail');
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { Resend } from 'resend';
 
-// API KEY
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-    try {
-        console.log('Data', req.body);
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
 
-        const { first_name, last_name, category, email, phone, zip, details } = req.body;
+  try {
+    const { first_name, last_name, category, email, phone, zip, details } = req.body;
 
-        // SendGrid
-        const msg = {
-            to: 'poallergie@omegalabs.ca', // Change to your recipient
-            from: 'sender@vivaallergy.ca', // Change to your verified sender
-            subject: 'Viva Allergy Website - DO NOT REPLY HERE',
-            text: `Hello,\nYou have received a new entry from:\nName: ${first_name} ${last_name}\nEmail: ${email}\nCategory: ${category}\nPhone: ${phone}\nPostal Code: ${zip}\nDetails: ${details}`,
-        };
-
-        await sgMail.send(msg);
-
-        console.log('Email sent');
-        res.status(200).json({ submitted: true });
-    } catch (error) {
-        console.error('Error:', error);
-        res.status(500).json({ error: 'Internal Server Error' });
+    if (!first_name || !last_name || !email || !details) {
+      return res.status(400).json({ error: 'Missing required fields' });
     }
+
+    const { error } = await resend.emails.send({
+      from: 'Omega Allergies <noreply@mail.omegaallergies.ca>',
+      to: ['poallergies@junopharma.com'],
+      replyTo: email,
+      subject: 'Omega Allergies Website Contact Form',
+      text: `
+New contact form submission
+
+Name: ${first_name} ${last_name}
+Email: ${email}
+Category: ${category || ''}
+Phone: ${phone || ''}
+Postal Code: ${zip || ''}
+Details: ${details}
+      `.trim(),
+    });
+
+    if (error) {
+      console.error('Resend error:', error);
+      return res.status(500).json({ error: 'Failed to send email' });
+    }
+
+    return res.status(200).json({ submitted: true });
+  } catch (error) {
+    console.error('Server error:', error);
+    return res.status(500).json({ error: 'Internal Server Error' });
+  }
 }
